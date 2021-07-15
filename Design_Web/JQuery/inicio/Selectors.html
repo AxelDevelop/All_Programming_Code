@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <title>Selectores</title>
+</head>
+<body>
+
+    <script>
+
+// ----------------------------------SELECTORS------------------------
+
+// Echemos un vistazo a todos los selectores de jQuery.
+
+// Como ha visto en la lección anterior, los selectores de jQuery comienzan con el signo de dólar y paréntesis: $ ().
+
+// El selector más básico es el selector de elementos, que selecciona todos los elementos en función del nombre del elemento.
+
+    $("div")  // selects all <div> elements
+
+// A continuación, se encuentran los selectores de identificación y clase, que seleccionan los elementos por su identificación y nombre de clase:
+
+    $("#test") // select the element with the id="test"
+    $(".menu") //selects all elements with class="menu"
+
+// También puede utilizar la siguiente sintaxis para los selectores:
+
+    $("div.menu")  // all <div> elements with class="menu"
+
+    $("p:first")  // the first <p> element
+
+    $("h1, p") // all <h1> and all <p> elements
+
+    $("div p") // all <p> elements that are descendants of a <div> element
+
+    $("*")  // all elements of the DOM
+
+// Los selectores facilitan el acceso a los elementos DOM de HTML en comparación con JavaScript puro.
+
+
+// Nota: hay mas selectores, No trates de recordarlos todos, solo debes saber que existen. Puede volver a leer esto cuando necesite saber más.
+
+
+    </script>
+    
+</body>
+</html>

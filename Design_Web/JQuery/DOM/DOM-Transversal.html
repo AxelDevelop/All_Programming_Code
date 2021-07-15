@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <title>DOM Transversal</title>
+</head>
+<body>
+
+<!-- ----------------------------------PARENT---------------------- -->
+
+    <div> div element
+        <p>paragraph</p> 
+      </div>
+      <br>
+
+<!-- ------------------------------------------PARENTS--------------------- -->
+
+        <div style="width:300px;"> div
+          <ul> ul
+            <li> li
+              <p class="p">paragraph</p>
+            </li>
+          </ul>   
+        </div>
+
+
+    <script>
+
+// -------------------------------DOM TRAVERSAL------------------------------
+
+// ----------------------------------PARENT----------------------
+
+
+// jQuery tiene muchos métodos útiles para atravesar DOM.
+
+// El método parent () devuelve el elemento principal directo del elemento seleccionado. Por ejemplo:
+
+        var e = $("p").parent();
+        e.css("border", "2px solid red");
+
+// El código anterior selecciona el elemento principal del párrafo y le pone un borde rojo.
+
+// ------------------------------------------PARENTS---------------------
+
+// El método parent () solo puede atravesar un solo nivel en el árbol DOM.
+
+// Para obtener todos los ancestros del elemento seleccionado, puede usar el método parent (). Por ejemplo:
+
+        $(function(){
+            var i = $(".p").parents();
+            i.css("border", "2px solid red")
+        });
+
+// El código anterior establece un borde rojo para todos los padres del párrafo.
+
+// Algunos de los métodos de recorrido más utilizados se presentan a continuación. (esta en la imagen llamada "metodos de recorrido" al final de la pagina)
+
+// -------------------------EQ()--------------------------------
+
+// El método eq () se puede utilizar para seleccionar un elemento específico de varios elementos seleccionados.
+
+// Por ejemplo, si la página contiene varios elementos div y queremos seleccionar el tercero debemos hacer lo siguiente
+
+         $("div").eq(2);
+
+// Los números de índice comienzan en 0, por lo que el primer elemento tendrá el número de índice 0.
+
+
+
+    </script>
+
+
+<img src="./metodos de recorrido.jpg" alt="">
+
+</body>
+</html>

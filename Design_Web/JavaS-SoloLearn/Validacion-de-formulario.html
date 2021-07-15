@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <title>Validacion de formularios</title>
+</head>
+<body>
+
+    <style>
+        
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: 'Barlow', sans-serif, 'Open Sans Condensed', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #CCCCCC;
+        }
+        form{
+            width: 270px;
+            height: 250px;
+            text-transform: capitalize;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: 600;     
+            background: #757575;
+            color: #fff;
+        }   
+
+        input{
+            margin: 10px;
+            border-radius: 4px;
+            padding: 10px;
+        }
+
+        input[type="submit"]{
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            background: #121212;
+            color: blanchedalmond;
+            font-size: 15px;
+            text-transform: capitalize;
+            outline: none;
+            cursor: pointer;
+        }
+
+    </style>
+
+    <form >
+        number: <input type="text" name="num1" id="num1">
+        repeat: <input type="text" name="num2" id="num2">
+        <input type="submit" value="submit" onclick="return validate()">
+    </form>
+
+
+
+
+
+
+<script>
+
+// --------------------------FORM VALIDATION (PNSUBMIT)------------------------
+
+// HTML5 agrega algunos atributos que permiten la validación de formularios. Por ejemplo, el atributo obligatorio se puede agregar a un campo de entrada para que sea obligatorio completarlo.
+
+// Se puede realizar una validación de formularios más compleja utilizando JavaScript.
+// El elemento de formulario tiene un evento onsubmit que se puede manejar para realizar la validación.
+
+// Por ejemplo, creemos un formulario con dos entradas y un botón. El texto en ambos campos debe ser el mismo y no estar en blanco para pasar la validación. (arriba esta la parte HTML.)
+
+// JS:
+
+    function validate(){
+        var n1 = document.getElementById("num1");
+        var n2 = document.getElementById("num2");
+
+        if(n1.value != "" && n2.value != ""){
+            if (n1.value == n2.value){
+                alert(n1.value);
+                return true;
+                
+            }
+            else if(n1.value != n2.value){
+                alert("lo que escribiste no es igual a lo que repetiste");
+                return true;
+            }
+
+        }
+        alert("vacio");
+        return false;
+    }
+
+// Devolvemos verdadero solo cuando los valores no están en blanco y son iguales.
+
+// El formulario no se enviará si su evento onsubmit devuelve falso.
+
+</script>
+    
+</body>
+</html>

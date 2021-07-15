@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Antes de comenzar a hacer que nuestra página de destino sea receptiva, debemos cubrir algunos conceptos. 
+
+     El primer concepto es la ventana gráfica: el área visible de una página web. 
+
+     Por lo general, una página web con un ancho fijo se vuelve demasiado grande para caber en la ventana gráfica de una pantalla pequeña, como un dispositivo móvil o una tableta. Para solucionar esto, los navegadores en esos dispositivos redujeron la página web completa para adaptarse a la pantalla. 
+
+     Puede controlar la ventana gráfica de sus páginas web. Toque Continuar para ver cómo.  -->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+
+    <!-- width = device-width establece el ancho de la página para seguir el ancho de la pantalla del dispositivo. -->
+
+    <!-- initial-scale = 1.0 establece el nivel de zoom inicial cuando el navegador carga la página por primera vez. -->
+
+    <!-- También puede usar valores personalizados para la etiqueta de la ventana gráfica (viewport), sin embargo, en la mayoría de los casos, se recomienda usar los valores predeterminados aplicando el valor de ancho del dispositivo. -->
+
+    <!-- ---------------------ANIMATION (JS O JQUERY)------------------------- -->
+    <!-- jQuery es una biblioteca de JavaScript rápida, pequeña y rica en funciones. -->
+
+    <!-- Hace que cosas como la manipulación y el recorrido de documentos HTML, el manejo de eventos y la animación sean mucho más simples. -->
+
+    <!-- Obtenga más información con nuestro tutorial de jQuery. -->
+
+    <!-- -----------------------JQUERY--------------------- -->
+
+    <!-- Puede descargar una copia de la biblioteca jQuery desde www.jquery.com o, como alternativa, puede incluirla desde una CDN (Content Delivery Network), como Google o Microsoft.
+Usaremos el CDN del sitio web oficial de jQuery.
+Para comenzar a usar jQuery, primero debemos agregarlo al encabezado de nuestro documento HTML usando la etiqueta de script: -->
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+    <!-- Usamos la etiqueta de script para importar la biblioteca jQuery. -->
+    <!-- jQuery es una biblioteca de JavaScript rápida, pequeña y rica en funciones. -->
+
+    <!-- Hace que cosas como la manipulación y el recorrido de documentos HTML, el manejo de eventos y la animación sean mucho más simples. -->
+
+    <!-- --------------------------------------------------- -->
+
+    <title>Diseño Web Responsivo</title>
+    <link rel="stylesheet" href="./Diseño-Web-Responsivo.css" />
+  </head>
+
+  <body>
+    <!-- -------------------RESPONSIVE WEB DESING----------------- -->
+
+    <!-- Comencemos por construir la estructura HTML básica de nuestra página de destino. Comenzaremos construyendo la versión de escritorio y luego la adaptaremos para dispositivos móviles y la haremos receptiva. -->
+
+    <!-- Usaremos etiquetas semánticas HTML5 para definir las secciones: -->
+    <!-- Dimos los nombres de clase correspondientes a las características y las secciones de citas para que podamos definir estilos CSS para ellas. -->
+
+    <div class="container">
+      <div class="container-header">
+        <header>
+          <h1>awesome app</h1>
+          <h2>this app will change your file!</h2>
+
+          <li>
+            <a class="btn">dowload now</a>
+          </li>
+          <ul>
+            <div class="submenu">
+              <a href="#">item 1</a>
+              <a href="#">item 2</a>
+            </div>
+          </ul>
+        </header>
+      </div>
+
+      <section class="features">
+        <div class="container-features">
+          <div class="feature">
+            <img src="../css/imagen1.jpg" alt="" />
+            <p>an awesome features</p>
+          </div>
+
+          <div class="feature">
+            <img src="../css/imagen1.jpg" alt="" />
+            <p>an awesome features</p>
+          </div>
+
+          <div class="feature">
+            <img src="../css/imagen1.jpg" alt="" />
+            <p>an awesome features</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="quote">
+        <blockquote class="container-quote">
+          <p>"some great wuote!</p>
+          <cite>satisfied customers</cite>
+        </blockquote>
+        <!-- Usamos la etiqueta blockquote como contenedor y reutilizamos nuestra clase de contenedor en ella.
+
+            Dentro de la cita en bloque, tenemos un párrafo de texto que representa la cita y una etiqueta de cita, que contiene el nombre del cliente. -->
+
+        <!-- Nota: El elemento blockquote especifica una sección que se cita, mientras que "cite" se usa para definir un título. -->
+      </section>
+
+      <footer>
+        <div class="container-footer">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">contacts</a></li>
+          </ul>
+          <p>all rights reserved</p>
+        </div>
+        <!-- Hemos reutilizado nuestro div contenedor para proporcionar los acolchados necesarios y la alineación central.
+
+            Cada uno de los enlaces del menú está contenido en elementos de lista.
+
+            El texto de los derechos de autor es un párrafo simple. -->
+      </footer>
+    </div>
+
+    <!-- ------------------------ANIMATION CON JQUERY-------------------- -->
+
+    <script src="./submenu.js"></script>
+  </body>
+</html>

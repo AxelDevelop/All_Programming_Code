@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nombres de propiedad calculados</title>
+</head>
+<body>
+
+    <script>
+
+// ---------------------Computed Property Names---------------------
+
+// Con ES6, ahora puede utilizar nombres de propiedades calculados. Usando la notación de corchetes [], podemos usar una expresión para un nombre de propiedad, incluida la concatenación de cadenas. Esto puede ser útil en los casos en los que queremos crear ciertos objetos basados en los datos del usuario (por ejemplo, identificación, correo electrónico, etc.).
+
+// A continuación, se muestran tres ejemplos:
+
+// ----------------------EJEMPLO 1------------------
+
+        let prop = 'name';
+        let id = '1234';
+        let mobile = '08923';
+
+        let user = {
+            [prop]: 'jack',
+            [`user_${id}`]: `${mobile}`
+            
+        };
+
+// ---------------------EJEMPLO 2--------------------
+
+        var i = 0;
+        var a = {
+            ['foo' + ++i]: i,
+            ['foo' + ++i]: i,
+            ['foo' + ++i]: i
+
+        };
+
+        var cero = 0;
+        var aumento = {
+            ['aum' + ++cero]: cero,
+            ['aum' + ++cero]: cero,
+            ['aum' + ++cero]: cero,
+        }
+
+// --------------------EJEMPLO 3-------------------
+
+        var param = 'size';
+        var config = {
+            [param]: 12,
+            ['mobile' + param.charAt(0).toUpperCase() + param.slice(1)]: 4
+        };
+        console.log(config.mobileSize); 
+
+// Es muy útil cuando necesita crear objetos personalizados basados en algunas variables.
+
+
+// -------------------------EXTRAS-----------------------
+
+// ------------------------------CHARAT()-----------------------------
+
+// El charAt() método devuelve el carácter en el índice especificado de una cadena. El índice del primer carácter es 0, el segundo carácter es 1, y así sucesivamente. Consejo: El índice del último carácter de una cadena es la cadena .
+
+// ---------------------SLICE()------------------------------------
+
+// slice() El método slice() devuelve una copia de una parte del array dentro de un nuevo array empezando por inicio hasta fin (fin no incluido). El array original no se modificará.
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <title>El objeto de evento</title>
+</head>
+<body>
+
+    <script>
+
+// ---------------------THE EVENT OBJECT-------------------
+
+// Cada función de manejo de eventos puede recibir un objeto de evento, que contiene propiedades y métodos relacionados con el evento:
+
+// pageX, pageY la posición del mouse (coordenadas X e Y) en el momento en que ocurrió el evento, en relación con la parte superior izquierda de la página.
+
+// escriba el tipo de evento (por ejemplo, "clic").
+
+// pageX, pageY la posición del mouse (coordenadas X e Y) en el momento en que ocurrió el evento, en relación con la parte superior izquierda de la página.
+
+// "type" el tipo de evento (por ejemplo, "clic").
+
+// "which" el botón o tecla que se presionó.
+
+// "data" cualquier dato que se pasó cuando se enlazó el evento.
+
+// "target" al elemento DOM que inició el evento.
+
+// "preventDefault ()" previene la acción predeterminada del evento (por ejemplo, siguiendo un enlace).
+
+// "stopPropagation ()" Evita que el evento se propague a otros elementos.
+
+
+// -----------------------Eventos desencadenantes-----------------
+
+// ---------------------------TRIGGER--------------------
+
+// También podemos disparar eventos mediante programación usando el método trigger (). Por ejemplo, puede activar un evento de clic sin que el usuario haga clic en un elemento:
+
+    $("div").click(function(){
+        alert("Clicked!");
+    });
+    $("div").trigger("click")
+
+// Este código activa el evento de clic para el elemento seleccionado.
+
+// Nota: El método trigger () no se puede utilizar para imitar eventos nativos del navegador, como hacer clic en un cuadro de entrada de archivo o una etiqueta de anclaje. Solo se pueden manejar eventos en el sistema de eventos jQuery.
+
+
+    </script>
+
+</body>
+</html>

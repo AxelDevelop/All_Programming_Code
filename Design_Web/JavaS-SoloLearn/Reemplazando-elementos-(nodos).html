@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reemplazando elementos</title>
+</head>
+<body>
+
+        <div id="demo">
+            <p id="p1">buenas</p>
+        </div>
+    
+
+    <script>
+
+// ------------------------REEMPLAZANDO NODOS O ELEMENTOS---------------------
+
+// Para reemplazar un elemento HTML, se usa el método element.replaceChild (newNode, oldNode).
+
+// HTML:
+
+    // <div id="demo">
+    //         <p id="p1">este es un parrafo</p>
+    //         <p id="p2">este es un parrafo</p>
+
+    //     </div>
+
+// javaScript:
+
+        var p = document.createElement("b");
+        var node = document.createTextNode("nuevo año");
+        p.appendChild(node);
+
+        var parent = document.getElementById("demo");
+        var child = document.getElementById("p1");
+        parent.replaceChild(p, child);
+
+// El código anterior crea un nuevo elemento de párrafo que reemplaza el párrafo p1 existente
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

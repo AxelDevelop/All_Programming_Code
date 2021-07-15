@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herencias en ES6</title>
+</head>
+<body>
+
+    <script>
+
+// ---------------INHERITANCE IN ES6------------------------
+
+// La palabra clave "extends"  se usa en declaraciones de clase o expresiones de clase para crear un hijo de una clase. El hijo hereda las propiedades y los métodos del padre.
+
+// Por ejemplo:
+
+        class Animal {
+            constructor(name){
+                this.name = name;
+            }
+            speak (){
+                console.log(this.name + ' makes a noise');
+            }
+        }
+
+        class Dog extends Animal {
+            speak(){
+                console.log(this.name + ' barks');
+            }
+        }
+
+        let dog = new Dog('Rex');
+        dog.speak();
+
+// En el código anterior, la clase Dog es hija de la clase Animal, heredando sus propiedades y métodos.
+
+// Si hay un constructor presente en la subclase, primero debe llamar a super () antes de usarlo. Además, la palabra clave super se usa para llamar a los métodos de los padres.
+
+// Por ejemplo, podemos modificar el programa anterior a lo siguiente:
+
+        class Animal1 {
+            constructor(name2){
+                this.name2 = name2;
+            }
+            speak1(){
+                console.log(this.name2 + ' makes a noise');
+            }
+        }
+    
+        class Dogger extends Animal1 {
+            speak1(){
+                super.speak1(); //super
+                console.log(this.name2 + ' barks');
+            }
+        }
+
+        let dogger = new Dogger('rex');
+        dogger.speak1();
+    
+// En el código anterior, se llama al método speak () del padre usando la palabra clave super.
+
+    </script>
+    
+</body>
+</html>

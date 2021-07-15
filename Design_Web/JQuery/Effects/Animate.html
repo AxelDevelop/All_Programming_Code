@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <title>Animate</title>
+</head>
+<body>
+
+    <div class="ani1">hola</div>
+    <div class="ani2">hola</div>
+    <div class="ani3">hola</div>
+    <div class="ani4">hola</div>
+
+    <script>
+
+// ----------------------------ANIMATE--------------------
+
+// El método animate () le permite animar a un valor establecido, o a un valor relativo al valor actual.
+
+// Debe definir las propiedades CSS que se van a animar como su parámetro en formato JSON (pares "clave": "valor").
+
+// El segundo parámetro define la velocidad de la animación.
+// Por ejemplo, el siguiente código anima la propiedad de ancho del div en 1 segundo al valor 250px:
+
+        $(".ani1").click(function(){
+            $(".ani1").animate({width: '250px'}, 1000);
+        });
+
+// Nota: Tenga en cuenta el formato JSON para proporcionar los parámetros CSS. La sintaxis JSON también se usó en los módulos anteriores al manipular las propiedades de CSS.
+
+// Puede animar cualquier propiedad CSS usando la sintaxis mencionada anteriormente, pero hay una cosa importante que recordar: todos los nombres de propiedad deben estar en mayúsculas y minúsculas cuando se usan con el método animate () (camelCase es la práctica de escribir palabras compuestas o frases tales que cada palabra o abreviatura comienza con una letra mayúscula y la primera palabra en minúscula).
+
+// Deberá escribir paddingLeft en lugar de padding-left, marginRight en lugar de margin-right, etc.
+
+// Tenga en cuenta el formato JSON para proporcionar los parámetros CSS. La sintaxis JSON también se usó en los módulos anteriores al manipular las propiedades de CSS.
+
+// --------------------------MULTIPLES PRPIEDADES DE AMNIMACION-----------------
+
+// Se pueden animar varias propiedades al mismo tiempo separándolas con comas.
+
+// por ejemplo:
+
+        $(".ani2").animate({
+            width: '250px',
+            height: '250px'
+        },1000);
+
+// También es posible definir valores relativos (el valor es entonces relativo al valor actual del elemento). Esto se hace poniendo + = o - = delante del valor:
+
+        $(".ani3").animate({
+            width: '+=250pc',
+            height: '+=250px'
+        },1000);
+
+// Para detener una animación antes de que termine, jQuery proporciona el método stop ().
+
+
+// -------------------------COLA DE ANIMACION-----------------------
+
+// De forma predeterminada, jQuery viene con funcionalidad de cola para animaciones.
+
+// Esto significa que si escribe varias llamadas animate () una tras otra, jQuery crea una cola "interna" para estas llamadas a métodos. Luego ejecuta las llamadas animadas una por una.
+
+
+        // Por ejemplo:
+
+        var div = $ (".ani4");
+        div.animate({opacity: 1});
+        div.animate({height: '+=100px', width: '+=100px', top: '100px'}, 500);
+        div.animate({height: '-=100px', width: '-=100px', left: '+=100px'}, 500);
+        div.animate({height: '+=100px', width: '+=100px', top: '-=100px'}, 500);
+        div.animate({height: '-=100px', width: '-=100px', left: '+=100px'}, 500);
+        div.animate({opacity: 0.5});
+
+// Cada llamada al método animate () se ejecutará una tras otra.
+// Recuerde, para manipular la posición de los elementos, debe establecer la propiedad de posición CSS del elemento en relativa, fija o absoluta.
+
+// Nota: El método animate (), al igual que los métodos hide / show / fade / slide, puede tomar una función de devolución de llamada opcional como parámetro, que se ejecuta una vez finalizado el efecto actual.
+
+
+
+
+    </script>
+
+</body>
+</html>

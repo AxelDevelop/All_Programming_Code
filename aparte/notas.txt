@@ -1,0 +1,16 @@
+la terminal que usaremos es zsh
+
+comandos parasu instalacion:
+
+1- sudo apt update
+
+2- sudo apt install git-core zsh
+
+3- zsh --version
+
+archivo de configuracion (~/.zshrc)
+
+p10k configure para configurar la terminal
+
+
+tarea: crear carpeta recursivas en linux

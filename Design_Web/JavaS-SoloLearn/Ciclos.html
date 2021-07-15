@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Ciclos </title>
+	<!-- un ciclo es una estructura que nos permite repetir nuestro codigo un numero de veces-->
+</head>
+<body>
+	<script>
+
+		var dias =["Lunes", "Martes", "Miercoles", "jueves", "viernes", "sabado", "domingo"];
+		var numerodias = dias.length -1;
+		var i = 0;
+
+// --------------------------------FOR----------------------------------------
+
+		// var dias =["Lunes", "Martes", "Miercoles", "jueves", "viernes", "sabado", "domingo"]
+		
+		for ( i = 0; i <= dias.length - 1; i++ )
+		// funciona añadiendo primero una i o variable que tenga un valor ya definido, luego despues de un punto y coma añadimos la condicion y luego su accion.
+		
+		// si te preguntas como funciona esto es que la variante i es iguaal a 0, mientras i sea menor o igual a dias (que tiene el comando length que mostrara el valor de la variante) i se ira sumando, como la condicion esta tomando lo que diga length, y length dice que hay 7 elementos dentro de la variante dias, la condicion pensara que son 7 y no 6 (ya que cuenta desde cero aparecera undefined, porque no hay 7 elementos sino 6 contando desde cero) y para resolver esto ponemos -1, asi elimina el 7 que indica length.
+
+		{
+		document.write( dias [i] + "<br>");
+		
+			// se añaden las intrucciones
+		}
+
+// -------------------------------------WHILE------------------------------------------
+
+		// while (i <= numerodias);
+			//la propiedad while funciona como un for y un if, el ciclo se ejecutara si la condicion es verdadera, leido seria que si la condicion se cumple (i es menor o igual a numerodias) se escribira la varibale dias la cual representara a i y se le sumara un espaciado, ademas de que se ira sumando
+		// {
+		// 	document.write( dias [i] + "<br>" );
+		// 	i++; 
+
+		// }
+// nota: Asegúrese de que la condición en un ciclo while eventualmente se vuelva falsa.
+
+
+
+
+// -----------------------------DO--------------------------
+
+		// do {
+
+			//aqui en do siempre se ejecutara al menos una vez. osea, do siempre ejecutara una funcion aunque no pase ninguna condicion, al menos 1 sola vez aunque no se cumpla la condicion, si la condicion se cumple se seguira ejecutando.
+		// }while(condition){
+			// instrucciones
+		// }
+
+// Nota:
+
+// Este bucle (do) ejecutará el bloque de código una vez, antes de verificar si la condición es verdadera, y luego repetirá el bucle siempre que la condición sea verdadera.
+
+
+	</script>
+
+</body>
+</html>

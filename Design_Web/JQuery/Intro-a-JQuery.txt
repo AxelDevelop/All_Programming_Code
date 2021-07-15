@@ -1,0 +1,4 @@
+jQuery es una biblioteca de JavaScript rápida, pequeña y rica en funciones.
+Hace que cosas como la manipulación y el recorrido de documentos HTML, el manejo de eventos y la animación sean mucho más simples.
+
+Se accede a todo el poder de jQuery a través de JavaScript, por lo que tener una sólida comprensión de JavaScript es esencial para comprender, estructurar y depurar su código.

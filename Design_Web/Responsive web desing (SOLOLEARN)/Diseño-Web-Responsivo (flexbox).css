@@ -1,0 +1,20 @@
+/* -------------------------FLEXBOX-------------------- */
+
+/* El modelo de diseño de flexbox permite crear diseños flexibles fácilmente, sin la necesidad de utilizar posiciones CSS y flotantes. */
+
+/* Demostremos cómo funciona con un ejemplo simple: */
+
+.contenedor{
+    display: flex;
+    align-items: stretch;
+}
+
+/* Para usar flexbox, primero definimos un contenedor y establecemos su propiedad "display" en "flex". */
+
+/* Ahora, podemos jugar con las alineaciones de los elementos div secundarios usando las propiedades de flexbox: */
+
+.contenedor div{
+    flex: 1;
+}
+
+/* Esto hará que todos los elementos secundarios tengan el mismo ancho (flex: 1) y llenen todo el ancho del contenedor. */

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>Page 4.</title>
+</head>
+<body>
+
+    <section>
+        <img src="./pictures/mountain.png" class="mosque" alt="">
+        <header>
+            <a href="#" class="logo">Page 4.</a>
+            <div class="toggle"></div>
+            <ul class="navigation">
+                <li><a href="#" style="--i:1" class="active">Home</a></li>
+                <li><a href="#" style="--i:2">About</a></li>
+                <li><a href="#" style="--i:3">Calendar</a></li>
+                <li><a href="#" style="--i:4">Blog</a></li>
+                <li><a href="#" style="--i:5">Contact</a></li>
+            </ul>
+        </header>
+
+        <div class="content">
+            <div class="textbox">
+                <h2>Primera Parte.</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae quaerat fugit officia eum veniam corrupti temporibus libero, asperiores voluptatum ad deleniti quibusdam quia harum? Voluptatibus amet repudiandae asperiores dolor aliquid.</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+
+        <ul class="sci">
+            <li><a href="#" style="--i:12;"><i class='bx bxl-facebook'></i></a></li>
+            <li><a href="#" style="--i:13;"><i class='bx bxl-twitter'></i></i></a></li>
+            <li><a href="#" style="--i:14;"><i class='bx bxl-instagram-alt'></i></a></li>
+        </ul>
+    </section>
+    
+    <script>
+        const menuToggle = document.querySelector('.toggle');
+        const navigation = document.querySelector('.navigation');
+       
+
+        menuToggle.onclick = function(){
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+
+*
+/*la etiqueta arriba es el selector universal*/
+ {
+	margin: 0;
+	padding: 0;
+}
+/*lo que hicimos con las propiedaddes dentro del selector universal es borrar todos los margenes que lleva por defecto la pagina, y tambien podremos hacer que la pagina tenga un diseño desde cero*/
+
+body{
+	background: #e6e6e6;
+	text-transform: capitalize;
+}
+
+/* .container{
+	text-transform: capitalize;
+	background-color: lightblue;
+	margin: 10px auto;
+	padding: 20px;
+	width: 70%;
+	height: auto;
+	border-radius: 10px;
+	
+} */
+
+
+
+img {
+	margin-bottom: 0px;
+	box-shadow: 5px 5px 1px rgb(73, 71, 71);
+	border-radius: 20px;
+}
+
+
+ nav, .logotipo, .main, footer
+{
+	
+	/* background: #fff; */
+	width: 90%;
+	/*aqui ajustamos la pagina en forma adaptable para que todas las pantallas se acomoden al porcentaje de la pagina y la vean bien, se usa el simbolo % en vez de en pixeles*/
+	max-width: 1000px;
+	/*aqui le decimos que el tamaño maximo que puede tener son 1000px para que no se pase y se vea tan feo.*/
+	margin: 20px auto;
+	/*aqui en margin hicimos que cada uno de las etiquetas tengan un margen*/
+	border-radius: 10px;
+
+	
+}
+
+	
+
+
+
+header nav{
+	background: #528fd5;
+	overflow: hidden;
+	/*la propiedad overflow:hidden; nos sirve para dos cosas: una es para ocultar nuestro contenido que sobrepasa nuestro contenedor y la otra es que nos limpia nuestros float left, si tenemos un float right y un float left este nos los limpiara*/ 
+
+	/*con overflow:hidden; solucionamos el problema de que en nuestra lista no nos aparezca el sombreado al poner las listas en linea*/
+
+	/* overflow:; en sololearn se define como una forma de empaquetar un contenedor o cuadro, para que este no se pase del tamaño limite si tiene mas letras de lo que tendria que tener normalmente. osea men, le pone barras para que le des hacia abajo osea, esas wueas con las que bajas la pagina */
+
+	/* overflow: ; es una propiedad de desbordamiento que especifica si recortar el contenido o agregar barras de desplazamiento cuando el contenido de un elemento es demasiado grande para caber en el área especificada. tiene atributos tales como: scroll (con este atrubuto El desbordamiento se recorta y se agrega una barra de desplazamiento para ver el resto del contenido) visible (Defecto. El desbordamiento no está recortado. El contenido se renderiza fuera de la caja del elemento.) hidden (El desbordamiento se recorta y el resto del contenido será invisible) y auto (Similar al scroll, pero agrega barras de desplazamiento solo cuando es necesario) */
+	border-radius: 10px;
+	
+
+	
+
+}
+
+
+
+header nav ul {
+	list-style:none;
+	/*aqui ya lo habia escrito pero ba, aqui lo que hicimos fue quitarle las bolitas que estan en las listas por defecto, y el marco blanco que tenia*/
+	/* clear: both; */
+	text-align: center;
+
+}
+
+
+header nav ul li {
+	/* float: right; */
+	/*con float:left; apilamos las propiedades hacia la izquierda, igual que a la derecha usando right*/
+	padding: 20px;
+	display: inline-block;
+	width: 20.6%;
+	
+		
+	
+}
+
+header nav ul li a {
+	padding: 5px 10px;
+	display: block;
+	/*con display block hacemos que tenga un padding de arriba hacia abajo, si no se lo pones no sirve, se vuelve un elemento bloque bro, no te confundas, como si fuera un bloque*/
+	
+	color: rgb(40, 10, 177);
+	text-decoration: none;
+	/*con text-decoration:none; lo pones bonito men XD, no se como explicarlo,tendras que acordarte*/
+	
+
+
+}
+
+header nav ul li:hover{
+	background: #75acec;
+
+}
+
+
+.main .articles{
+	width: 68.5%;
+	margin-right: 1.5%;
+	float:left;
+	
+}
+
+.main .articles article{
+	padding: 20px;
+	background: #fff;
+	margin-bottom: 20px;
+	border-radius: 10px;
+}
+
+aside{
+	width: 30%;
+	background: #ff8000;
+	float: left;
+	padding: 20px;
+	box-sizing: border-box;
+	border-radius: 10px;
+	min-height: 22.5em;
+
+}
+
+footer{
+	background: #000;
+	color: #fff;
+	clear: both;
+	/*con la propiedad clear:both; podemos limpiar los float:left;, tambien nos da un salto de linea*/
+	text-align: center;
+	padding: 20px 0px;
+	
+}

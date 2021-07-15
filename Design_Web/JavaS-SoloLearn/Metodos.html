@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos</title>
+</head>
+<body>
+
+    <script>
+
+// ----------------------METODOS--------------------
+
+// Los métodos son funciones que se almacenan como propiedades de objeto.
+
+// esta es la sintaxys para crear un metodo de objeto:
+
+    // methodName = function (Parametros){
+
+        // lines de codigo
+
+    // }
+
+// Acceda a un método de objeto utilizando la siguiente sintaxis:
+
+    // objectname.methodName()
+
+
+// Un método es una función que pertenece a un objeto. Se puede hacer referencia a él mediante la palabra clave this.
+
+// La palabra clave this se usa como referencia al objeto actual, lo que significa que puede acceder a las propiedades y métodos de los objetos usándolo.
+
+// Nota: La definición de métodos se realiza dentro de la función constructora.
+
+// por ejemplo:
+
+        var i = 12;
+        var z = 11;
+
+    function personaje(name, age){
+        this.name = name;
+        this.age =  age;
+        this.changeName = function (name){
+            this.name = name;
+        }
+        this.changeNumber = function (age){
+            this.age = age;
+        }
+    }
+
+    var p = new personaje("david", 21);
+
+    if(i < z){
+    p.changeName("jhon");
+    document.write(p.name + "<br>");
+
+    }
+    else{
+        p.changeNumber(90);
+        document.write(p.age + "<br>");
+    }
+
+    // ahora p.name sera igual a jhon (le hice mas cambios como añadirle una condicional)
+
+// En el ejemplo anterior, hemos definido un método llamado changeName para nuestra persona, que es una función, que toma un nombre de parámetro y lo asigna a la propiedad name del objeto.
+
+// this.name se refiere a la propiedad de nombre del objeto.
+
+// El método changeName cambia la propiedad del nombre del objeto a su argumento.
+
+// También puede definir la función fuera de la función constructora y asociarla con el objeto.
+
+// de esta manera:
+
+    function algo(name1, age1){
+        this.name1 = name1;
+        this.age1 = age1;
+        this.yearOfBirth = bornYear;
+    }
+
+    function bornYear (){
+        return 2016 - this.age1;
+    }
+
+
+
+// Como puede ver, hemos asignado la propiedad yearOfBirth del objeto a la función bornYear.
+
+// La palabra clave this se usa para acceder a la propiedad age del objeto, que va a llamar al método.
+
+// Nota: Tenga en cuenta que no es necesario escribir los paréntesis de la función al asignarla a un objeto.
+
+// ------------------LLAME AL METODO COMO DE COSTUMBRE----------------------
+
+// Ejemplo:
+
+    function alguien(name3, age3){
+        this.name3 = name3;
+        this.age3 = age3;
+        this.añosPorCumplir = añoCumplido;
+
+    }
+    function añoCumplido() {
+        return 2021 - this.age3 + "<br>";
+    }
+
+    var e = new alguien("A", 22);
+    document.write(e.añosPorCumplir());
+
+// Llame al método por el nombre de propiedad que especificó en la función constructora, en lugar del nombre de la función.
+
+    var primero = 23;
+    var primero2 = 45;
+    var primero3 = 12;
+
+
+    function numero (num1, num2, num3){
+        this.num1 = num1;
+        this.num2 = num2;
+        this.num3 = num3;
+        this.resultado = ecuacion;
+
+    }
+
+    function ecuacion (){
+        return this.num1 * this.num2 / this.num3;
+    }
+
+    var numX = new numero(primero, primero2, primero3);
+    document.write(numX.resultado());
+
+    </script>
+    
+</body>
+</html>

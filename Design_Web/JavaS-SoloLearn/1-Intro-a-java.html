@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro a Java</title>
+</head>
+<body>
+
+    <script>
+// -----------------DOCUMENT WRITE----------------------
+
+// Es hora de introducir la función document.write (). Esto es lo que necesitamos usar para escribir texto en nuestro documento HTML.
+
+        document.write("<h1>hello word!</h1>");
+
+// NOTA: document.write () debe usarse solo para pruebas. Pronto cubriremos algunos otros mecanismos de salida.
+
+
+// --------------------CONSOLE LOG--------------------
+
+// Bien, ahora somos expertos en escribir resultados HTML con document.write ().
+
+// Es hora de un tipo diferente de salida. Aprendamos sobre la salida a la consola del navegador.
+
+// Para esto, necesitaremos la función de confianza console.log ().
+
+// La consola es parte del navegador web y le permite registrar mensajes, ejecutar código JavaScript y ver errores y advertencias.
+
+        console.log("hello word!")
+
+
+// ------------------------VARIABLES-----------------------
+
+// Las variables son contenedores para almacenar valores de datos. El valor de una variable puede cambiar a lo largo del programa.
+
+// Declarar una variable es tan simple como usar la palabra clave var. Que se vería así:
+
+        var x = 10;
+
+// En este ejemplo, le hemos asignado un valor de 10 a la variable x.
+
+// Hemos utilizado la palabra asignada deliberadamente aquí, porque en JavaScript, el signo igual (=) se llama en realidad el operador de "asignación", en lugar de un operador "igual a".
+
+// Lo que significa que en JavaScript, x = y asignará el valor de y a la variable x.
+
+// usariamos las variables de esta manera:
+
+        var y = 100;
+        console.log(y); 
+
+// Nota: Cada "instrucción" escrita se llama declaración. Las declaraciones de JavaScript están separadas por punto y coma.
+
+// Nota: Es muy importante recordar que los nombres de las variables de JavaScript distinguen entre mayúsculas y minúsculas.
+
+// --------------------------SOME RULES OF JAVASCRIPT FOR VARS------------------------
+
+// - El primer carácter de un nombre de variable debe ser una letra, un guión bajo (_) o un signo de dólar ($) (los caracteres posteriores (osea los caracteres despues de estos signos) pueden ser letras, dígitos, guiones bajos o signos de dólar).
+
+// - El primer carácter de un nombre de variable no puede ser un número.
+
+// - Los nombres de las variables no pueden incluir una operacion matemática o lógica en su nombre. Por ejemplo, 2 * algo o esto + aquello;
+
+// - Los nombres de las variables no pueden contener espacios.
+
+// - No se le permite utilizar ningún símbolo especial, como my # num, num%, etc.
+
+
+// ----------------ALERT------------------------
+
+// alert se utiliza para crear cajas de mensajes de texto, como alertas, para poner dentro un espaciado o salto de linea le añadimos \n.
+
+
+
+alert("mensaje de aviso")
+
+// Nota: Tenga cuidado al usar cuadros de alerta, ya que el usuario puede continuar usando la página solo después de hacer clic en Aceptar.
+
+
+// -------------------BARRAS INVERTIDAS----------------
+
+// Ahora es un buen momento para hablar sobre el carácter de escape de barra invertida (\). Él viene al rescate cuando necesitas poner comillas dentro de cadenas (y un montón de otras situaciones) transformando caracteres especiales en caracteres de cadena.
+
+    var sayhello = 'hello word! \'i am a javascript programmer.\' ';
+    document.write(sayhello);
+
+    // de esta manera podemos usar un comilla simple dentro de otra
+
+
+    </script>
+
+
+    
+</body>
+</html>

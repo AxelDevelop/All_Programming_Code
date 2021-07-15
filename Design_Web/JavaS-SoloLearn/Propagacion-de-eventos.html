@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propagacion de eventos</title>
+</head>
+<body>
+    <style>
+
+    form{
+        margin: 20px;
+    }
+
+    form, div, p{
+        border:solid 1px red;
+        padding:10px;
+    }
+    </style>
+
+        <form onclick="formFn()">FORM
+            <div onclick="divFn()">DIV
+            <p onclick="pFn()">P</p>
+            </div>
+        </form>
+  
+
+      <form id="form">FORM
+        <div>DIV
+          <p id="p">P</p>
+        </div>
+      </form>
+      
+
+    <script>
+
+// ---------------------EVENT PROPAGATION--------------------
+
+// Hay dos formas de propagación de eventos en HTML DOM: burbujeo y captura.
+
+// La propagación de eventos permite definir el orden de los elementos cuando ocurre un evento. Si tiene un elemento <p> dentro de un elemento <div>, y el usuario hace clic en el elemento <p>, ¿qué evento "clic" del elemento debe manejarse primero?
+
+// En el bubbling, el evento del elemento más interno se maneja primero y luego se maneja el evento del elemento externo. El evento de clic del elemento <p> se maneja primero, seguido por el evento de clic del elemento <div>.
+
+// En capturing, el evento del elemento más externo se maneja primero y luego el interno. El evento de clic del elemento <div> se maneja primero, seguido por el evento de clic del elemento <p>.
+
+// Nota: La capturing pasa por el DOM.
+// El burbbling sube por el DOM.
+
+
+// --------------CAPTURING VS BLUBLING---------------------
+
+// El método addEventListener () le permite especificar el tipo de propagación con el parámetro "useCapture".
+
+// Ejemplo:
+
+    // addEventListener(event, funcion, useCapture);
+
+// El valor predeterminado es falso, lo que significa que se utiliza la propagación de burbujeo (bubbling); cuando el valor se establece en verdadero, el evento utiliza la propagación de captura (capturing).
+
+// ejemplo:
+    
+        //Capturing propagation
+    // elem1.addEventListener("click", myFunction, true); 
+
+    //Bubbling propagation
+    // elem2.addEventListener("click", myFunction, false);
+
+// Nota: Esto es particularmente útil cuando tiene el mismo evento manejado para múltiples elementos en la jerarquía DOM.
+
+// este es otro ejemplo mas claro:
+
+// ---------------------------------BLUBLING--------------------------
+
+    function formFn()
+    {
+    alert('form');
+    }
+
+    function divFn()
+    {
+    alert('div');
+    }  
+
+    function pFn(e)
+    {
+    alert('p');
+    e.stopPropagation();
+    }
+
+// ---------------------------CAPTURING----------------------
+
+    
+    var usarCapture = true;
+    document.querySelector("#form")
+    .addEventListener("click", function(r){
+
+    alert("clic sobre form");
+
+    }, usarCapture);
+
+    document.querySelector("#p")
+    .addEventListener("click", function(r){
+    alert("clic sobre p");
+    }, !usarCapture);
+
+    // dato:
+    // El signo de exclamación hace que cualquier función siempre devuelva un valor booleano. El valor final es la negación del valor devuelto por la función.
+
+    !function bool() { return false; }() // true
+    !function bool() { return true; }() // false
+    // Omitir ! en los ejemplos anteriores sería un error de sintaxis.
+
+    // function bool() { return true; }() // SyntaxError
+    // Sin embargo, una mejor manera de lograr esto sería:
+
+    (function bool() { return true; })() // true
+
+    </script>
+    
+</body>
+</html>

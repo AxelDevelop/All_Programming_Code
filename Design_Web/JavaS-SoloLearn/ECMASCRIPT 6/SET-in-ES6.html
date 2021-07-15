@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SET</title>
+</head>
+<body>
+
+    <script>
+
+// ------------------------SET--------------------------
+
+// Un objeto Set puede usarse para contener valores únicos (no se permiten repeticiones).
+// Un valor en un conjunto puede ser cualquier cosa (objetos y valores primitivos).
+
+// La sintaxis new Set ([iterable]) crea un objeto Set donde iterable es una matriz o cualquier otro objeto iterable de valores.
+
+// La propiedad de tamaño devuelve el número de valores distintos en un conjunto.
+
+// por ejempl:
+
+        let set  = new Set([[1, 2, 3, 4, 5, 6, 7, 8, 9], [10,11,12,13,14,15,16, NaN]]);
+        console.log(set.values()); // mostrara los distintos valores, en este caso 9
+
+//         Métodos
+
+// add (value) Agrega un nuevo elemento con el valor dado al conjunto.
+
+// delete (valor) Elimina un valor especificado del conjunto.
+
+// has (valor) Devuelve verdadero si existe un valor especificado en el conjunto y falso en caso contrario.
+
+// clear () Borra el conjunto.
+
+// values () Devuelve un iterador de valores en el conjunto.
+
+// por ejemplo:
+
+        let set2 = new Set ();
+
+        set2.add(5).add(9).add(59).add(9);
+
+        console.log(set2.has(9));
+
+        for(let v of set2.values())
+        console.log(v);
+
+// El ejemplo anterior demuestra algunos de los métodos de ES6 Set.
+
+// Nota: El conjunto admite diferentes tipos de datos, es decir, 1 y "1" son dos valores diferentes.
+
+// NaN y undefined también se pueden almacenar en Set.
+
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

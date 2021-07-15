@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de eventos</title>
+</head>
+<body>
+
+    <button onclick="show()">click me</button>
+    <input type="text" id="name" onchange="change()">
+
+    <!-- <button id="demo">presionar</button> -->
+
+
+    <script>
+
+// --------------------------HANDLING EVENTS----------------------
+
+// --------------------ONCLICK--------------------
+
+// Vamos a mostrar una ventana emergente de alerta cuando el usuario hace clic en un botón específico:
+
+//     aqui el boton 
+
+// este es el elemento de manejo:
+
+        function show (){
+            alert("hi there");
+        }
+
+// Los controladores de eventos se pueden asignar a elementos.
+
+// por ejemplo:
+
+
+        var x = document.getElementById("demo");
+        x.onclick = function(){
+            document.body.innerHTML = Date();
+        }
+
+
+// Nota: Puede adjuntar eventos a casi todos los elementos HTML.
+
+// -----------------ONLOAD y ONUNLOAD------------------------
+
+// Los eventos onload y onunload se activan cuando el usuario entra o sale de la página.
+
+// Estos pueden ser útiles al realizar acciones después de que se cargue la página.
+
+// ejemplo si ponemos un atributo a body (<body onload="alguna accion()"> de esta manera) 
+
+// De manera similar, el evento window.onload se puede usar para ejecutar código después de que se cargue toda la página.
+
+// de esta manera:
+
+    // window.onload = function(){
+    //     //algun codigo.
+    // }
+
+
+// --------------------ONCHANGE------------------------
+
+// El evento onchange se usa principalmente en cuadros de texto. Se llama al controlador de eventos cuando el texto dentro del cuadro de texto cambia y se pierde el foco del elemento.
+
+// por ejemplo:
+
+    // HTML: 
+
+    // <input type="text" id="name" onchange="change()">
+
+    // JAVASCRIPT:
+
+    function change (){
+        var x = document.getElementById("name"); //ya sabes esta parte, es la de buscar el id.
+
+        x.value = x.value.toUpperCase();
+    }
+
+// Nota: Es importante comprender los eventos, porque son una parte esencial de las páginas web dinámicas.
+
+
+
+
+    </script>
+    
+</body>
+</html>

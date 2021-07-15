@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control deslizante de imagen</title>
+</head>
+<body>
+    <style>
+        div{
+            display: flex;
+            margin: 1em auto;
+            width: 500px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        img{
+            position: relative;
+            top: 150;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px #121212;
+            margin: 10px;
+        }
+
+        button{
+            width: 100px;
+            height: 100px;
+            outline: none;
+            border-radius: 10px;
+            border-style: none;
+            border: 1px solid #9ce9a6;
+            background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+            box-shadow: -5px 5px 10px #121212;
+        }
+
+        button:active{
+            background: #d4fc79;
+            transform: translate3d(-10px, 5px, 0);
+        }
+
+    </style>
+
+    <div>
+        <button onclick="prev()">prev</button>
+        <img src="../css//blue space.jpg" alt="" id="slider" width="200px" height="100px">
+        <button onclick="next()">Next</button>
+    </div>
+
+    <script>
+
+// ----------------------IMAGE SLIDER-------------------------
+
+// Ahora podemos crear un proyecto de control deslizante de imagen de muestra. Las imágenes se cambiarán usando los botones "Siguiente" y "Anterior".
+
+// Ahora, creemos nuestro HTML, que incluye una imagen y los dos botones de navegación. (esta arriba en el HTML)
+
+// A continuación, definamos nuestras imágenes de muestra en una matriz:
+
+        var images = [
+        "../css/blue space.jpg",
+        "../css/imagen1.jpg",
+        "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg",
+        "https://cdn.pixabay.com/photo/2013/11/28/10/36/road-220058_960_720.jpg",
+        "https://cdn.pixabay.com/photo/2018/01/12/10/19/fantasy-3077928_960_720.jpg"
+        ];
+
+        
+// Nota: Vamos a utilizar tres imágenes de muestra que hemos subido a nuestro servidor. Puede utilizar cualquier número de imágenes.
+
+// --------------------PASO 2-------------------
+
+// Ahora necesitamos manejar los clics de los botones NEXT y PREV y llamar a las funciones correspondientes para cambiar la imagen.
+
+// JS:
+
+        var number = 0;
+
+        function next (){
+            var slider = document.getElementById("slider");
+            number++;
+
+            if(number >= images.length){
+                number = 0;
+            }
+            slider.src = images[number];
+        }
+        
+        function prev (){
+            var slider = document.getElementById("slider");
+            number--;
+
+            if(number < 0){
+                number = images.length-1;
+            }
+            slider.src = images[number];
+        }
+
+// La variable number contiene la imagen actual. Los clics de botón siguiente y anterior son manejados por sus funciones correspondientes, que cambian la fuente de la imagen a la imagen siguiente / anterior en la matriz.
+
+    </script>
+    
+</body>
+</html>

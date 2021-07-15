@@ -1,0 +1,65 @@
+a {
+	font-size:20px;
+	text-decoration:none; 
+	/* margin:20px ; */
+	/*en margin el primer valor que se le ponga representa el de arriba, el segundo el de la derecha, el tercero abajo y el cuarto la izquierda*/
+	padding: 10px;
+
+	/*las seudoclases son las que nos permiten aplicarles estilos a los enlaces, dependiendo del estado que estos lleven, las seudoclases tienen cuatro estados: el estado visited que es el de los enlaces ya visitados, el estado link que es el que definie estilos a los enlaces que no se han visitado, el hover que es cuando el color cambia al pasarle el mouse por encima y el active cuando le damos click.*/
+
+	/* border:none; */
+	/* border:none; none elimina el borde de las imágenes con enlaces */
+
+	outline: none;
+	/* none elimina el borde punteado en el enlace en el que se hizo clic en IE */
+	/* display: inline-block; */
+	background: #000;
+	height: auto;
+	width: 80%;
+
+	
+	
+
+}
+
+/* div{
+	background: #000;
+	height: auto;
+	width: 80%;
+} */
+
+body{
+	color: aqua;
+	
+}
+
+a:link
+/* con la pseudoclase link podremos poner que los enlaces que aun no han sido visitados tengan un color diferente */
+{
+
+	color:#df1338;
+}
+
+a:hover
+/* con hover pueder decirle que efecto tendran los elementos al pasar el mouse por encima de las letras */
+{
+	text-decoration: underline;
+	/* text-decoration: ; sirve para decorarlo, y underline ya de por si tiene el efecto de la raya por debajo de las letras, esto con hover ya sabes como se ve. */
+
+	background:rgb(28, 238, 192);
+	color: #fff;
+}
+
+a:active
+/* con active podemos decirle al usuario que va a pasar cuando clicke el elemento */
+{
+	background:#ff8000;
+}
+
+
+a:visited
+/* el atributo visited nos permite ponerle un color a los enlaces que ya hayamos visitado */
+{
+color: #941212;
+}
+

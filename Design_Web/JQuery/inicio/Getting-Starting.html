@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting Started</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+</head>
+<body>
+
+    <div id="start">Start</div>
+
+    <script>
+
+// --------------------------EMPEZANDO (JQuery)------------------
+
+// ----------------------OBJETO READY------------------------
+
+// Es una buena práctica esperar a que el documento HTML esté completamente cargado y listo antes de trabajar con él.
+
+// Para eso usamos el evento ready del objeto de documento:
+
+    $(document).ready(function() {
+    // jQuery code goes here
+    });
+
+// -----------------------EL SIMBOLO $----------------------
+
+// El $ se usa para acceder a jQuery. Desde aquí, el código accede al objeto del documento y define una función a la que se llamará cuando se active el evento listo del documento.
+// Esto evita que cualquier código jQuery se ejecute antes de que el documento termine de cargarse.
+
+// Dado que el código anterior se usa en casi todos los casos cuando se usa jQuery, hay un atajo útil para escribirlo:
+
+    $(function() {
+    // jQuery code goes here (El código jQuery va aquí)
+    });
+
+// Este código realiza la misma tarea que el código más largo anterior.
+
+// Nota: Si la sintaxis de jQuery parece un poco confusa, no se preocupe, lo cubriremos en detalle.
+
+
+// ----------------------------------------PARTE 2------------------------------
+
+// Ahora, teniendo la biblioteca jQuery en nuestra sección principal y habiendo definido el evento de preparación del documento, ¡podemos comenzar nuestra primera manipulación de jQuery! Cambiemos el contenido del elemento div.
+
+    $(function(){
+        $("#start").html("go");
+    });
+
+    // Esto cambia el HTML del elemento con id = "start" a "Go!".
+
+// ----------------------------SYNTAX---------------------------
+
+// jQuery se utiliza para seleccionar (consultar) elementos HTML y realizar "acciones" en ellos.
+
+// La sintaxis básica es: $ ("selector"). Action ()
+
+// - El $ accede a jQuery.
+
+// - El (selector) busca elementos HTML.
+
+// - El "actión" se realiza luego en el elemento
+
+    // ejemplo:
+    
+
+    // $("#start").html("go");
+
+// Esto selecciona el elemento con id = "start" y llama al método html () para ello. El método html () se utiliza para cambiar el contenido HTML de un elemento.
+
+// Nota: Si ha usado CSS antes, notará que jQuery usa la sintaxis CSS para seleccionar elementos.
+
+
+
+
+    </script>
+
+</body>
+</html>

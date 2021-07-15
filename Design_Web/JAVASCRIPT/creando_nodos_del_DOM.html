@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Document Object Model 2</title>
+	<!--el DOM o document object model nos permite acceder y poder manipular los elementos de nuestro documento. consta de dos elementos que son primarios: el <head> y el <body>-->
+</head>
+<body>
+	<h1 id="Titulo">Titulo de nuestro sitio web</h1>
+	<div id="subtitulo"></div>
+	<p>
+		 1.-El Xiaomi Redmi Note 8 marca la octava generación de la serie <b>Redmi Note</b>, esta vez con una pantalla Full HD+ de 6.3 pulgadas y potenciado por un procesador Snapdragon 665 de ocho núcleos. Con opciones de 4GB de memoria RAM y 64GB de almacenamiento, 6GB de RAM y 64GB de almacenamiento o 6GB de RAM y 128GB de almacenamiento, el Redmi Note 8 cuenta con una cámara cuádruple en su posterior de 48 MP + 8 MP + 2 MP + 2 MP, y su cámara para selfies es de 13 megapixels. El Redmi Note 8 completa sus características con una batería de 4000 mAh con soporte para carga rápida, lector de huellas montado en su parte posterior, resistencia a salpicaduras y corre MIUI 10 basado en Android 9.0 Pie.
+	</p>
+		
+
+	<p id="segundo">
+		2.-El Xiaomi Redmi Note 8 marca la octava generación de la serie <b>Redmi Note</b>, esta vez con una pantalla Full HD+ de 6.3 pulgadas y potenciado por un procesador Snapdragon 665 de ocho núcleos. Con opciones de 4GB de memoria RAM y 64GB de almacenamiento, 6GB de RAM y 64GB de almacenamiento o 6GB de RAM y 128GB de almacenamiento, el Redmi Note 8 cuenta con una cámara cuádruple en su posterior de 48 MP + 8 MP + 2 MP + 2 MP, y su cámara para selfies es de 13 megapixels. El Redmi Note 8 completa sus características con una batería de 4000 mAh con soporte para carga rápida, lector de huellas montado en su parte posterior, resistencia a salpicaduras y corre MIUI 10 basado en Android 9.0 Pie.
+	</p>
+	<p>
+		3.- El Xiaomi Redmi Note 8 marca la octava generación de la serie Redmi Note, esta vez con una pantalla Full HD+ de 6.3 pulgadas y potenciado por un procesador Snapdragon 665 de ocho núcleos. Con opciones de 4GB de memoria RAM y 64GB de almacenamiento, 6GB de RAM y 64GB de almacenamiento o 6GB de RAM y 128GB de almacenamiento, el Redmi Note 8 cuenta con una cámara cuádruple en su posterior de 48 MP + 8 MP + 2 MP + 2 MP, y su cámara para selfies es de 13 megapixels. El Redmi Note 8 completa sus características con una batería de 4000 mAh con soporte para carga rápida, lector de huellas montado en su parte posterior, resistencia a salpicaduras y corre MIUI 10 basado en Android 9.0 Pie.
+	</p>
+
+
+	<script>
+
+		// En informática y en telecomunicación, de forma muy general, un nodo es un punto de intersección, conexión o unión de varios elementos que confluyen en el mismo lugar. Ahora bien, dentro de la informática la palabra nodo puede referirse a conceptos diferentes según el ámbito en el que nos movamos. en mi opinion es aquella variable que esta unida a un comando en la cual orbitan o fluyen varios resultados.
+		
+		//var elementosP = document.getElementsByTagName("p");
+		//var segundoParrafo = document.getElementsByTagId("segundo");
+		//pasos para los nobdos
+
+		// 1.- crear el elemento: aqui se creara el elemento con el comando createElement(""); para que la variable elemento tenga la etiqueta a añadir. date cuenta que antes del comando ya mencionado hay una condicion o nombre llamado document, no se exactamente que sea, pero es bueno que sepas la sintaxis de javaS.
+		var elemento = document.createElement("h2");
+
+		// 2.- crear un nodo de texto: el nodo es creado por el comando createTextnode(""). en este caso creamos una nueva variable la cual tendra el texto o contenido que queramos aladir a la etiqueta o elemento (en este caso el h2)
+		var contenido = document.createTextNode("Este es nuestro titular");
+		
+		// 3.- añadir el nodo de texto al elemento:  appendChild se utiliza para poder añadir elementos a otros elementos cualquiera, en este caso a documento, mas bien adjuntarlo. al parecer, si lo lees bien, 
+		elemento.appendChild(contenido);
+		
+		// 4.- agregar atributos al elemento: con setAtribute se añaden atributos al elementoo la variable, en este caso la variable elemento.
+		elemento.setAttribute("align","center");
+		
+		// 5.- agregar el elemento al documento: aqui con getElementById buscamos el id donde queremos añadir el elemento y con un punto seguido de appendChild el cual añade cosas, se añade la variable elemento
+		document.getElementById("subtitulo").appendChild(elemento);
+
+
+
+
+
+	</script>
+
+
+
+	
+</body>
+</html>

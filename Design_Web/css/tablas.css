@@ -1,0 +1,46 @@
+table
+/*table es la propiedad para las tablas, creo que lo escrinbi en otra parte pero por si acaso*/
+{
+	border:1px solid #000 ;
+	/*con el border podemos ponerle un marco a las elementos*/
+
+	border-collapse: separate;
+	/*con la propiedad border-collapse podemos controlar el margen o el espaciado entre cada una de las celdas, dentro de estas usamos "collapse" para quitarle los bordes o "separate" para separarlos con bordes que añade el atribuuto, tambien se le añade el atributo "separate" para que tenga una forma extraña, para mejor decirte es como un marco para toda la tabla y a esa tabla se le suma un marco para cada uno de los elementos dentro de ese marco-*/
+
+	/* width:; */
+	/*la propiedad width se puede usar en las tablas para que tambien se adapten al ancho*/
+	
+
+}
+table td
+{
+	border: 1px solid #000;
+	padding: 20px;
+	/*aqui usamos padding para añadir un espaciado entre celdas*/
+	
+}
+
+table tr:hover
+/* usamos hover aqui para cuando se pase el mause se ponga del color deseado y al quitar el mouse vuelva a su forma normal*/
+ {
+	background: #ccc;
+}
+table td:hover{
+	background: #000;
+	color: #fff;
+	/*asi lo pones negro mientras pase el mouse y cuando se quite normal, ya sabes, cooool*/
+
+	/* border-spacing: 20px; */
+	/* border-spacing: ; puede utilizarse para cambiar el tamaño de los espaciados entre cada celda */
+
+	/* caption-side: top; */
+	/* caption-side: ; funciona para especificar la posición de un título de tabla. Los valores se pueden establecer como top (superior) o bottom (inferior). */
+
+	empty-cells: show;
+	/* empty-cells: ; especifica si se muestran o no los bordes y el fondo en las celdas vacías de una tabla. show es una de sus propiedades y sirve para mostrar una celda vacia y la propiedad hide no muestra la celda.  */
+
+	table-layout:auto;
+	/* table-layout: ; especifica cómo se calcula el ancho de las columnas de la tabla. sus propiedades son: auto (la cual ajusta el texto dependiendo su tamaño de el texto, y esta su propiedad fixed el cual toma un tamaño fijo y no se adapta al texto */
+	
+
+}

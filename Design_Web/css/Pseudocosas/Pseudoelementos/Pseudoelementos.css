@@ -1,0 +1,139 @@
+:root {
+	--fondoPrimario: #323941;
+	--fondoSecundario: #1A1E21;
+	--azulPrimario: #3860EC;
+	--azulSecundario: #2247ce;
+}
+
+body {
+	background: var(--fondoPrimario);
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+.contenedor {
+	background: var(--fondoSecundario);
+	max-width: 500px;
+	padding: 30px;
+	border-radius: 20px;
+}
+
+.logo {
+	width: 100%;
+	margin: 50px 0;
+	display: flex;
+	justify-content: center;
+}
+
+svg {
+	width: 70%;
+}
+
+.dialogo {
+	background: var(--fondoPrimario);
+	padding: 25px;
+	color: #fff;
+	margin-bottom: 35px;
+	border-radius: 15px;
+	font-size: 20px;
+	line-height: 28px;
+
+	position: relative;
+	/* nota: es muy importante este relative para que despues el elemento hijo que va a ser el triangulito lo podamos posicionar con posicionamiento absuluto. */
+}
+
+
+					/* Pseudoelementos CSS */
+
+.dialogo::selection
+/*con selection se cambia el sombreado. con first-line se puede seleccionar la primera linea de un div o elemento cualquiera. para aplicarle codigo css	 */
+{
+	background: #D61a1a;
+}
+
+.dialogo::after
+/* after se refiere al contenido que queremos poner despues del elemento, igual que before, con este simplemente se pondra antes. */
+{
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: -40px;
+
+	/* abajo estan los bordes de cada lado de elemento */
+	border-top: 20px solid var(--fondoPrimario);
+	border-right: 20px solid transparent;
+	/* transparent es una propiedad que nos permite quitarle el color a un elemento */
+
+	border-left: 20px solid transparent;
+	border-bottom:  20px solid transparent;
+	right: calc(50% - 10px);
+	/* calc nos permite hacer una pequeña operacion */
+
+}
+
+
+.boton {
+	width: 100%;
+	background: var(--azulPrimario);
+	display: inline-block;
+	padding: 25px;
+	border: none;
+	cursor: pointer;
+	color: #fff;
+	text-transform: uppercase;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	transition: .3s ease all;
+}
+
+.boton:hover {
+	background: var(--azulSecundario);
+}
+
+.enlace {
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+	text-decoration: none;
+	color: #D4D4D4;
+	font-size: 14px;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	
+}
+
+.enlace:hover {
+	border-bottom: 3px solid #5a5a5a;
+}
+
+/* ----------------OTROS PSEUDOELEMENTOS NO MENCIONADOS----------- */
+
+/* ::first-letter sirve para la primera letra */
+
+/* ::placeholder representa el texto provisional en un elemento <input> o un elemento <textarea>. */
+
+/* Ejemplo: */
+
+.cuadro{
+	width: 300px;
+	height: 200px;
+	margin: 10px;
+	padding: 20px;
+	color: #fff;
+	background: var(--fondoSecundario);
+	border-radius: 20px;
+}
+
+.cuadro::after{
+	content: 'hola';
+}
+
+.cuadro::before{
+	content: 'adios';
+}
+
+

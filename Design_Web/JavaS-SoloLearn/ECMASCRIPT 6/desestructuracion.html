@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desestructuracion</title>
+</head>
+<body>
+
+    <script>
+
+// -------------------------DESTRUCTURING---------------------------
+
+// La sintaxis de asignación de desestructuración es una expresión de JavaScript que permite descomprimir valores de matrices o propiedades de objetos en distintas variables.
+
+// ES6 ha agregado una sintaxis abreviada para desestructurar una matriz.
+
+// El siguiente ejemplo demuestra cómo descomprimir los elementos de una matriz en distintas variables:
+
+        let arr = ['1', '2', '3'];
+        let [one, two, tree] = arr;
+
+        console.log(one); // este sera uno
+        console.log(two) //este dos
+        console.log(tree) //este tres
+
+// Podemos usar también desestructurar una matriz devuelta por una función.
+// Por ejemplo:
+
+        let u = () => {
+            return [1, 3, 2];
+        };
+
+        let [uno, ,dos] = u();
+
+// Observe que dejamos vacío el lugar del segundo argumento.
+
+// La sintaxis de desestructuración también simplifica la asignación y el intercambio de valores:
+
+        let r, c, d = 4, e = 8;
+        [r, c = 6] = [2]; // esto seria como r=2, c=6
+
+        [d, e] = [e, d]; //esto seria como d=8, e=4
+
+// -------------------------OBJECT DESTRUCTURING IN ES6---------------------
+
+// Similar a la desestructuración de matrices, la desestructuración de objetos descomprime las propiedades en distintas variables. 
+
+// por ejemplo:
+
+        let obj = {h:100, s: true};
+        let {h, s} = obj;
+
+        console.log(h); //h sera igual a 100
+        console.log(s); //aqui s sera verdadero
+
+// Podemos asignar sin declaración, pero hay algunos requisitos de sintaxis para eso:
+
+        let a, b;
+        ({a, b} = {a: 'hello', b: 'jack'});
+
+        console.log(a + b); //hello jack, osea concatenacion XD. ta facil
+
+
+// Los () con un punto y coma (;) al final son obligatorios cuando se desestructura sin una declaración. Sin embargo, también puede hacerlo de la siguiente manera donde no se requieren los ():
+
+        let {q, w} = {q: 'hello ', w: 'jack'};
+        console.log(q + w);
+
+// También puede asignar el objeto a nuevos nombres de variable.
+
+        var o = {h: 42, s: true};
+        var {h: foo, s:bar} = o;
+
+        // console.log(h) dara error si lo ponemos de esta manera
+        console.log(foo); //aqui no dara error, aqui sera 42
+
+// Finalmente, puede asignar valores predeterminados a las variables, en caso de que el valor desempaquetado del objeto no esté definido.
+
+// por ejemplo:
+
+        var obj2 = {id: 42, name: "jack"};
+        let {id = 10, age = 20} = obj2;
+
+        console.log(id); //aqui id es igual a 42
+        console.log(age); //aqui age es igual a 20
+
+    </script>
+    
+</body>
+</html>

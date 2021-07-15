@@ -1,0 +1,51 @@
+/* -------------------------UNITS--------------------------- */
+
+/* --------------------------EM------------------------- */
+
+/* CSS también le permite definir tamaños de unidad relativos para tamaños de fuente:
+El tamaño de la unidad em será relativo al tamaño de fuente de los padres.
+Por ejemplo, si el cuerpo de nuestra página tiene un tamaño de fuente de 16px, usar 1.5em será igual a 24px (16 * 1.5): */
+
+/* por ejemplo: */
+
+body{
+    font-size: 16px;
+
+}
+
+p{
+    font-size: 1.5em;
+    /* seria igual a 16 * 1.5 que serian 24px */
+}
+
+/* Esto es útil porque cuando tiene que cambiar el tamaño de fuente, necesita cambiarlo solo en el padre superior. Todos los elementos secundarios obtendrán el tamaño relativo correspondiente utilizando las unidades em. */
+
+/* Sin embargo, cuando define todos los tamaños con em, se verá afectado por un efecto de cascada. En esta situación, tiene muchos elementos anidados que usan tamaños de fuente en relación con sus padres correspondientes, lo que resulta en tamaños de unidad difíciles de controlar. */
+
+/* ------------------------------REM-------------------------------- */
+/* 
+Otra unidad relativa es rem. Significa Root Em, lo que significa que solo mira el tamaño de fuente del elemento raíz, que es el elemento html.
+Esto lo hace más fácil de usar que em.
+
+Cambiemos los tamaños de fuente de nuestra página de destino a unidades rem: */
+
+html{
+    font-size: 16px;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 1.5em;
+}
+
+.btn{
+    font-size: 1.25rem;
+}
+
+/* Establecimos el tamaño de fuente de los elementos html en 16px y lo usamos para configurar todos los demás tamaños de fuente usando rem. */
+
+/* Nota: También puede utilizar unidades CSS relativas para márgenes y rellenos. */
+

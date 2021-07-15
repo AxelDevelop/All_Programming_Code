@@ -1,0 +1,127 @@
+/* -------------@KEYFRMAES----------------------- */
+
+/* @keyframes ejemplo{ */
+
+    /* Una animación permite que un elemento cambie gradualmente de un estilo a otro.
+    Puede cambiar tantas propiedades CSS como desee, tantas veces como desee.
+    Los fotogramas clave contienen los estilos que tendrá el elemento en determinados momentos */
+
+    /* El siguiente ejemplo cambiará el color de fondo de un elemento tres veces: cuando la animación esté 50% completa, 70% completa y cuando la animación esté 100% completa. este tambien se puede especificar como from y to, "from" es el 0% y to "el" 100%*/
+
+    /* 0% {background-color: red;}
+    50% {background-color: yellow;}
+    70% {background-color: blue;}
+    100% {background-color: green;} */
+
+
+
+    /* La regla @keyframes */
+
+
+/* Cuando especifica estilos CSS dentro de la regla @keyframes, la animación cambiará gradualmente del estilo actual al nuevo estilo en determinados momentos. */
+/* Para que una animación funcione, debe vincular la animación a un elemento. */
+
+/* siguiente ejemplo: */
+
+@keyframes cambiodecolor{
+
+    0% {background-color: red;}
+    50% {background-color: yellow;}
+    100% {background-color: blue;}
+
+}
+
+.animacion1{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: cambiodecolor;
+    /* animation-name: ; sirve para especificar el nombre de la animacion, para que sea reusada */
+    animation-duration: 3s;
+    padding: 10px;
+    
+}
+
+/* ---------------ANIMATIONTIMINGFUCTION------------------------- */
+
+.animacion2{
+
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: cambiodecolor;
+    animation-duration: 3s;
+    padding: 10px;
+    animation-iteration-count: infinite;
+
+/* --------------------------------animation-iteration-count------------------------------- */
+
+/* animation-timing-fuction especifica la curva de velocidad de una animación. Puede tener los siguientes valores:
+
+ease: especifica una animación con un inicio lento, luego rápido, luego termina lentamente (esto es predeterminado)
+
+linear: especifica una animación con la misma velocidad de principio a fin
+
+ease-in: especifica una animación con un inicio lento.
+
+ease-out: especifica una animación con un final lento
+
+ease-in-out: especifica una animación con un inicio y un final lentos.
+
+cubic-bezier (n, n, n, n): le permite definir sus propios valores en una función cubic-bezier */
+
+animation-timing-function: ease-in-out;
+
+/* ---------------------ANIMATION DELAY------------- */
+
+/* define el retraso antes de que comience una animación. La sintaxis CSS se ve así: */
+
+/* animation-delay: 2s; */
+
+/* tanto animation-timing-function: ; como animation-delay: ; tienen propiedades o parametros medidos en segundos (s) y milisegundos (ms) */
+
+/* ------------ANIMATION ITERATION COUNT--------- */
+
+/* La propiedad animation-iteration-count: ; determina el número de veces que se repite una animación. por ejemplo una animacion de 5 tiempos, osea, se repetira cico veces */
+
+/* ejemplo */
+/* animation-iteration-count: 5; */
+
+/* si queremos que siga por siempre solo debemos poner infinite, yap. */
+
+/* -----------ANIMATION DIRECTION-------------------- */
+/* 
+La animation-direction: ; indica cómo se debe aplicar el fotograma clave.
+Los valores se pueden establecer como:
+
+normal: el valor predeterminado, lo que significa que se reproduce hacia adelante del 0% al 100%.
+
+reverse: reproduce el fotograma clave en una dirección opuesta del 100% al 0%
+
+alternate: la animación primero se ejecuta hacia adelante, luego hacia atrás y luego hacia adelante.
+
+alternate-reverse: la animación primero se ejecuta hacia atrás, luego hacia adelante y luego hacia atrás. */
+
+animation-direction: alternate;
+
+}
+
+
+.animacion3{
+
+/* --------------------ANIMATION DE MULTIPLES PROPIEDADES---- */
+
+/* Se puede usar una sola propiedad de animación para lograr el mismo resultado que el código anterior: */
+
+animation: cambiodecolor 3s ease-in 1s infinite reverse;
+margin-top: 10px;
+width: 100px;
+height: 100px;
+background-color: red;
+padding: 10px;
+
+
+
+
+}

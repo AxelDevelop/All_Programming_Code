@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiando elementos.</title>
+</head>
+<body>
+
+    <img id="myimg" src="orange.jpg" alt="" />
+    <br>
+    <a href="http://ejemplo.com">some link</a>
+    <br>
+    <div id="demo" styles="width:200px">some text</div>
+
+
+    
+    <script>
+
+// -------------------CHANGING ATTRIBUTES----------------
+
+// Una vez que haya seleccionado los elementos con los que desea trabajar, puede cambiar sus atributos.
+
+// Como hemos visto en las lecciones anteriores, podemos cambiar el contenido de texto de un elemento usando la propiedad innerHTML.
+
+// Del mismo modo, podemos cambiar los atributos de los elementos.
+
+// por ejemplo cambiar el atributo src:
+
+    // <img id="myimg" src="orange.png" alt="" />
+
+    var el = document.getElementById("myimg");
+    el.src = "tree.jpg";
+
+
+    // o el href llamando su etiqueta como arriba:
+
+        // <a href="http://example.com">some link</a>
+
+        var  la = document.getElementsByTagName("a");
+        la[0].href = "http://sololearn.com";
+
+// Nota: Prácticamente todos los atributos de un elemento se pueden cambiar usando JavaScript.
+
+// --------------------CAMBIO DE ESTILO (OBJETO STYLE)---------------------
+
+// El estilo de los elementos HTML también se puede cambiar usando JavaScript.
+
+// Se puede acceder a todos los atributos de estilo utilizando el objeto de estilo del elemento.
+
+            // <div id="demo" styles="width:200px">some text</div>
+
+
+            var x = document.getElementById("demo");
+            x.style.color = "#6600ff";
+            x.style.width = "100px";
+            x.style.fontSize = "100px";
+
+// El código anterior cambia el color del texto y el ancho del elemento div. (tambien una que otra cosa)
+
+// Nota: Todas las propiedades de CSS se pueden configurar y modificar mediante JavaScript. Solo recuerde que no puede usar guiones (-) en los nombres de las propiedades: estos se reemplazan con versiones de camelCase, donde las palabras compuestas comienzan con una letra mayúscula.
+
+// Por ejemplo: la propiedad background-color debe denominarse backgroundColor.
+
+
+
+    </script>
+
+
+
+</body>
+</html>

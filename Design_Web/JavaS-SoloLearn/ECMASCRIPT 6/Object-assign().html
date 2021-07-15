@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object.assign()</title>
+</head>
+<body>
+
+    <script>
+
+// <!-- -------------------OBJECT.ASSIGN()------------- -->
+
+// ES6 agrega un nuevo método de objeto assign () que nos permite combinar múltiples fuentes en un objetivo para crear un único objeto nuevo.
+
+// Object.assign () también es útil para crear un duplicado de un objeto existente.
+
+// Veamos el siguiente ejemplo para ver cómo combinar objetos:
+
+        let persona = {
+            nombre: 'pedro',
+            edad: 32,
+            sex: 'female'
+        };
+
+        let student = {
+            nombre: 'bob',
+            edad: 20,
+            xp: '2'
+        };
+
+        let student2 = {
+            id: 231232,
+            tareas: 54,
+            salida: 3
+        };
+
+        
+        let newStudent = Object.assign({}, student, persona, student2);
+
+// Aquí usamos Object.assign () donde el primer parámetro es el objeto de destino al que desea aplicar nuevas propiedades.
+
+// Todos los parámetros posteriores al primero se utilizarán como fuentes para el objetivo. No hay limitaciones en la cantidad de parámetros de origen. Sin embargo, el orden es importante porque las propiedades del segundo parámetro serán reemplazadas por las propiedades del mismo nombre en el tercer parámetro, y así sucesivamente.
+
+// En el ejemplo anterior, usamos un nuevo objeto {} como destino y usamos dos objetos como fuentes.
+
+// Nota: Intente cambiar el orden de los parámetros segundo y tercero para ver qué sucede con el resultado.
+
+// -------------------ASSINGN-------------------------
+
+// Ahora, veamos cómo podemos usar assign () para crear un objeto duplicado sin crear una referencia (mutar) al objeto base.
+
+// En el siguiente ejemplo, se utilizó la asignación para intentar generar un nuevo objeto. Sin embargo, el uso de = crea una referencia al objeto base. Debido a esta referencia, los cambios destinados a un nuevo objeto mutan el objeto original:
+
+        let person = {
+            name: 'jack',
+            age: 18
+        };
+
+        let newPerson = person; //se referencia a la persona
+        newPerson.name= 'bob';
+
+        console.log(person.name); // este es bob
+        console.log(newPerson.name); // bob tambien
+
+
+// Para evitar esto (mutaciones), use Object.assign () para crear un nuevo objeto.
+// Por ejemplo:
+
+        let person2 = {
+            name2: 'jake',
+            age2: 18
+        };
+
+        let newPerson2 = Object.assign({}, person2);
+        newPerson2.name2 = 'bob';
+
+        console.log(person2.name2); //jake
+        console.log(newPerson2.name2); //bob
+
+// Finalmente, puede asignar un valor a una propiedad de objeto en la declaración Object.assign ().
+
+        let person3 = {
+            name3: 'jack',
+            age3: 18
+        };
+
+        let newPerson3 = Object.assign({}, person3, {name3:'bob'});
+        
+// -----------------------PRACTICA QUE NO PUDE RESOLVER-------------------
+
+        const obj1 = {
+    a: 0,
+    b: 2,
+    c: 4
+    };
+    const obj2 = Object.assign({c: 5, d: 6}, obj1);
+    document.write(obj2.c, obj2.d);
+
+
+
+
+
+</script>
+</body>
+</html>

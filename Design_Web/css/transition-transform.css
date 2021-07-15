@@ -1,0 +1,164 @@
+.posicionamiento,
+.transform
+{
+    color: #fff ;
+}
+
+
+.posicionamiento {
+
+/* ---------------TRANSITION------------------ */
+
+    /* Las transiciones CSS3 nos permiten cambiar de un valor de propiedad a otro durante un período determinado. */
+
+    /* transition-property: ; */
+    /* transition-property: ; especifica la propiedad a realizar la transición, en toras palabras, si un elemento tiene un ancho en su pseudoclase hover, esta transicion solo se le aplicara ese ancho, si hay otra propiedad como el tamaño de letra en el hover, esta no tendra la transicion*/
+
+    /* transition-duration: ; */
+    /* transition-duration: ;  especifica la duración durante la cual deben ocurrir las transiciones */
+
+    /* transition-timing-function: ;   */
+    /* transition-timing-function: ; especifica cómo cambia el ritmo de la transición a lo largo de su duración.
+    La propiedad de transition-timing-function: ; especifica la curva de velocidad del efecto de transición. las propiedades de este son: ease (la animación comienza lentamente y luego se acelera rápidamente.) ease-in (comienza lentamente, luego acelera y se detiene bruscamente.) ease-out (arranca rápidamente, pero desacelera hasta detenerse.) ease in out (similar a la ease, pero con una aceleración y desaceleración más fino.), linear (velocidad constante a lo largo de la animación; a menudo es mejor para cambios de color u opacidad.) y cubic-bezier() que le permite definir sus propios valores en la función cubic-bezier. Los valores posibles son valores numéricos de 0 a 1. ejemplo: transition-timing-function: cubic-bezier(0,0,1,1); */
+
+    /* transition-delay: ;  */
+    /* transition-delay: ; especifica un retraso (en segundos) para el efecto de transición */
+
+    /* En el siguiente ejemplo, configuramos la propiedad de transición para transformar, con una duración de 5 segundos y con una función de temporización de fácil entrada que especifica un efecto de transición con un inicio lento. */
+
+    /* transition: transform 5s ease-in; */
+
+
+     /* ejemplo: --> */
+
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 3s;
+}
+
+.posicionamiento:hover {
+        width: 250px;
+        font-size: 20px;
+}
+
+p{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+.transform {
+    /* ------------------------------------TRANSFORM------------------------------ */
+
+/* Las transformaciones CSS3 le permiten traducir, rotar, escalar y sesgar elementos. */
+/* Una transformación es un efecto que permite que un elemento cambie de forma, tamaño y posición. */
+
+/* CSS3 admite transformaciones 2D y 3D. Echemos un vistazo a la transformación de rotación: */
+
+/* ejemplo: */
+
+    width: 200px;
+    height: 100px;
+    margin-top: 30px;
+    background-color: blueviolet;
+    transform: rotate(20deg);
+    /* transform: ; es utilizada para trasladar, rotar, escalar y doblar elementos. */
+    /* Una transformación es un efecto que permite que un elemento cambie de forma, tamaño y posición. este utiliza la propiedad rotate y dentro de su parentesis se ponen la medida en grados para ver hacia donde rotara el elemento, si es positivo seria en sentido de las manecillas del reloj, si es negativo al contrario */
+
+}
+
+/* este es un ejemplo de como se utiliza transform origin y su uso con los traslados de posicion junto con los traslados de movimiento (movimiento osea si esta de lado, derecho, etc) */
+
+.mover{
+    position: relative;
+    height: 100px;
+    width: 100px;
+    margin: 30px;
+    padding: 10px;
+    border: 1px solid black;
+
+}
+
+.mover p {
+    padding: 50px;
+    position: absolute;
+    background-color: skyblue;
+    border: 1px solid black;
+    transform: rotate(15deg);
+    transform-origin: 100% 75%;
+
+    /* dato: 0 0 es el mismo valor que en la parte superior izquierda y 100% 100% es el mismo valor que en la parte inferior derecha. */
+
+/* -----------------------TRANSFORM ORIGIN----------------------- */
+
+/* se utiliza para poder trasladar la posicion de un elemento hacia otro lugar. el primer valor sera de arriba hacia abajo, el siguiente de derecha a izquierda */
+
+}
+
+    /* --------------------TRANSLATE--------------------------- */
+/* El método o propiedad translate() de transform mueve un elemento desde su posición actual (de acuerdo con los parámetros dados para el eje xy el eje y). Los valores positivos empujarán un elemento hacia abajo y hacia la derecha de su posición predeterminada, mientras que los valores negativos empujarán un elemento hacia arriba y hacia la izquierda de su posición predeterminada. */
+
+.traslate{
+
+    padding: 50px;
+    position: absolute;
+    background-color: slategrey;
+    transform: translate(700px, 80px);
+    /* transform: translate(); usa parametros como los pixeles, unidades de medida o porcentaje para poder mover la ubicacion del elemento, el primero sera de derecha (positivo) a izquierda (negativo), y el segundo de arriba (negativo) hacia abajo (positivo) */
+}
+
+/* -----------------------------SKEW------------------------ */
+
+/* El método skew () tuerce un elemento a lo largo del eje x y el eje y en los ángulos dados. osea lo dobla, se usan grados*/
+
+.skew{
+    padding: 50px;
+    position: absolute;
+    background-color: sandybrown;
+    transform: skew(15deg);
+    top: 100px;
+    right: 100px;
+}
+
+/* ---------------------SCALE---------------------- */
+
+/* El método scale () aumenta o disminuye el tamaño de un elemento, de acuerdo con los parámetros dados para el ancho y el alto. 1 representa el tamaño original, 2 el doble del tamaño original, etc. scale funciona ocmo si fuera un proyector de imagenes, mientras mas pequeño sea el tamaño, mas se acercara al final del ancho de su tamaño,  mientras mas crezca mas lejos ira hacia el lado contrario, en este caso el cuadro mientras menos tamaño tenga se ira yendo a la partes inferior derecha, y mientras mas tamaño tenga, ira cada vez mas llegando a la parte superior izquierda*/
+
+
+.scale1 {
+    width: 200px;
+    height: 100px;
+    background-color: violet;
+    transform: scale(0.9, 0.9);
+    color: white;
+    transform-origin: 300%;
+
+
+}
+
+.scale2{
+    margin:60px;
+    width: 200px;
+    height: 100px;
+    background-color: teal;
+    transform: scale(1.7, 1.7);
+    color: white;
+    transform-origin: -240%;
+}
+
+/* -------------------------MULTIPLETRANSFORM--------------------------- */
+
+/* Se pueden usar múltiples transformaciones a la vez. Rotar y escalar el tamaño de un elemento al mismo tiempo es un ejemplo de eso. */
+/* Aplicar múltiples transformaciones a un elemento es simple; simplemente sepárelos usando espacios. el ejemplo debajo podemos ver que en un transform podemos usar tanto un rotate como un translate */
+
+.multiple{
+    margin:60px;
+    width: 200px;
+    height: 100px;
+    background-color: seagreen;
+    color: white;
+    transform: rotate(45deg) translate(100px);
+
+}

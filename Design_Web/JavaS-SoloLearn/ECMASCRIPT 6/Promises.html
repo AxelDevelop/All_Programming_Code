@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promesas ES6</title>
+</head>
+<body>
+    <div id="myContent"></div>
+    <button id="btn">Presionar</button>
+
+    <div id="myContent1"></div>
+    <button id="btn1">Presionar con Promise</button>
+    
+    <script>
+
+// -----------------------PROMISES ES6--------------------------
+
+// Una Promise es una mejor forma de programación asincrónica en comparación con la forma común de usar un método de tipo setTimeout ().
+
+// ejemplo
+
+    setTimeout(function(){
+        console.log("work 1");
+        setTimeout(function(){
+            console.log("work 2");
+        },1000);
+    }, 1000);
+    console.log("End");
+
+// Imprime "Fin", "Trabajo 1" y "Trabajo 2" en ese orden (el trabajo se realiza de forma asincrónica). Pero si hay más eventos como este, el código se vuelve muy complejo.
+
+// ES6 viene al rescate en tales situaciones. Se puede crear una promesa de la siguiente manera:
+
+
+    // new Promise (function(resolve, reject){
+    //     //trabajar
+    //     if (succes)
+    //     resolve(resultado);
+        
+    //     else 
+    //     reject(Error("Failure"));
+    // });
+
+// Aquí, "resolve" es el método para el éxito y "reject" es el método para el fracaso.
+
+// Si un método devuelve una promesa, sus llamadas deben usar el método then", que toma dos métodos como entrada; uno para el éxito y el otro para el fracaso.
+
+// Por ejemplo:
+
+
+    function asyncFunc(work){
+        return new Promise (function(resolve,reject){
+            if (work === ""){
+                reject(Error("Nothing"));
+            }
+            else{
+                setTimeout(function() {
+                resolve(work);
+            }, 1000);
+            }
+        })
+    }
+
+    asyncFunc("work 1") //tarea 1
+
+    .then(function(resultado){
+        console.log(resultado);
+        return asyncFunc("work 2"); //tarea 2
+    }, function(error){
+        console.log(error);
+    })
+    
+    .then(function(resultado){
+        console.log(resultado);
+    }, function(error){
+        console.log(error);
+    });
+    console.log("End");
+
+
+
+// También imprime "Fin", "Trabajo 1" y "Trabajo 2" (el trabajo se realiza de forma asincrónica). Pero, esto es claramente más legible que el ejemplo anterior y en situaciones más complejas es más fácil trabajar con él.
+
+
+// ---------------------------------EJEMPLO DE UNA OPERACION SINCRONICA SIN PROMISE---------------------
+
+        var btn = document.querySelector("#btn"),
+        texto = document.querySelector("#myContent");
+
+        const setText = data =>{
+            texto.textContent = data;
+        }
+
+        const obtenerData = llamada =>{
+            setText("solicitando informacion");
+            setTimeout(()=>{
+                llamada(true);
+            }, 1000)
+        }
+        
+        const mostrarData = llamada =>{
+            setText('esperando a mostrar la informacion');
+            setTimeout(()=>{
+                llamada({name: 'james'});
+            }, 1000)
+        }
+
+        btn.addEventListener('click', () =>  {
+            obtenerData(autorizacion =>{
+                if (autorizacion){
+                    mostrarData(usuario =>{
+                        setText(usuario.name)
+                    })
+                }
+            })
+        });
+
+        // ---------------------------EJEMPLO CON PROMISE-------------------------
+
+        var btn1 = document.querySelector("#btn1"),
+        texto1 = document.querySelector("#myContent1");
+
+        const setText1 = data1 =>{
+            console.log(data1);
+        }
+
+        const obtenerData1 = llamada1 =>{
+            return new Promise(function (resuelto, fallido) {
+            setText1("solicitando informacion");
+            setTimeout(()=>{
+                resuelto(true);
+            }, 1000)
+            })
+
+        }
+        
+        const mostrarData1 = () =>{
+            return new Promise(function (resuelto, fallido) {
+            setText1('esperando a mostrar la informacion');
+            setTimeout(()=>{
+                resuelto({name: 'james'});
+            }, 1000)
+            })
+        }
+
+        btn1.addEventListener('click', async () =>  {
+            let usuario = null
+            const autorizacion1 = await obtenerData1()
+                if (autorizacion1){
+                    usuario = await mostrarData1()
+                    setText1(usuario.name)
+                    }
+                })
+        
+
+    </script>
+</body>
+</html>

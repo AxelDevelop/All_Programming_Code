@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos de Datos</title>
+</head>
+<body>
+    <style>
+
+        div{
+            width: 200px;
+            border-radius: 20px;
+            border: 1px solid #121212;
+            font-size: 2em;
+            text-align: center;
+            color: #fff;
+            font-weight: 800;
+            background-color: #5a5a5a;
+        }
+
+    </style>
+    <div id="demo"></div> 
+
+    <script>
+
+// -------------------------SET INTERVAL--------------------
+
+// El método setInterval () llama a una función o evalúa una expresión a intervalos específicos (en milisegundos).
+
+// Continuará llamando a la función hasta que se llame a clearInterval () o se cierre la ventana.
+
+// un ejemplo seria como esto:
+
+    function myAlert(){
+        alert("HI");
+
+    }
+    //    setInterval(myAlert, 3000);
+
+        // Esto llamará a la función myAlert cada 3 segundos (1000 ms = 1 segundo).
+
+// Nota: Escriba el nombre de la función sin paréntesis al pasarlo al método setInterval.
+
+// ------------------------EL OBJETO DATE---------------------
+
+// El objeto Date nos permite trabajar con fechas.
+
+// Un date consta de un año, un mes, un día, una hora, un minuto, un segundo y milisegundos.
+
+// Usando new Date (), cree un nuevo objeto de fecha con la fecha y hora actuales
+
+    // var d = new Date();
+    // la variable d almacenara la fecha y tiempo actuales.
+
+// Las otras formas de inicializar fechas permiten la creación de nuevos objetos de fecha a partir de la fecha y hora especificadas.
+
+    // algo asi:
+
+    var datos = new Date();
+    var hora = datos.getFullYear();
+    document.write(hora);
+    // new Date(dateString)
+    // new Date(year, month, day, hours, minutes, seconds, milliseconds)
+
+    // estos son los datos que puede almacenar el objeto Date
+
+// Nota: Las fechas de JavaScript se calculan en milisegundos desde el 1 de enero de 1970 a las 00:00:00, hora universal (UTC). Un día contiene 86,400,000 milisegundos.
+
+    ////Fri Jan 02 1970 00:00:00
+    //var d1 = new Date(86400000); 
+
+    ////Fri Jan 02 2015 10:42:00
+    //var d2 = new Date("January 2, 2015 10:42:00");
+
+    ////Sat Jun 11 1988 11:42:00
+    //var d3 = new Date(88,5,11,11,42,0,0);
+
+// Nota: JavaScript cuenta los meses del 0 al 11. Enero es 0 y diciembre es 11.
+
+// Los objetos de fecha son estáticos, en lugar de dinámicos. El tiempo de la computadora avanza, pero los objetos de fecha no cambian, una vez creados.
+
+// ------------------------------OBJETOS DATE------------------------
+
+// Cuando se crea un objeto Date, varios métodos permiten realizar operaciones en él.
+
+
+//        Metodo:                         Descripcion:
+//
+//        getFullYear()                   Obtiene el año.
+//
+//        getMonth()                      Obtiene los meses.
+//
+//        getDate()                       Obtiene los dias del mes.
+//
+//        getDay()                        Obtiene los dias de la semana.
+//
+//        getHours()                      Obtiene las horas.
+//
+//        getMinutes()                    Obtiene los minutos.
+//
+//        getSeconds()                    Obtiene los segundos.
+//
+//        getMilliSeconds()               Obtiene los milisegundos
+
+
+    // Por ejemplo:
+
+    // var d = new Date();
+    // var horas = d.getHours();
+    // //horas seria igua a las horas actualmente
+    // document.write(horas);
+
+// -----------------------------------------------------------------------------
+
+    // Creemos un programa que imprima la hora actual en el navegador una vez por segundo.
+
+    function printTime (){
+        var date = new Date ();
+        var hours = date.getHours();
+        var mins = date.getMinutes();
+        var secs = date.getSeconds();
+        document.getElementById("demo").innerHTML = hours+":"+mins+":"+secs;
+        
+    }
+
+    var intervalo = setInterval(printTime, 1000);
+    
+
+// Declaramos una función printTime (), que obtiene la hora actual del objeto de fecha y la imprime en la pantalla.
+
+// Luego llamamos a la función una vez por segundo, usando el método setInterval.
+
+
+// ---------------------------INNERHTML-------------------------
+
+// La propiedad innerHTML establece o devuelve el contenido HTML de un elemento.
+
+// En nuestro caso, estamos cambiando el contenido HTML del cuerpo de nuestro documento. Esto sobrescribe el contenido cada segundo, en lugar de imprimirlo repetidamente en la pantalla.
+
+    
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iteradores y generadores.</title>
+</head>
+<body>
+
+    <script>
+
+// ----------------------ITERATORS & GENERATORS-----------------------
+
+// Symbol.iterator es el iterador predeterminado para un objeto. Los bucles for ...of se basan en este tipo de iterador.
+
+// En el siguiente ejemplo, veremos cómo debemos implementarlo y cómo se utilizan las funciones del generador.
+
+    // let myIterableObj = {
+    //     [Symbol.iterator] : function * (){
+    //         yield 1; yield 2; yield 3;
+    //         ...
+
+    //         console.log({...myIterableObj});
+        
+// En la segunda línea del código, usamos un * con la palabra clave de función. Se llama función generadora (o función gen).
+
+// Por ejemplo, aquí hay un caso simple de cómo las funciones gen pueden ser útiles:
+
+        function* idMarket(){
+            let index = 0;
+            while (index < 5){
+                yield index++;
+            }
+        }
+        var gen = idMarket();
+        console.log(gen.next().value);
+        
+// Podemos salir y volver a ingresar a las funciones del generador más tarde. Sus enlaces de variables (contexto) se guardarán en las reentradas. Son una herramienta muy poderosa para la programación asincrónica, especialmente cuando se combinan con Promises. También pueden resultar útiles para crear bucles con requisitos especiales.
+
+// Podemos anidar funciones generadoras unas dentro de otras para crear estructuras más complejas y pasarles argumentos mientras las llamamos.
+
+// El siguiente ejemplo mostrará un caso útil de cómo podemos usar funciones generadoras y Symbol.iterators juntos.
+        
+// por ejemplo:
+
+            const arr = ['0', '1', '4','5','6','3','9'];
+            const my_obj = {
+                [Symbol.iterator]: function* (){
+                    for(let index of arr){
+                        yield `${index}`;
+                    }
+                }
+            };
+            const all = [...my_obj]
+            .map(i => parseInt(i, 10))
+            .map(Math.sqrt)
+            .filter((i) => 1 < 5)
+            .reduce((i, d) => 1 + 10);
+            console.log(all);
+
+// Creamos un objeto de 7 elementos usando Symbol.iterator y funciones generadoras. En la segunda parte, asignamos nuestro objeto a un todo constante. Al final, imprimimos su valor.
+
+    </script>
+    
+</body>
+</html>

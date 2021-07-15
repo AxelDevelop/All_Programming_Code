@@ -1,0 +1,46 @@
+// sass tambien nos permite importar archivos desde multiples lugares con la palabra clave "import" utilizandola de esta manera:
+
+@import url('https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap');
+@import '_variables';
+// tambien podemos añadirles mas imports como vemos aqui.
+
+
+// Las variables se crean de esta manera:
+
+$color:#212121;
+$morado: #543356;
+
+// esta es la forma en la cual se usa scss, osea, la forma de sintaxys la cual es usada es implementada como si fuera una jerarquia, de la siguiente manera:
+
+body{
+    background: $color1;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+    .contenedor{
+        border-radius: 20px;
+        background-color: aliceblue;
+        padding: 10px;
+        width: 20%;
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: capitalize;
+        span{
+            font-weight: 600;
+            font-size: 50px;
+            font-family: 'Odibee Sans', cursive;
+            letter-spacing: 5px;
+            transition: 0.5s ease;
+        }
+        // si queremos añadir estados como por ejemplo el "hover" no tenemos que llamar denuevo a nuestro selector, sino solo usar la letra clave "&" y esta instantaneamente nos añadira el hover o pseudoelemento o peseudoclase a alguna otra cosa que se refiera al mismo selector que esta en esa misma rama o dentro de las llaves en este caso del selector.
+        transition: 0.5s ease;
+        &:hover{
+            background: $morado;
+            transition: 0.5s ease;
+        }
+    }
+}
+

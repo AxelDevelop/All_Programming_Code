@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Funciones</title>
+	<!--las funciones son fragmentos de codigos que podemos reutilizar cuantas veces nosotros queramos, lo que entendi es que una funcion es un conjunto de comandos o reglas o lo que sea, que puede ser utilizado para una funcion en especifico.-->
+</head>
+<body>
+	<script>
+
+// ------------------------------------EJEMPLO 1-----------------------------
+
+			//una funcion nos permite utilizar un codigo cuantas veces queramos, se le agregan parametros si quieres. para que este funcione debe ser llamado desde fuera. o llamado por su condicion. en este caso el parametro o condicion es "nombre" ya que presentara un saludo con el nombre de la persona, entonces pondremos que si nombre es igual a el nombre del usuario este se le dara un "hola" como esta escrito, como dice abajo saludo con la condicion "arturo" que ya intercambiaria arriba con el saludo de la function, leelo bien.
+
+		//function saludo(nombre)
+
+		//{
+
+			//document.write("Hola " + nombre);
+			//intrucciones
+		//}
+
+		//saludo("Arturo");
+
+
+// ------------------------------------EJEMPLO 2---------------------------------------
+
+		// explicado es que la funcion consta de sumar, en la condicion estan las variables numero1 y numero2, entonces en las instrucciones indican dos variables que son que numero 1 y 2 seran iguales a las variables de la condicion, segun abajo, return tomara la suma o la ecuacion o lo que sea y lo regresara a la condicion la cual es "suma" la cual tiene un valor de 10 y 20 (10 sera numero 1 y 20 el numero 2) y segun este valor se cumplira las instrucciones
+
+		//var suma = function (numero1, numero2){
+
+		//var numero1 = numero1;
+		//var numero2 = numero2;
+
+		//return numero1 + numero2;
+
+		//return es una sentencia que nos permite regresar un valor hacia la funcion, aqui lo regresa a "suma"
+
+		//}
+
+		// document.write(suma(10,20) );
+
+		// document.write( "<br>" );
+
+		// document.write(suma(90,39) );
+
+		// este es un ejemplo de como reutilizar el codigo, aqui escribimos otra suma para que la funcion se tome la otra suma, de esta forma reutilizamos el codigo (arriba por si acaso)
+
+// ---------------------------------EJEMPLO 3------------------------------
+
+		function numeroMaximo(valor1, valor2){
+		if (valor1 > valor2) {
+			return valor1;
+
+		}
+			return valor2;
+		
+	}
+
+		document.write("El numero maximo es: " + numeroMaximo(1,7));
+
+		//numeroMaximo(10,20);
+
+		// creo que ya entendiste un poco supongo, si leiste lo de arriba claro esta, pero en fin, la funcion tiene un nombre (el cual se le pone con simplemente añadirselo al lado) el cual tambien esta la condicion valor1 y valor2, las instrucciones dicen que si valor1 es igual a valor2, este retornara a el nombre de la funcion y se escribira por el document.write, y si este no se cumple se cumplira el retorno de valor2, fuera, esta el parametro que dice que numeroMaximo tiene como valores el 1 y el 7, para que entiendas significa que si valor1 es mayor al valor 2 este retornara hacia el numero maximo y asi el numero maximo sera igual al numero mayor, pero si no el valor2 sera el numero mayor, osea XD, matematicas de progra, verga mas complicada XD. para convertir la funcion en una variable lo pones delante, para asi poder usarla facilmente o llamarla.
+
+
+
+
+	// DATOS: una variable global no puede ser accedida fuera de la funcion
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

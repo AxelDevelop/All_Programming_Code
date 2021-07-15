@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajas emergentes</title>
+</head>
+<body>
+    
+    <script>
+
+// -----------------------CAJAS EMERGENTES--------------
+
+// JavaScript ofrece tres tipos de cuadros emergentes, los cuadros Alert, prompt y Confirm.
+
+// ------------------------ALERT------------------
+
+// alert se utiliza para crear cajas de mensajes de texto, como alertas, para poner dentro un espaciado o salto de linea le añadimos \n dentro del texto.
+
+
+
+alert("mensaje de aviso");
+
+// Nota: Tenga cuidado al usar cuadros de alerta, ya que el usuario puede continuar usando la página solo después de hacer clic en Aceptar.
+
+// ----------------------PROMPT-------------------
+
+// A menudo se usa un cuadro de aviso para que el usuario ingrese un valor antes de ingresar a una página.
+
+// Cuando aparece un cuadro de aviso, el usuario tendrá que hacer clic en Aceptar o Cancelar para continuar después de ingresar el valor de entrada.
+
+// Si el usuario hace clic en Ok, el cuadro devuelve el valor de entrada. Si el usuario hace clic en Cancelar, el cuadro devuelve nulo.
+
+// El método prompt () toma dos parámetros.
+// - La primera es la etiqueta, que desea mostrar en el cuadro de texto.
+// - La segunda es una cadena predeterminada para mostrar en el cuadro de texto (opcional).
+
+// ejemplo:
+
+        var user = prompt("por favor introduzca su nombre");
+        alert(user);
+
+
+// Nota: Cuando aparece un cuadro de aviso, el usuario tendrá que hacer clic en "Aceptar" o "Cancelar" para continuar después de ingresar un valor de entrada. No abuse de este método, ya que evita que el usuario acceda a otras partes de la página hasta que se cierre el cuadro.
+
+// ----------------------CONFIRM---------------------
+
+// Un cuadro de confirmación se usa a menudo para que el usuario verifique o acepte algo.
+
+// Cuando aparece un cuadro de confirmación, el usuario debe hacer clic en Aceptar o Cancelar para continuar.
+
+// Si el usuario hace clic en Aceptar, el cuadro devuelve verdadero. Si el usuario hace clic en Cancelar, el cuadro devuelve falso.
+
+        var result = confirm("tu en realidad deseas entrar a esta pagina?");
+
+        if (result == true){
+            alert( "gracias for visitarnos");
+            
+        }
+
+        else{
+            alert("¿porque?");
+        }
+
+// Nota: No abuse de este método, porque también evita que el usuario acceda a otras partes de la página hasta que se cierre el cuadro.
+
+    </script>
+
+
+</body>
+</html>

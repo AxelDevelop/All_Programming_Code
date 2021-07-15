@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modulos</title>
+</head>
+<body>
+
+    <script>
+
+// --------------------MODULES-------------------------
+
+// Es una buena práctica dividir el código relacionado en módulos. Antes de ES6, había algunas bibliotecas que lo hacían posible (por ejemplo, RequireJS, CommonJS). ES6 ahora admite esta función de forma nativa.
+
+// Consideraciones al usar módulos:
+// La primera consideración es la mantenibilidad. Un módulo es independiente de otros módulos, lo que permite realizar mejoras y ampliaciones sin depender del código de otros módulos.
+
+// La segunda consideración es el espacio de nombres. En una lección anterior, hablamos sobre variables y alcance. Como sabe, las vars se declaran globalmente, por lo que es común tener contaminación del espacio de nombres donde se puede acceder a variables no relacionadas en todo nuestro código. Los módulos resuelven este problema creando un espacio privado para variables.
+
+// Otra consideración importante es la reutilización. Cuando escribimos código que se puede usar en otros proyectos, los módulos permiten reutilizar fácilmente el código sin tener que reescribirlo en un nuevo proyecto.
+
+// Veamos cómo deberíamos usar módulos en archivos JS.
+
+// por ejemplo:
+
+        //la libreria seria math.js
+        export let sum = (x,y) => {
+            return x + y
+        };
+        export let pi = 3.14;
+
+        // app.js 
+        import * as math from "lib/math"
+        console.log(`2p = + ${math.sum(math.pi, math.pi)}`)
+
+// Aquí estamos exportando la función de suma y la variable pi para que podamos usarlas en diferentes archivos.
+
+//Nota: ES6 supports modules officially, however, some browsers are not supporting modules natively yet. So, we should use bundlers (builders) such as Webpack or Browserify to run our code.
+
+    </script>
+
+</body>
+</html>

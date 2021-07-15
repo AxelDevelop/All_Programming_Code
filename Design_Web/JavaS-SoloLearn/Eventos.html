@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    <style>
+        .cuadro{
+            background:none;
+            height: 100px;
+            width: 100px;
+            position: relative;
+            border-radius: 10px;
+            border: 2px solid #0A0E14;
+            top: 25px;
+            margin: 1em auto;
+            transition: transform 2s ease-in-out;
+
+        }
+
+        .prueba{
+            transform: translate3D(-10px, -10px, 10px);
+            transition: transform 2s ease-in-out;
+    }
+
+    .prueba2{
+            transform: translate3D(-10px, -10px, 10px);
+            transition: transform 2s ease-in-out;
+    }
+
+    .prueba3{
+            transform: translate3D(-10px, -10px, 10px);
+            transition: transform 2s ease-in-out;
+    }
+    </style>
+
+    <button onclick="show()">
+        click me
+    </button>
+
+    <button id="demo">
+        hola
+    </button>
+
+    <div id="demo2">
+    </div>
+
+    
+    <div class="cuadro" id="prueba" onmouseover="prueba()">
+    </div>
+
+    <script>
+
+// -------------------------EVENTS-------------------
+
+// Puede escribir código JavaScript que se ejecute cuando ocurre un evento, como cuando un usuario hace clic en un elemento HTML, mueve el mouse o envía un formulario.
+
+// Cuando ocurre un evento en un elemento de destino, se ejecuta una función de controlador.
+
+// Los eventos HTML comunes incluyen:
+
+
+
+// onclick: 
+
+// ocurre cuando el usuario hace clic en un elemento.
+
+// onload: 
+
+// ocurre cuando un objeto se ha cargado.
+
+// onunload: 
+
+// ocurre una vez que se ha descargado una página (para <body>).
+
+// onchange: 
+
+// ocurre cuando el contenido de un elemento de formulario, la selección o el estado marcado han cambiado (para <input>, <keygen>, <select> y <textarea>).
+
+// onmouseover:
+
+// ocurre cuando el puntero se mueve sobre un elemento o sobre uno de sus hijos.
+
+// onmouseout: 
+
+// ocurre cuando un usuario mueve el puntero del mouse fuera de un elemento, o fuera de uno de sus elementos secundarios.
+
+// onmousedown: 
+
+// ocurre cuando el usuario presiona un botón del mouse sobre un elemento.
+
+// onmouseup: 
+
+// ocurre cuando el usuario suelta un botón del mouse sobre un elemento.
+
+// onblur: 
+
+// ocurre cuando un elemento pierde el foco.
+
+// onfocus: 
+
+// ocurre cuando un elemento se enfoca.
+
+
+// Nota: Los eventos correspondientes se pueden agregar a los elementos HTML como atributos.
+
+// ejemplos:
+
+// ejemplo1:
+
+    function show(){
+        alert("hi there");
+    }
+
+// ejemplo2
+
+    var x = document.getElementById("demo");
+    x.onclick = function (){
+        var tiempo = new Date ();
+        var horas =  tiempo.getSeconds();
+        document.getElementById('demo2').innerHTML = horas;
+    }
+
+// ejemplo3:
+
+    var var1 = document.getElementById('prueba');
+
+    function prueba () {
+        var1.classList.toggle("prueba");
+    }
+
+    </script>
+    
+</body>
+</html>

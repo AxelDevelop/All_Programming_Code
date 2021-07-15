@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <title>Establecer el contenido</title>
+</head>
+<body>
+    <div id="test">
+        <p>some text</p>
+     </div>
+
+    <script>
+
+// -----------------SET CONTENT---------------------
+
+// Se pueden utilizar los mismos métodos html () y text () para cambiar el contenido de los elementos HTML.
+
+// El contenido que se va a configurar se proporciona como parámetro del método, por ejemplo:
+
+        $(function(){
+            $("#test").text("hello");
+        });
+
+// El código anterior cambia el contenido del elemento con id = "test" a "hello!".
+
+// Si el contenido que está configurando contiene marcado HTML, debe usar el método html () en lugar de text ().
+
+        // por ejemplo:
+
+        $(function() {
+            $("#demo").html("<b>Hi</b>");
+        });
+
+    </script>
+
+
+</body>
+</html>

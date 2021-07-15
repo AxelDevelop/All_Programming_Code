@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <title>DROP-DOWN MENU</title>
+</head>
+<body>
+
+    <div class="menu">
+        <li>
+        <div id="item">Drop-Down</div>
+        </li>
+            <ul>
+                <div id="submenu">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+                </div>
+            </ul>
+    </div>
+
+    <script>
+
+// --------------------DROP-DOWN MENU---------------------
+
+// Creemos un menú desplegable simple que se abrirá al hacer clic en el elemento del menú.
+
+        $("#item").click(function(){
+            $("#submenu").slideToggle(500);
+        });
+
+// El código anterior maneja el evento click del elemento id = "item" y abre / cierra el submenú en 500 milisegundos.
+
+// Ejecute el código para verlo en acción. También puede consultar el CSS utilizado para diseñar los elementos.
+
+
+    </script>
+
+</body>
+</html>

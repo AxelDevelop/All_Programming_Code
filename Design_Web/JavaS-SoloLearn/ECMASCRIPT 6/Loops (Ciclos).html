@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclos en ECMAScript</title>
+</head>
+<body>
+    <button onclick="clearConsole()">clear terminal</button>
+    <button onclick="iteradorNormal()">Iterador</button>
+    <button onclick="_in_()">IN</button>
+    <button onclick="_of_()">OF</button>
+    <button onclick="_of2_()">OF2</button>
+    <button onclick="_in2_()">IN2</button>
+
+    <script>
+
+        const clearConsole = () => {
+            console.clear();
+        }
+
+// ------------------LOOPS IN ECMAScript------------------------
+
+// En JavaScript, comúnmente usamos el bucle for para iterar sobre los valores en una lista:
+    const iteradorNormal = () => {
+        let arr = [1,2,3];
+        for(let k = 0; k < arr.length; k++){
+            console.log(arr[k]);
+        }
+    }
+
+// ---------------------FOR...IN-----------------------
+
+// En ECMAScript, el bucle for ... in está diseñado para iterar sobre las claves enumerables de un objeto.
+
+// por ejemplo
+
+    const _in_ = () => {
+        let obj = {a: 1, b: 2, c: 3};
+        for (let v in obj){
+            console.log(v);
+        }
+    }
+
+// El bucle for ... in NO debe usarse para iterar sobre matrices porque, dependiendo del motor de JavaScript, podría iterar en un orden arbitrario. Además, la variable iterativa es una cadena, no un número, por lo que si intenta hacer algún cálculo con la variable, estará realizando una concatenación de cadenas en lugar de una suma.
+
+// -------------------FOR...OF-----------------------
+
+// ES6 introduce el nuevo bucle for ... of, que crea un bucle que itera sobre objetos iterables.
+
+// por ejemplo: 
+
+    const _of_ = () => {
+        let list = ["x", "y", "z"];
+        for(let val of list){
+        console.log(val);
+        }
+    }
+
+// El bucle for ... of también funciona para otros objetos iterables, incluidas las cadenas
+
+// por ejemplo:
+
+    const _of2_ = () => {
+        for(let ch of "hello"){
+            console.log(ch);
+        }
+
+    }
+
+// Nota: El bucle for ... of también funciona en las colecciones recién introducidas (Map, Set, WeakMap y WeakSet). Aprenderemos sobre ellos en las próximas lecciones.
+
+// Tenga en cuenta que el código ES6 solo se ejecutará en navegadores que lo admitan. Los dispositivos y navegadores más antiguos que no son compatibles con ES6 devolverán un error de sintaxis.
+
+// Dato curioso: ECMAScript es una especificación de lenguaje de programación publicada por ECMA International. El desarrollo empezó en 1996 y estuvo basado en el popular lenguaje JavaScript propuesto como estándar por Netscape Communications Corporation. Actualmente está aceptado como el estándar ISO/IEC 22275:2018.
+
+    const _IN2_ = () => {
+        var raiz = [1,2,3,4,5];
+
+        for (var json in raiz){
+            console.log(json);
+        }
+    }
+
+
+    </script>
+    
+</body>
+</html>

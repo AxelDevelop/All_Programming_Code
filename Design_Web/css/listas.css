@@ -1,0 +1,24 @@
+ul
+/* con el simbolo > podremos señalar las etiquetas o comandos que esten dentro de otras que sean la misma etiqueta */
+{
+	list-style-type: circle;
+	/*con la propiedad list-style-type:; nosotros podemos decirle que tipo de estilo queremos que tenga lo que clasifica cada elemento en la lista, como en forma de cuadrado, circulo o circulo lleno, square, disc, circle.*/
+
+	list-style-position:inside;
+	/* con list-style-position podemos indicar la posicion de la lista, con este usamos dos valores: inside (que le da un espaciado a la lista) y outside (que lo pone con el valor por defecto*/
+
+
+}
+ol {
+	list-style-type: upper-latin;
+	/* upper-latin se usa para contar por si acaso */
+	/* la propiedad list-style-type:; al añadirle el decimal-leading-zero hace que las listas con numeros tengan un cero al lado*/
+	/*si quitamos el decimal-leading-zero y agregamos upper-latin le agrega letras en vez de numeros, si queremos cambiar las letras de mayusculas a minusculas se cambiara upper por  lower*/
+
+	/* list-style-image: ; */
+	/* list-style-image: ; especifica una imagen para usarse como marcador de una lista, osea, cambia los numeros o letras o circulos que ordenan una lista por alguna imagen */
+
+	list-style: square outside none;
+	/* list-style: ; es la convinacion de list-style-type: ; list-style-position: ; y list-style-image: ; para asi solo poner los tres valores o propiedades en  unsa sola */
+
+}

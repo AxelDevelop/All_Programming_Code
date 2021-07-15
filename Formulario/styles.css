@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Open+Sans+Condensed:wght@300&display=swap");
+
+:root {
+  --letra1: "Open Sans Condensed", sans-serif;
+  --letra2: "Nunito", sans-serif;
+  --color1: linear-gradient(to right, #accbee 0%, #e7f0fd 100%);
+  --degradado1: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  --btn: linear-gradient(to right, #6a85b6 0%, #bac8e0 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--letra2);
+  background: var(--color1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form {
+  background-image: var(--degradado1);
+  width: 40%;
+  height: auto;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 2px;
+  text-align: center;
+  text-transform: capitalize;
+  box-shadow: 5px 5px 5px #12121249;
+  transition: 2s ease;
+}
+
+form:hover {
+  transform: translate3d(12px, 12px, 0);
+  box-shadow: none;
+  transition: 2s ease;
+}
+
+form h2,
+input {
+  display: block;
+  padding: 10px;
+  margin: 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #e0c3fc;
+  outline: none;
+  transition: 2s ease;
+  text-transform: capitalize;
+}
+
+h2:hover,
+input:hover {
+  border-bottom: 2px solid #e0c3fc00;
+  transition: 2s ease;
+}
+
+form .form-info h2 {
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.form-info input {
+  text-transform: none;
+  width: 70%;
+}
+
+.form-info input::placeholder {
+  color: #aabfe2;
+  text-align: left;
+}
+
+.btn-container{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 50px;
+  margin: 20px;
+}
+
+button {
+  border: transparent;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #12121249;
+  font-size: 0.9em;
+  text-transform: capitalize;
+  font-weight: 600;
+  padding: 10px;
+  width: 20%;
+  transition: 2s ease;
+  outline: none;
+  width: 100px;
+}
+
+button:hover {
+  transform: translate3d(5px, 5px, 0);
+  box-shadow: none;
+  transition: 2s ease;
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleccion de elementos</title>
+</head>
+<body>
+        <h1 id="demo"></h1>
+        <h2 class="demo"></h1>
+        <h3 class="demo"></h1>
+        <h4 class="demo"></h1>
+
+        <p>hi</p>
+        <p>hello</p>
+        <p>hi</p>
+
+        <p class="cambio">hi</p>
+        <p class="cambio">hello</p>
+        <p class="cambio">hi</p>
+
+        <div id="nodo">
+                <div id="nodo2">Primer nodo</div>
+                <div>segundo nodo</div>
+                <div>tercer nodo</div>
+        </div>
+
+    <script>
+
+// -----------------------SELECCION DE ELEMENTOS-------------------
+
+// Todos los elementos HTML son objetos. Y como sabemos, todo objeto tiene propiedades y métodos.
+
+// El objeto de documento tiene métodos que le permiten seleccionar el elemento HTML deseado.
+
+// Estos tres métodos son los más utilizados para seleccionar elementos HTML:
+
+// Buscar elementos por su ID:
+
+        // document.getElementById(id_del_elemento);
+
+// Buscar elementos por su nombre de clase:
+
+        // document.getElementsByClassName(nombre_de_la_clase);
+
+// Buscar elementos por el nombre de su etiqueta:
+
+        // document.getElementsByName(nombre_de_la_etiqueta);
+
+// ---------------------getElementById--------------------------
+
+// En el siguiente ejemplo, el método getElementById se usa para seleccionar el elemento con id = "demo" y cambiar su contenido:
+
+        var element = document.getElementById("demo");
+        element.innerHTML = "hello word";
+
+// El ejemplo anterior asume que el HTML contiene un elemento con id = "demo", por ejemplo <div id = "demo"> </div>.
+
+// -------------------------getElementsByClassName---------------------
+
+// El método getElementsByClassName () devuelve una colección de todos los elementos del documento con el nombre de clase especificado.
+
+// Por ejemplo, si nuestra página HTML contiene tres elementos con class = "demo", el siguiente código devolvería todos esos elementos como una matriz:
+
+        var arr = document.getElementsByClassName("demo");
+
+        // ahora accederemos al segundo elemento:
+        arr[0].innerHTML = "hi";
+        arr[1].innerHTML = "how are you";
+        arr[2].innerHTML = "it´s fine";
+
+
+// ----------------------GETELEMENTBYTAGNAME-----------------------
+
+// De manera similar, el método getElementsByTagName devuelve todos los elementos del nombre de etiqueta especificado como una matriz.
+
+// El siguiente ejemplo obtiene todos los elementos de párrafo de la página y cambia su contenido:
+
+// en html:
+        // <p>hi</p>
+        // <p>hello</p>
+        // <p>hi</p>
+
+// en JS:
+
+        var arre = document.getElementsByTagName("p");
+
+
+        for (var x = 0; x < arr.length; x++) {
+        arre[x].innerHTML = "HOLAAA";
+        }
+
+
+// El script dará como resultado el siguiente HTML:
+
+    // <p>Hi there</p>
+    // <p>Hi there</p>
+    // <p>Hi there</p>
+
+// el  otro script dara resultado "wenas" en cada uno de los p con la clase cambio
+
+// Nota: Usamos la propiedad length de la matriz para recorrer todos los elementos seleccionados en el ejemplo anterior.
+
+// --------------------TRABAJANDO CON EL DOM---------------------------
+
+// Cada elemento del DOM tiene un conjunto de propiedades y métodos que proporcionan información sobre sus relaciones en el DOM:
+
+// element.childNodes devuelve una matriz de los nodos secundarios de un elemento.
+
+        var x = document.getElementById("nodo").childNodes;
+        console.log(x);
+
+// element.firstChild devuelve el primer nodo hijo de un elemento.
+
+var a = document.getElementById("nodo").firstElementChild;
+        console.log(a);
+
+// element.lastChild devuelve el último nodo hijo de un elemento.
+
+var b = document.getElementById("nodo").lastElementChild;
+        console.log(b);
+
+// element.hasChildNodes() devuelve verdadero si un elemento tiene nodos secundarios; de lo contrario, es falso.
+
+var c = document.getElementById("nodo").hasChildNodes();
+        console.log(c);
+
+// element.nextSibling devuelve el siguiente nodo en el mismo nivel de árbol.
+
+var d = document.getElementById("nodo2").nextElementSibling;
+        console.log(d);
+
+// element.previousSibling devuelve el nodo anterior en el mismo nivel de árbol.
+
+var e = document.getElementById("nodo").previousElementSibling;
+        console.log(e);
+
+// element.parentNode devuelve el nodo padre de un elemento.
+
+var f = document.getElementById("nodo2").parentNode;
+        console.log(f);
+
+// Nota: para que los selectores de nodo no nos devuelvan los espacios en blanco (#text) en el arbol del documento, añadimos la palabra Element(s) para que solo nos tome los elementos y no los espacios en blanco
+
+    </script>
+    
+</body>
+</html>

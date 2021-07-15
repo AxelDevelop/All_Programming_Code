@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionales y loops</title>
+</head>
+<body>
+
+    <script>
+
+// >-----------------------CONDICIONALES-----------------<
+
+// ---------------------IF------------------
+
+// A menudo, cuando escribimos código, queremos realizar diferentes acciones en función de diferentes condiciones.
+
+// Y aquí es donde entran las declaraciones condicionales.
+
+// Hay un montón de condicionales diferentes que cubrir, pero comenzamos con uno de los más útiles: "if"
+
+// Usamos if para especificar un bloque de código que queremos que se ejecute si una condición especificada es verdadera.
+
+// ejemplo:
+
+        // if(condicion){
+
+            // instrucciones
+        // }
+
+// nota: no dare mucho detalles de los loop, ve a los ciclos en el otro archivo que esta en esta misma carpeta para poder tener mas info de ellos, abajo al final la ruta.
+
+// -----------------------ELSE------------------
+
+// Podemos usar la instrucción else para especificar un bloque de código que se ejecutará si la condición es falsa. Como esto:
+
+        // else{
+            // instruccones por si todos los valores son falsos
+        // }
+
+// Nota: Puede omitir las llaves si el código de la condición contiene solo un comando.
+
+// ---------------------ELSE IF-------------------
+
+// Hemos visto más, hemos visto si, es hora de encontrarnos con otros si.
+
+// La instrucción else if es útil porque nos permite especificar una nueva condición si la primera condición es falsa.
+
+        // else if {
+            // intrucciones secundarias que se cumpliran si la primera no se cumple
+        // }
+
+// Nota: La sentencia else final "finaliza" la sentencia else if y siempre debe escribirse después de las sentencias if y else if.
+
+// ejemplo de los tres:
+
+            var numP = 4;
+            var num2 = 2;
+            var letra = 4;
+
+        if(numP = num2){
+            var num = 2;
+            var num3 = 2;
+            if(num != num3){
+                document.write("diferentes" + "<br>");
+            }
+
+            else{
+                document.write("iguales" + "<br>");
+            }
+        }
+        else if(numP == letra){
+                document.write("es una palabra" + "<br>");
+            }
+
+        else{
+            document.write(numP + " " + "no es igual" + "<br>");
+        }
+
+// ----------------------------SWITCH------------------------
+
+// Pero, ¿qué sucede si necesita realizar pruebas para detectar múltiples afecciones? En esos casos, escribir declaraciones if else para cada condición podría no ser la mejor solución.
+
+// En su lugar, podemos usar la instrucción switch para realizar diferentes acciones en función de diferentes condiciones.
+
+// se veria algo asi:
+
+var day = "n10";
+
+switch(day) {
+    case "n1":
+
+        // instrucciones
+        document.write("monday");
+
+
+        break;
+    
+
+    case "n2":
+
+        // instrucciones
+        document.write("tuesday");
+
+        break;
+    
+
+    case "n3":
+
+        // instrucciones
+        document.write("wednesday");
+
+        break;
+    
+
+    default: 
+    document.write("another day");
+
+
+}
+
+    // mayormente usamos esto para definir varias condiciones y intercambiar los if y if else, la declaracion break es para que esta se detenga y default es la condicion la cual ocurrira si ninguno de los casos suceden. todo esto se activara si el caso de switch es verdadero.
+
+// Dato: La expresión de cambio se evalúa una vez. El valor de la expresión se compara con los valores de cada caso, y si hay una coincidencia, se ejecuta ese bloque de código.
+
+// Break: Así que hemos aprendido que la instrucción switch prueba un bloque de código, pero no siempre queremos que pruebe todo el bloque. Básicamente, la palabra clave break desactiva la instrucción switch.
+
+// La ruptura del bloque de interruptores detiene la ejecución de más pruebas de código y casos dentro del bloque.
+
+// default: A menudo no habrá coincidencia, pero aún necesitamos que el programa genere algo ... para esto usamos la palabra clave default, que especifica el código que se ejecutará si no hay coincidencia de mayúsculas y minúsculas.
+
+// LUEGO SIGUEN LOS LOOPS LOS CUALES SON "FOR" "WHILE" Y "DO WHILE" PERO PANA, VAYASE AL LINK QUE ESTA ABAJO, AHI HAY MAS EXPLICACION
+
+
+// Dato de Break: Hemos conocido la instrucción break anteriormente en este módulo, la usamos para "saltar" de un bucle y continuar ejecutando el código después del bucle.
+
+// Nota: Puede usar la palabra clave return para devolver algún valor inmediatamente desde el bucle dentro de una función. Esto también romperá el bucle.
+
+// Nota: A diferencia de la instrucción break, la instrucción continue rompe solo una iteración en el ciclo y continúa con la siguiente iteración. lo que se refiere es que este seguira haciendo el ciclo aunque tenga una condicion dentro, o bien se salta la condicion, ejemplo, si hay un if dentro de un loop, y este if dice que si el numero de la variable llega a 5 continuara, el loop volara este valor y seguira, es mas como omitir.
+
+
+
+
+    </script>
+
+    <a href="./Ciclos.html"></a>
+
+    
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones en ECMAScript</title>
+</head>
+<body>
+
+    <script>
+
+// ----------------------------FUNCTIONS IN ECMASCRIPT 6------------------
+
+// Antes de ES6, se definía una función de JavaScript como esta:
+        function add (x,y){
+            var sum = x+y;
+            console.log(sum);
+        }
+
+// ES6 introduce una nueva sintaxis para escribir funciones. La misma función de arriba se puede escribir como:
+
+        const add1 = (x,y) => {
+            let sum1 = x + y;
+            console.log(sum1);
+        }
+// Esta nueva sintaxis es bastante útil cuando solo necesita una función simple con un argumento.
+
+// Puede omitir escribir "función" y "retorno", así como algunos paréntesis y llaves.
+
+
+// por ejemplo:
+
+        const greet = x => "welcome " + x;
+
+// El código anterior define una función llamada "saludar" que tiene un argumento y devuelve un mensaje.
+
+// Si no hay parámetros, se debe usar un par de paréntesis vacíos, como en:
+
+        const x = () => alert ("hi");
+
+// La sintaxis es muy útil para funciones en línea. Por ejemplo, digamos que tenemos una matriz (array), y para cada elemento de la matriz necesitamos ejecutar una función. Usamos el método forEach de la matriz para llamar a una función para cada elemento.
+
+// ------------------------------FOREACH-------------------------------
+
+// por ejemplo:
+
+        var arr = [2, 3, 4, 5];
+
+        arr.forEach(function(el){
+            console.log(el * 2);
+        })
+
+// Sin embargo, en ES6, el código anterior se puede reescribir de la siguiente manera:
+
+        const arr2 = [2, 3, 4, 5];
+
+        arr2.forEach( v2 => {
+            console.log(v2 * 2);
+        })
+
+// El código es más corto y se ve bastante bien, ¿no? :)
+
+
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

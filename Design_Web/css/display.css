@@ -1,0 +1,69 @@
+.parrafos span {
+    display: block;
+
+    /* display: inline; se utiliza para poder convertir un elemento en tipo bloque asi dando como un margen a todo el elemento */
+
+}
+
+.parrafos2 span{
+
+    display: inline;
+    /* Un elemento en línea solo ocupa el ancho necesario y no fuerza los saltos de línea. */
+    /* display: inline; adhiere elementos en lineas */
+
+}
+
+.parrafos3 span{
+
+    display: none;
+    /* display: none oculta un elemento, por lo que no ocupa espacio. El elemento se ocultará y la página se mostrará como si el elemento no estuviera allí. */
+
+    /* en display Hay muchos otros valores de visualización, como el elemento de list-item, table, table-cell, table-column, grid etc. Simplemente juegue con los valores para ver la diferencia. */
+
+    /* visibility: hidden; */
+    /* visibility: ; puede especificar si un elemento puede ser visible o no. dentro de esta pueden haber dos variables: hidden (el cual oculta el contenido pero de forma como si fuera invisible, osea sigue ahi pero no se ve) y visible que pues, sera visible. */
+
+/* ---------------------POSITION---------------- */
+
+ /* estas propiedades no funcionarán a menos que se establezca primero la propiedad de posición. También funcionan de forma diferente según el valor de la posición. */
+
+    /* position: static; */
+    /* position nos permite posicionar cosas, su propiedad static de acuerdo al flujo normal de la pagina web, con la propiedad fixed podemos posisionar elementos sin importar si la ventana es movida o reducida, se puede mover con top, right, bottom, left*/
+
+    /* top: 30px; */
+    /* right: 5px; */
+    /* color: red; */
+
+    /* position:relative; */
+    /* position: relative; permite dejar que una serie de elementos se posicionen dependiendo su posicion, por ejemplo: si hay tres elementos y los tres son seleccionados con una posision relativa, el primero tendra una posicion, el segundo tendra otra mas atras que la primera y la otra mas atras que la segunda, como si fuera cascada, osea una detras de la otra */
+
+
+    /* top: ;arriba
+    right: ;derecha
+    left: ;izquierda */
+    /* bottom: ;abajo */
+
+    /* position: absolute; */
+    /* position: absolute; puede convertir elementos a una position absuluta. Un elemento de posición absoluta se posiciona en relación con el primer elemento padre que tiene una posición distinta a la estática. Si no se encuentra tal elemento, el bloque contenedor es <html>. */
+
+    /* Los elementos absolutamente posicionados se eliminan del flujo normal. */
+
+    /* El documento y otros elementos se comportan como si el elemento absolutamente posicionado no existiera. */
+
+    /* mas definido, si un elemento tiene una poscicion absuluta y su padre tiene un posicionamiento distinto a una posicion estatica, este sera movido dependiendo de la posicion del elemento padre, si este elemento no existe tomara como padre el documento entero o la etiqueta html */
+
+
+    /* float: right; */
+    /* con float un elemento se puede empujar hacia la izquierda o hacia la derecha, permitiendo que otros elementos lo envuelvan. este recibe varios propiedades, las cuales son left y right que te permitiran mover el elemento flotante en esas direcciones, y esta none que asegura que el elemento no sea flotante. */
+
+    clear: both;
+
+    /* Los elementos que vienen después del elemento flotante fluirán a su alrededor. Para evitar esto, use la propiedad clear. */
+
+    /* clear Utiliza los valores right, left y both (se utiliza para despejar floats que vienen de cualquier dirección) para especificar los lados de un elemento donde no se permite que otros elementos flotantes estén. */
+
+    /* z-index: ; */
+    /* este permite que cuando un valor esta por encima del otro, puedas cambiar su posision, para esto le asignaras a cada elemento un z-index: ; y a uno le pondras un valor mayor al otro, este solo trabaja con valores de posicionamiento como position:absolute, position:relative y postion:fixed */
+
+}
+

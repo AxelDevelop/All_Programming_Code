@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 OBJECTS</title>
+</head>
+<body>
+
+    <script>
+
+// -------------------------OBJECTS ES6---------------------
+
+// Las variables de JavaScript pueden ser tipos de datos de Objeto que contienen muchos valores llamados propiedades.
+
+// Un objeto también puede tener propiedades que son definiciones de funciones llamadas métodos para realizar acciones en el objeto.
+
+// ES6 introduce notaciones taquigráficas y nombres de propiedades calculados que facilitan la comprensión de la declaración y el uso de objetos.
+
+// La nueva abreviatura de definición de método no requiere los dos puntos (:) o la palabra clave de función, como en la función de crecimiento de la declaración del objeto de árbol.
+
+// Por ejemplo:
+
+
+        let tree = {
+            height: 10,
+            color: 'green',
+            grow (){
+                this.height +=2
+            }
+        };
+
+        tree.grow();
+        console.log(tree.height); //sera igual a 12
+
+// También puede utilizar una abreviatura de valor de propiedad al inicializar propiedades con una variable con el mismo nombre.
+
+// Por ejemplo, las propiedades height y health se inicializan con variables denominadas height y health.
+
+// ejemplo:
+
+        let height = 5;
+        let health = 100;
+
+        let athlete = {
+            height,
+            health
+        };
+
+        let DatosAtletas = athlete.health;
+        console.log(DatosAtletas);
+
+// Al crear un objeto utilizando nombres de propiedad duplicados, la última propiedad sobrescribirá las anteriores del mismo nombre.
+
+// por ejemplo:
+
+         var a = {x: 1, x: 2, x: 3, x: 4};
+
+// Nota: Los nombres de propiedad duplicados generaban un SyntaxError en ES5 cuando se usaba el modo estricto. Sin embargo, ES6 eliminó esta limitación.
+
+
+
+
+    </script>
+    
+</body>
+</html>

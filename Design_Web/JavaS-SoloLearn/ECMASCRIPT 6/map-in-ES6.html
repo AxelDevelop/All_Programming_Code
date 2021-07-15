@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mapa en ES6</title>
+</head>
+<body>
+
+    <script>
+
+// ---------------------MAP IN ES6--------------------------
+
+// Un objeto Map se puede utilizar para contener pares clave / valor. Una clave o valor en un mapa puede ser cualquier cosa (objetos y valores primitivos).
+
+// La sintaxis new Map ([iterable]) crea un objeto Map donde iterable es una matriz o cualquier otro objeto iterable cuyos elementos son matrices (con un par clave / valor cada uno).
+
+// Un objeto es similar al mapa, pero existen diferencias importantes que hacen que el uso de un mapa sea preferible en ciertos casos:
+// 1) Las claves pueden ser de cualquier tipo, incluidas funciones, objetos y cualquier primitiva.
+// 2) Puede obtener el tamaño de un mapa.
+// 3) Puede iterar directamente sobre Map.
+// 4) El rendimiento del mapa es mejor en escenarios que implican la adición y eliminación frecuentes de pares clave / valor.
+
+// La propiedad de tamaño devuelve el número de pares clave / valor en un mapa.
+
+// Por ejemplo:
+
+        let map = new Map ([['k1', 'v1'], ['k2', 'v2'],['k3', 'v3']]);
+        console.log(map.entries()); //esto es igual a dos
+
+// methods:
+
+// set (clave, valor) Agrega un par clave / valor especificado al mapa. Si la clave especificada ya existe, el valor correspondiente se reemplaza con el valor especificado.
+
+// get (key) Obtiene el valor correspondiente a una clave especificada en el mapa. Si la clave especificada no existe, se devuelve undefined.
+
+// has (clave) Devuelve verdadero si existe una clave especificada en el mapa y falso en caso contrario.
+
+// delete (clave) Elimina el par clave / valor con una clave especificada del mapa y devuelve verdadero. Devuelve falso si el elemento no existe.
+
+// clear () Elimina todos los pares clave / valor del mapa.
+
+// keys () Devuelve un iterador de claves en el mapa para cada elemento.
+
+// value () Devuelve un iterador de valores en el mapa para cada elemento.
+
+// entries () Devuelve un iterador de matriz [clave, valor] en el mapa para cada elemento.
+
+// por ejemplo:
+
+        let map2 = new Map ();
+
+        map2.set('key1', 'v1').set('key2', 'v2');
+
+        console.log(map2.get('key1')); // obtiene el v1
+
+        console.log(map2.has('key2')); // returnara verdadero
+
+        for (let kv of map2.entries())
+        console.log(kv[0] + " : " + kv[1]);
+
+// Nota: El mapa admite diferentes tipos de datos, es decir, 1 y "1" son dos claves / valores diferentes.
+
+    </script>
+    
+</body>
+</html>

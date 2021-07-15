@@ -1,0 +1,14 @@
+¡Felicitaciones, ha completado nuestro curso de diseño web receptivo!
+
+Estas son algunas de las prácticas más comunes que se deben seguir al crear una página web receptiva:
+
+- Utilice unidades relativas (como porcentajes) para los tamaños de los elementos y las fuentes.
+
+- Utilice consultas de medios CSS para definir puntos de interrupción y cambios de diseño.
+
+- Definir la ventana gráfica para adaptarse a las pantallas de los móviles.
+- Utilice CSS Flexbox para facilitar la creación de diseños flexibles.
+
+Siempre pruebe su página usando diferentes anchos de navegador; puede cambiar el tamaño de su navegador para ver cómo su página se adapta al nuevo ancho.
+
+Los navegadores modernos también admiten la emulación del tamaño de pantalla de un dispositivo móvil, lo que facilita la prueba con anchos predefinidos.

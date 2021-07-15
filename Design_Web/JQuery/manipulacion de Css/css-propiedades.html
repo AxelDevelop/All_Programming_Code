@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <title>toggleClass()</title>
+</head>
+<body>
+    <style>
+
+        p {
+            background-color:red;
+            color: white;
+        }
+
+    </style>
+
+    <p>Some text</p>
+
+    <script>
+
+// -------------------CSS PROPERTIES---------------------
+// ------------------------METODO CSS--------------------------
+
+// Similar al método html (), el método css () se puede usar para obtener y establecer valores de propiedad CSS. Por ejemplo:
+
+// jQ:
+
+        $(function() {
+            alert($("p").css("background-color"));
+            $("p").css("background-color", "blue");
+        });
+
+// El código anterior alerta a la propiedad de color de fondo del párrafo y luego lo establece en azul.
+
+// ---------------------------MUULTIPLES PROPIEDADES------------------
+
+// Para establecer varias propiedades de CSS, el método css () usa la sintaxis JSON, que es:
+
+    // css({"property":"value","property":"value",...});
+
+// Como puede ver, la sintaxis consta de pares "propiedad": "valor", que están separados por comas y encerrados entre llaves {}.
+
+// por ejemplo:
+
+        $("p").css({"color":"red", "font.size":"200px"});
+
+// Esto establecerá las propiedades de color y tamaño de fuente del párrafo.
+
+// Puede especificar cualquier número de propiedades utilizando esta sintaxis JSON.
+
+
+
+
+
+    
+
+    </script>
+
+</body>
+</html>

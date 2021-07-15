@@ -1,0 +1,63 @@
+h1 {
+
+	font-weight: normal;
+	/*en los encabezados ya tendra la negrita por defecto, con el atributo normal se le puede quitar, dato, abajo explica mas dobre esto*/
+	text-align: center;
+	background: #ccc;
+}
+
+p {
+	font-family:Arial, Helvetica, sans-serif, "myriad pro";
+	/*la propiedad font-family se utiliza en css para cambiar la tipografia, las comillas se le ponen para cuando el nombre de la tipografia utilize espacios entre las palabras, mayormente el navegador pone las tipografias Arial, Helvetica, sans-serif como predeterminadas, si no tienen ninguna de las tres va a buscar la que el navegador tenga por defecto, se pueden añadir fuentes personales instaladas en el navegador*/
+
+	font-size:20px;
+	/*con la propiedad font-size se puede cambiar el tamaño de nuestro texto, aparte de las unidades de medida existen las exactas declaradas por atributos, como small, medium, large y xlarge*/
+
+	font-weight:normal;
+	/*la propiedad font-weight se puede cambiar el ancho de nuestro texto, lleva dentro una atributo bold la cual son las negritas*/
+
+	text-align: left;
+	/*con la propiedad text-align se puede modificar la posicion de el texto, se utiliza center para poner los textos alineados, igualmente tenemos left y right que lo acomodan a la derecha y a la izquierda*/
+
+	line-height:30px;
+	/*con la propiedad line-height se puede modificar la anchura de el espaciado de cada linea*/
+
+	text-decoration:underline;
+	/* text-decoration nos permite agregarle un decorado al texto, underline es el atributo que lleva dentro, con el podemos aderirle un subrayado al texto, para quitarle los subrayados que vengan en el texto haces text-decoration:none; y se le quitara cualquier estilo que lleve, con text-decoration:overline; hacemos que nuestro texto tenga en cada linea rayas por encima, con text-decoration:line-through; los textos se tachan*/
+	
+	text-transform: initial;
+	/*con la propiedad text-transform podemos cambiar en minusculas, mayusculas, el capital etc. todo nuestro texto, si ponemos dentro de esta el atributo capitalize, podremos poner todas las palabras empezaran con la letra inicial en mayusculas, si dentro de esta ponemos uppercase todas las letras seran mayusculas, si dentro de esta ponemos lowercase todas las letras seran minusculas y si usamos initial solo laprimera palabra de un texto o despues de un punto estara en mayusculas.*/
+	
+	/* letter-spacing:; */	
+	/*con letter-spacing tendremos un espaciado entre cada una de las letras. los atributos que lleva dentro serian: normal la cual define el estilo predeterminado sin espacio adicional entre caracteres, length el cual define un espacio extra entre caracteres usando unidades de medida como px, pt, cm, mm, etc .;, y inherit que hereda la propiedad de su elemento padre. esto lo escribi de youtube pero hay algunos atributos que no sirven, si simplemente quieres poner un espaciado  entre cada una de las letras pos solo añade la unidad de medida y listo*/
+	
+	/* word-spacing: ; */
+	/*con word-spacing podemos añadir un espaciado entre cada palabra que nosotros queramos. las propiedades que se le añaden dentro son los valores de espaciado de palabras como normal, largo y heredado. al igual que letter-spacing:; solo tienes que usar las unidades de medida si deseas ponerle un espaciado entre cada palabra.*/
+	
+	text-shadow:1px 1px 1px rgb(14, 31, 21);
+	/*con la propiedad text-shadow podemos agregar un sombreado a las palabras, el primer numero sera horizontalmente empezando desde derecha a izquierda, el segundo de arriba hacia abajo, el tercero el tamaño y el ultimo el color,*/
+
+	font-style: italic;
+	/* font-style:; se utilza para poner el texto en un tipo de estilo de los que tiene dentro, en este caso tiene una fuente en italica, pero tiene mas, esta no es muy usada que digamos porque ya podemos poner por nosotros mismos una fuente por medio de font-family: ;.  los valores pueden ser determinados como normal (default size), bold (negrita), bolder (mas negrita), and lighter (mas clara). */
+
+	/* font-variant: small-caps; */
+	/* font-variant: ; se utiliza  para convertir su fuente a minúsculas. los valores pueden ser especificados como normal (minusculas nomales), small-caps (pequeña capitalizacion), and inherit (heredadoss). */
+
+	/* vertical-align: bottom; */
+	/* La propiedad de vertical-align: ; establece la alineación vertical de un elemento. Los valores más utilizados son top (superior), medio (middle) e inferior (bottom). */
+
+	/* La propiedad vertical-align: ; también toma los siguientes valores: baseline (línea de base), sub, super,% (porcentaje) y px (o pt, cm) (unidades de medida). */
+
+	/* text-indent: ; */
+	/* La propiedad text-indent especifica cuánto espacio horizontal debe dejarse antes del comienzo de la primera línea del texto. Los valores de propiedad son longitud (px, pt, cm, em, etc.),% y inherit (heredar). */
+
+	/* white-space:; */
+	/* La propiedad de espacio en blanco especifica cómo se maneja el espacio en blanco dentro de un elemento. Los valores se pueden establecer como normal, inherit, nowrap, etc. */
+
+	/* pre: el texto previo solo se ajustará a los saltos de línea y los espacios en blanco */
+	/* prelínea: el texto se ajustará donde haya una interrupción en el código, pero aún se ignoran los espacios en blanco adicionales */
+	/* ajuste previo: el texto se ajustará cuando sea necesario y en saltos de línea */
+
+
+
+}	

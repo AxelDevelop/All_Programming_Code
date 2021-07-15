@@ -1,0 +1,40 @@
+Para que HTTP funcione correctamente necesita de un mecanismo que permita identificar los recursos, con el fin de que el cliente los pueda llamar de la forma correcta, y el servidor sepa en todo momento y de manera unívoca qué es lo que se busca. Ese mecanismo es la URL (Uniform Resource Locator). Es una forma estándar de hacer referencia a cualquier recurso (servicio) de Internet (sí, porque no sólo vale para el servicio HTTP).
+
+Si el servidor HTTP no puede mostrar el recurso solicitado, envía un código de respuesta formado por tres dígitos. El primero indica el estado, mientras que los otros dos explican la naturaleza exacta del error. En otras palabras, es el origen del famoso Error 404: URL not found.
+
+No se como explicarlo correctamente pero la web puede almacenar datos de dos formas: ssesion storage y local storage, se usa la misma sintaxys para las dos y la unica diferencia que tienen es que uno no guarda la informacion si no lo estas usando (ssesion storage) y la otra si (localstorage)
+
+sintaxys:
+
+Para guardar:
+
+localStorage.setItem("key1", "value1");
+
+Para obtener un valor:
+
+alert(localStorage.getItem("key1"));
+
+Para borrar un valor:
+
+localStorage.removeItem("key1");
+
+Para borrar todos los valores:
+
+localStorage.clear();
+
+LA GEOLOCALIZACION DEL API:
+
+El método principal de las API de geolocalización es getCurrentPosition, que recupera la ubicación geográfica actual del dispositivo del usuario.
+
+navigator.geolocation.getCurrentPosition();
+
+SUS PARAMETROS SON:
+
+ShowLocation (mandatory):
+Define el método de devolución de llamada que recupera la información de ubicación.
+
+ErrorHandler(optional):
+Defines the callback method that is invoked when an error occurs in processing the asynchronous call.
+
+Options (optional):
+Define un conjunto de opciones para recuperar la información de ubicación.

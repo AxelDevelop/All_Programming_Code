@@ -1,0 +1,34 @@
+.contenedor {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 200px);
+
+
+
+	justify-items:center;
+	/*justify-items nos va a permitir acomodar un elemento de forma horizontal*/
+
+	align-items:center;
+	/*con align-items podremos permitirnos acomodar un elemento de forma vertical*/
+
+	/*dentro de estas podremos ponerles propiedades como auto (que tomaria todo el espacio de la grid) y estretch que haria lo mismo. tambien se puede utilizar center para tomar el centro y end para tomar el final o la derecha*/
+
+
+
+}
+
+
+
+.contenedor .items {
+
+	background: #ff8000;
+	justify-self:stretch;
+	/*con justify-self podemos decirle cual sera el posicionamiento de solamente un elemento*/
+	align-self:stretch;
+
+
+
+
+
+}

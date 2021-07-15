@@ -1,0 +1,39 @@
+.contenedor {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(4, 1fr);
+}
+
+.contenedor .items {
+	background: #ff8000;
+	/*grid-column-start:2;
+	/*con grid-column-start podemos especificar donde queremos que inice nuestra columna*/
+	/*grid-column-end:3;
+	/* grid-column-end va con grid-column-start y sirve para indicarle donde queremos que termine neustra columna*/ 
+
+
+	/*grid-row-start:2; 
+	/*con grid-row-start podemos decir el posicionamiento de nuestra grid pero en las filas en su comienzo*/ 
+	/*grid-row-end:4; donde termina.
+
+	/*La forma anterior es la mas larga, este se puede acortar de esta manera:*/
+	
+	/*grid-column: 1 / 4;
+	/*aqui le decirmos que vaya de la 1 a la 4 columna*/
+
+	/*grid-row: 1 / 3;
+	/*aqui le decirmos que vaya de la 1 a la 4 fila*/
+
+	/*la forma anterior se puede reducir aun mas de esta manera:*/
+
+	/*grid-area: 2 / 1 / 4 / 3; 
+	/*aqui el primer y segundo parametro serian el inicio de la fila y el inicio de la columna, y el tercer y cuarto el final de la fila y la columna*/
+
+
+
+	grid-column: 1 / span 3;
+	/*esta es otra forma de posicionar, span dira el final de la columna o fila*/
+	grid-row: span 2;
+
+}

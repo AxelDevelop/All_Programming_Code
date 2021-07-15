@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>validando formularios</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<form action="" name="formulario" method="get">
+		<!--el metodo get o como esta escrito arriba es uno de los dos metodos que tenemos para enviar datos por nuestro sitio web. tenemos el metodo get y el button-->
+		<!-- explicar required-->
+		<input type="text" name="nombre" id="nombre" maxlength="30" placeholder="nombre:"required>
+		<br>
+		<!--required es una etiqueta de html5 que hace que al no llenar un campo y le demos a enviar salga una advertencia que nos diga que este campo debe ser llenado obligatoriamente--> 
+		<input type="radio" name="sexo" id="hombre" value="hombre"required> hombre
+		<input type="radio" name="sexo" id="mujer" value="mujer"required> mujer
+		<br>
+
+		<input type="checkbox" name="terminos" id="terminos"required> terminos y condiciones
+		<br>
+
+		<input type="submit" id="btn" name="btn" value="enviar">
+		<!-- nota:al agregar submit al "elemento" te debes dar cuenta de que el formulario en quien recibira el evento-->
+
+
+
+
+	</form>
+	<script>
+		(function(){
+
+
+			var formulario = document.getElementByName('formulario') [0];
+			elementos = formulario.elements,
+			//ya con esto podemos acceder a lo elementos
+
+			boton = document.getElementById('btn');
+
+			var validarNombre = function(e){
+
+				if (formulario.nombre.value == 0) {
+					//en el espacio de la condicion ponemos el input de arriba que es tipo nombre
+					alert("completa el campo de nombre");
+					e.preventDefault();
+					//con e.preventDefault estamos previniendo elcomportamiento de lo que es nuestro evento submit.
+				}
+
+			};
+
+			
+				var validarRadio = function(){
+					if (formulario.sexo[])
+				}
+
+			};
+
+			var validar = function(e){
+				validarNombre(e);
+			};
+
+			formulario-addEventListener("submit,validar");
+			//la funcion validar podria validar facilmente todos nuestros elementos pero recuerda que las funciones solo deben ejecutar una accion, es decir, solo deben dedicarse a una sola cosa
+
+
+		}())
+	</script>
+
+</body>
+</html> 

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <title>DOM Transversal</title>
+</head>
+<body>
+
+    <p id="demo">presionar</p>
+
+    <input type="text" id="name" />
+    <div id="msg"></div>
+
+    <script>
+
+// ---------------------HANDLING EVENTS-----------------
+
+// JQuery proporciona una forma eficiente de manejar eventos. Los eventos ocurren cuando el usuario realiza una acción, como hacer clic en un elemento, mover el mouse o enviar un formulario.
+
+// Cuando ocurre un evento en un elemento de destino, se ejecuta una función de controlador.
+
+// Por ejemplo, digamos que queremos manejar el evento de clic en un elemento con id = "demo" y mostrar la fecha actual cuando se hace clic en el botón. Usando JavaScript puro, el código se ve así:
+
+        // var x = document.getElementById("demo");
+        // x.onclick = function(){
+        //     document.body.innerHTML = Date();
+        // };
+
+// El mismo evento podría manejarse usando jQuery con el siguiente código:
+
+    $("#demo").click(function(){
+        $("#demo").html(Date());
+    });
+
+
+// Como puede ver, el código jQuery es más corto y más fácil de leer y escribir.
+
+// Tenga en cuenta que el nombre del evento se proporciona sin el prefijo "on" (es decir, onclick en JavaScript es clic en jQuery).
+
+// Nota: La función que se ejecuta cuando se dispara un evento se llama controlador de eventos.
+
+
+// ----------------------------COMMON EVENTS---------------------
+
+// Los siguientes son los eventos más utilizados:
+
+// Eventos del mouse:
+
+// "click" ocurre cuando se hace clic en un elemento.
+// "dblclick" ocurre cuando se hace doble clic en un elemento.
+// "mouseenter" ocurre cuando el puntero del mouse está sobre (ingresa) el elemento seleccionado.
+// "mouseleave" ocurre cuando el puntero del mouse sale del elemento seleccionado.
+// "mouseover" ocurre cuando el puntero del mouse está sobre el elemento seleccionado.
+
+// Eventos de teclado:
+
+// "keydown" ocurre cuando se presiona una tecla del teclado.
+// "keyup" ocurre cuando se suelta una tecla del teclado.
+
+// Eventos de formulario:
+
+// "submit" ocurre cuando se envía un formulario.
+// "change" ocurre cuando se ha cambiado el valor de un elemento.
+// El "focus" ocurre cuando un elemento se enfoca.
+// El "blur" ocurre cuando un elemento pierde el enfoque.
+
+// Eventos de documentos:
+
+// "ready" ocurre cuando se ha cargado el DOM.
+// El "resize" ocurre cuando la ventana del navegador cambia de tamaño.
+// "scroll" ocurre cuando el usuario se desplaza en el elemento especificado.
+
+// -------------------------------------EJEMPLO 1-----------------------
+
+// Como ejemplo, cambiemos el contenido de un div cuando el usuario escribe en un campo de entrada. Para hacer eso, necesitamos manejar el evento keydown, que ocurre cuando se presiona una tecla en el teclado:
+
+    $("#name").keydown(function(){
+        $("#msg").html($("#name").val());
+    });
+
+// El código anterior maneja el evento keydown para el elemento con id = "nombre" y asigna el contenido del div con id = "msg" el valor del campo de entrada.
+
+// ---------------------------------ON--------------------
+
+// Otra forma de manejar eventos en jQuery es usando el método on ().
+
+// El método on () se utiliza para adjuntar un evento al elemento seleccionado.
+
+    // por ejemplos:
+
+    $( "#demo2").on( "click", function(){
+        alert("clicked");
+        
+    });
+
+// Como puede ver, el nombre del evento se pasa como primer argumento al método on (). El segundo argumento es la función de controlador.
+
+// Nota: El método on () es útil para vincular la misma función de controlador a múltiples eventos. Puede proporcionar varios nombres de eventos separados por espacios como primer argumento. Por ejemplo, puede usar el mismo controlador de eventos para los eventos click y dblclick.
+
+// ----------------------OF-----------------
+
+// Puede eliminar los controladores de eventos mediante el método off ().
+
+    $("div").on("click", function(){
+        alert('hi there');
+        $("div").off("click");
+    });
+
+// El argumento del método off () es el nombre del evento para el que desea eliminar el controlador.
+
+
+
+    </script>
+
+</body>
+</html>

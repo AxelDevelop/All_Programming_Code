@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Document Object Model 3</title>
+
+
+</head>
+<body>
+
+	<ol id="lista">
+		<li id="primero">aqui voy 
+		gente</li>
+		<li>ya fui gente XD</li>
+
+
+	</ol>
+
+
+	<script type="text/javascript">
+
+
+			var elemento = document.createElement("li")
+   contenido = document.createTextNode("Nuevo Texto");
+  elemento.appendChild(contenido);
+
+  var padre =document.getElementsByTagName("li")[0].parentNode;
+ 	referencia = document.getElementsByTagName("li")[0];
+  padre.removeChild(referencia);
+  //con removeChild podemos decidir que variable queremos eliminar
+
+
+
+
+
+
+
+
+		//var elemento = document.createElement("li")
+   //contenido = document.createTextNode("Nuevo Texto");
+  //elemento.appendChild(contenido);
+
+  //var padre =document.getElementsByTagName("li")[0].parentNode;
+  //padre.replaceChild(elemento, primero);
+  //esta es la forma en la cual podemos reemplazar los nodos, esta la misma abajo pero no me funciono, tuve que copiar de un amigo
+
+
+
+
+
+
+
+
+		
+		//var primerElemento = document.getElementById("primerElemento");
+		//primerElemento.innerHTML = "nuevo Texto <i>falcon masters</i>";
+		//aqui usamos ineerHTML para cambiar un valor de nuestro documento, como se ve cambio el li primero
+
+		//var elemento = document.createElement("li");
+		//var contenido = document.createTextNode("Nuevo Texto");
+		 //elemento.appendChild(contenido);
+		
+		//var padre = document.getElementsByTageName("li")[0].parentNode;
+		//var referencia = document.getElementsByTageName("li")[0]; 
+		//padre.replaceChild(elemento, primero);
+		//replacechild recibe dos parametros, el primero es el elemento que queremos agregar al documento y el otro el que queremos borrar, primero va el elemento que queremos agregar y luego el que queremos borrar
+
+
+
+
+
+
+
+
+
+	</script>	
+
+
+
+
+
+
+
+
+
+</body>
+</html>

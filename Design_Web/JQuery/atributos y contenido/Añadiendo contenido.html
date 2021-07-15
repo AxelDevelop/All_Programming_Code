@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <title>Agregar contenido</title>
+</head>
+<body>
+
+
+<!-- ---------------------------APPEND--------------------- -->
+
+    <p id = "demo"> Hola </p>   
+
+<!-- ------------------------AFTER/BEFORE---------------- -->
+
+    <p id="demo2">Hi</p>
+
+<!-- ----------------------AGREGANDO NUEVOS-------------------------- -->
+
+    <p id="demo3">Hello</p>
+
+
+
+    <script>
+
+// ------------------------------ADDING CONTENT------------------------
+
+// Como hemos visto en las lecciones anteriores, los métodos html () y text () se pueden usar para obtener y establecer el contenido de un elemento seleccionado. Sin embargo, cuando se utilizan estos métodos para configurar contenido, el contenido existente se pierde.
+
+// jQuery tiene métodos que se utilizan para agregar contenido nuevo a un elemento seleccionado sin eliminar el contenido existente:
+
+// append () inserta contenido al final de los elementos seleccionados.
+// prepend () inserta contenido al comienzo de los elementos seleccionados.
+// after () inserta contenido después de los elementos seleccionados.
+// before () inserta contenido antes de los elementos seleccionados.
+
+//---------------------------------¡Veámoslos en acción!------------------------------
+
+// ---------------------------APPEND/PREPEND---------------------
+
+// El método append () inserta contenido AL FINAL del elemento HTML seleccionado. Por ejemplo:
+
+        $(function(){
+            $("#demo").append("david");
+        });
+        // la salida seria igual a hola david, esto porque append lo añadio al final del contenido del parrafo
+
+// De manera similar, el método prepend () inserta contenido AL COMIENZO del elemento seleccionado.
+// También puede utilizar marcado HTML para el contenido.
+
+// ------------------------AFTER/BEFORE----------------
+
+// The jQuery after() and before() methods insert content AFTER and BEFORE the selected HTML element. For example:
+
+        $(function(){
+            $("#demo2").before("<i>some title</i>");
+            $("#demo2").after("<b>Welcome</b>");
+        });
+
+// ----------------------AGREGANDO NUEVOS ELEMENTOS---------------------
+
+// Los métodos append (), prepend (), before () y after () también se pueden usar para agregar elementos recién creados. La forma más sencilla de crear un nuevo elemento HTML con jQuery es la siguiente:
+
+        // var txt = $("<p></p>").text("Hi"); 
+
+// El código anterior crea un nuevo elemento <p>, que contiene el texto Hola y lo asigna a una variable llamada txt.
+
+// Ahora, podemos usar esa variable como parámetro de los métodos mencionados anteriormente para agregarla a nuestro HTML, por ejemplo:
+
+    $(function(){
+        var txt = $("<p></p>").text("Hi"); 
+        $("demo3").after(txt);
+    });
+
+// Esto insertará el elemento <p> recién creado después del párrafo #demo.
+
+// También puede especificar varios elementos como argumentos para los métodos before (), after (), append (), prepend () separándolos con comas: $ ("# demo"). Append (var1, var2, var3).
+
+// La sintaxis mencionada anteriormente para crear elementos se puede utilizar para crear cualquier elemento HTML nuevo, por ejemplo $ ("<div> </div>") crea un nuevo div.
+
+
+    </script>
+
+</body>
+</html>

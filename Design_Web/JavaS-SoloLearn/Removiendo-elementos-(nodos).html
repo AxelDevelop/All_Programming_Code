@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Removiendo elementos</title>
+</head>
+<body>
+
+
+    <div id="demo">
+        <p id="p1">este es un parrafo</p>
+        <p id="p2">este es otro parrafo</p>
+    </div>
+
+
+
+    <script>
+
+// ------------------------REMOVIENDO ELEMENTOS---------------------
+
+// Para eliminar un elemento HTML, debe seleccionar el padre del elemento y utilizar el método removeChild (nodo).
+
+// HTML:
+        
+    // <div id="demo">
+    //     <p id="p1">este es un parrafo</p>
+    //     <p id="p2">este es otro parrafo</p>
+
+    // </div>
+
+// JavaScript:
+
+    var parent = document.getElementById("demo");
+    var child = document.getElementById("p1");
+    parent.removeChild(child);
+
+// Esto elimina el párrafo con id = "p1" de la página.
+
+// otra manera era llamando al padre y borrando su hijo
+
+    // Una forma alternativa de lograr el mismo resultado sería el uso de la propiedad parentNode para obtener el padre del elemento que queremos eliminar:
+
+    var child2 = document.getElementById ("p2");
+    child2.parentNode.removeChild (child2);
+    
+        
+
+    </script>
+    
+</body>
+</html>

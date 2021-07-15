@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animaciones.</title>
+    
+</head>
+<body>
+
+    <style>
+        #container{
+            width: 200px;
+            height: 200px;
+            background: green;
+            position: relative;
+        }
+
+        #box{
+            width: 100px;
+            height: 100px;
+            background: grey;
+            position: absolute;
+            text-align: center;
+            
+
+        }
+
+        #box h1{
+            font-size: inherit;
+        }
+
+        #container2{
+            width: 200px;
+            height: 200px;
+            background: green;
+            position: relative;
+        }
+
+        #box2{
+            width: 50px;
+
+            height: 50px;
+            background: grey;
+            position: absolute;
+            text-align: center;
+            
+
+        }
+
+        #box2 h1{
+            width: inherit;
+        }
+    </style>
+
+
+    <div id="container">
+        <div id="box">
+            <h1>Buenas.</h1>
+        </div>
+    </div>
+
+    <div id="container2">
+        <div id="box2">
+            <p>hola</p>
+        </div>
+    </div>
+
+        <script>
+
+// --------------------ANIMATIONS----------------------
+
+// Ahora que sabemos cómo seleccionar y cambiar elementos DOM, podemos crear una animación simple.
+
+// Creemos una página HTML simple con un elemento de cuadro que se animará usando JS.
+            
+// Nota: (en la pagina) Nuestro elemento de caja está dentro de un elemento contenedor. Tenga en cuenta el atributo de posición utilizado para los elementos: el contenedor es relativo y la caja es absoluta. Esto nos permitirá crear la animación relativa al contenedor.
+
+// Animaremos el cuadro rojo para que se mueva hacia el lado derecho del contenedor.
+
+// Nota: Debe estar familiarizado con CSS para comprender mejor el código proporcionado.
+
+
+// -------------------CREAR UNA ANIMACION-------------------
+
+// Para crear una animación, necesitamos cambiar las propiedades de un elemento en pequeños intervalos de tiempo. Podemos lograr esto usando el método setInterval (), que nos permite crear un temporizador y llamar a una función para cambiar propiedades repetidamente a intervalos definidos (en milisegundos).
+    
+    // por ejemplo:
+
+            var t = setInterval(move, 500);
+
+// Este código crea un temporizador que llama a una función move () cada 500 milisegundos.
+
+// Ahora necesitamos definir la función move (), que cambia la posición del cuadro.
+
+// empezamos:   
+
+        // posicion inicial:
+
+        var pos = 0;
+
+        // nuestro elemento box:
+        var doc = document.getElementById("box");
+        
+        // funcion para la animacion de movimiento:
+
+        function move (){
+            pos += 1;
+            box.style.left = pos+ "px"; //son pixeles, no te confundas
+        }
+
+// La función move () incrementa la propiedad izquierda del elemento box en uno cada vez que se llama.
+
+// -------------------PRACTICA 2-------------------------
+
+// El siguiente código define un temporizador que llama a la función move () cada 10 milisegundos:
+
+        var pos2 = 0;
+
+        var t2 = setInterval(move2, 10);
+
+// Sin embargo, en el ejemplo arriba pasa un error, ya que nuestro cuadro se mueva hacia la derecha para siempre. Para detener la animación cuando el cuadro llega al final del contenedor, agregamos una simple marca a la función move () y usamos el método clearInterval () para detener el temporizador.
+
+        function move2 (){
+            if (pos2 >= 150){
+                clearInterval(t2);
+            }
+            else{
+                pos2 += 1;
+                box2.style.left = pos2+"px";
+            }
+        }
+
+// ¡Felicitaciones, acaba de crear su primera animación de JavaScript!
+
+        </script>
+            
+</body>
+</html>

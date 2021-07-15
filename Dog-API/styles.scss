@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Open+Sans+Condensed:wght@300&display=swap");
+
+$letra1: "Open Sans Condensed", sans-serif;
+$letra2: "Nunito", sans-serif;
+$color1: linear-gradient(to right, #accbee 0%, #e7f0fd 100%);
+$color2: #121212;
+$degradado1: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+$btn: linear-gradient(to right, #6a85b6 0%, #bac8e0 100%);
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: $letra2;
+  background: $color1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  .search-main {
+    margin: 20px;
+    padding: 10px;
+    width: 40%;
+    display: grid;
+    grid-template-columns: 1.5fr;
+    grid-gap: 20px;
+    text-transform: capitalize;
+    
+    .select-main {
+      h2 {
+        margin-bottom: 20px;
+        transition: 0.1s ease;
+      }
+      input {
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px #121212;
+        outline: none;
+        padding: 10px;
+        background: transparent;
+        border: none;
+        transition: 0.5s ease;
+        font-family: var(--letra2);
+        font-weight: 600;
+        width: 90%;
+        text-transform: lowercase;
+        margin: 10px;
+        &:focus {
+          transform: translate3d(3px, 3px, 0);
+          transition: 0.5s ease;
+        }
+      }
+    }
+  }
+  .container-btn {
+    background-color: transparent;
+    box-shadow: 1px 1px 5px #121212;
+    width: 40%;
+    text-align: center;
+    padding: 20px;
+    transition: 1s ease;
+    display: inline-block;
+    margin: 10px;    
+    button {
+      border: none;
+      background: none;
+      font-size: 100%;
+      font-family: var(--letra2);
+      outline: none;
+      cursor: pointer;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+  }
+
+    img {
+        border-radius: 20px;
+        max-width: 400px;
+        height: 400px;
+        margin: 20px;
+        transition: 1s ease;
+
+        &:hover {
+          transform: translate3d(3px, 3px, 0);
+          transition: 1s ease;
+        }
+    }
+  }
+
+
+@media screen and (max-width: 940px) {
+    body{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+    }
+    .search-main{
+        justify-self: center;
+        align-self: center;
+    }
+    .container-btn{
+      justify-self: center;
+      align-self: center;
+    }
+    .demo-image{
+      justify-self: center;
+      align-self: center;
+    }
+}

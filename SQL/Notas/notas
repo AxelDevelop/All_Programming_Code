@@ -1,0 +1,7 @@
+
+-- -- Creando la relacion
+
+ALTER TABLE libros
+ADD CONSTRAINT cualquierNombre
+FOREIGN KEY (id_publicador)
+REFERENCES publicadores(id);

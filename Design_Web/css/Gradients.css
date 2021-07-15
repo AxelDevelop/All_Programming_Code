@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ .parrafo {
+
+    /* display: flex; */
+    padding: 10px;
+    width: 200px;
+    height: 200px;
+    /* ejemplo */
+    background: radial-gradient( green, yellow, blue); 
+    color: #000;
+}
+
+.parrafo p{
+    width: 200px;
+    height: 350px;
+    /* background:url("../css/imagen1.jpg") no-repeat center  center/cover ; */
+    /* si vez hacia  arriba notaras la forma de centrar la imagen si esta de fondo */
+    text-align: center;
+
+}
+
+
+
+.cont2{
+    font-family: Arial, Helvetica, sans-serif;
+
+    
+    /* display: flex; */
+    padding: 10px;
+    width: 200px;
+    height: 200px;
+    color: #000;
+    margin: 10px;
+
+/* --------------------------LINEAR GRADIENT------------------------------- */
+
+/* ejemplo: */
+
+    background: linear-gradient(deepskyblue, black);
+
+    /* con linear-gradiant podemos añadir un degradado a nuestro elemento, dentro, hay dos parametros separados por comas, el primero definira el primer color y el segundo el color de degradado o color secundario, estos dos se degradaran entre si, osea una arriba y se ira degradando hasta llegar al otro. tambien se le puede añadir antes de estos dos parametros uno el cual sera el comienzo del degradado, puede ser en grados, o en lados como to right, to left, to bottom, top, etc.*/
+
+/* -------------------------Radial Gradients---------------------------- */
+
+    /* background: radial-gradient(posicion, forma o tamaño, parada de color); */
+
+    /* el background: radial-gradient; si queremos hacer un degradado de color con esta propiedad el primer valor sera el de la posicion de comienzo, este se puede definir o escribir como top, bottom, center, o left, se puede definir de otra manera usando porcentajes, por ejemplo, background: radial-gradient(50% 50% con este el degradado comenzaria desde el centro o center, 0% 0% seria desde la esquina izquierda, forma o tamaño, parada de color); */
+
+    /* El segundo valor define la forma y el tamaño del degradado. Hay dos argumentos para dar forma a los degradados: el primero es la elipse, que es el valor predeterminado; y el segundo es el círculo. */
+
+    /* OTHER (COLOR STOP)--> */
+
+    /* background: -moz-repeating-linear-gradient(blue,yellow,green,black); */
+
+        /* background: -moz-repeating-linear-gradient(blue, green 20px); */
+    /* La función repeating-linear-gradient () se usa para repetir una gradiente lineal: */
+
+    /* el repeating-linear-gradient se utiliza para añadir varios degradados al elemento por separados, varios colores. Los colores se pueden agregar uno tras otro, separados por una coma. A continuación, el navegador determinará la posición de parada de cada color. El degradado lineal tiene varias paradas de color y se ejecuta de arriba a abajo. tambien puedes especificar donde termina cada color, usando porcentajes (HACIA ABAJO OBVIAMENTE). */
+
+
+    /* se puede indicar la posicion de comienzo del degradado colocando las palabras bottom, left, right y top antes de poner los colores. */
+
+    /* tambien se puede especificar el comienzo del degradado desde un angulo (deg, El ángulo se especifica como un ángulo que se extiende entre una línea horizontal y la línea de degradado. En otras palabras, 90 grados crea un degradado de izquierda a derecha, mientras que 0 grados genera un degradado de abajo hacia arriba. */
+
+    /* la direccion se define desde el principio dentro de el parentesis de el degradado, esto solo lo vi con moz-repeating-linear-gradient, y se define con el numero y la palabra deg. ejemplo: moz-repeating-linear-gradient(100deg) */
+
+    /* background:url(../descargas/imagen1.jpg); */
+
+
+}
+

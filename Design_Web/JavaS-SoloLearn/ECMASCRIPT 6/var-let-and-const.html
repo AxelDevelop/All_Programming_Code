@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables.</title>
+</head>
+<body>
+
+    <button onclick="varTest()">varTest</button>
+
+    <button onclick="letTest()">letTest</button>
+
+    
+    <script>
+
+// -----------------------VARS-----------------
+
+// En ES6 tenemos tres formas de declarar variables:
+
+        var a = 10;
+
+        const b = 'hello';
+
+        let c = true;
+
+// El tipo de declaración utilizada depende del "scope" necesario. "scope" es el concepto fundamental en todos los lenguajes de programación que define la visibilidad de una variable.
+
+// ------------------VAR and LET--------------------------
+
+// A diferencia de la palabra clave var, que define una variable globalmente o localmente a una función completa independientemente del alcance del bloque, "let" le permite declarar variables que tienen un alcance limitado al bloque, declaración o expresión en la que se utilizan.
+
+// Por ejemplo:
+
+        if (true){
+            let name = 'Fulano';
+        }
+        alert(name); // se generara un arror
+
+// En este caso, la variable de nombre es accesible solo en el alcance de la instrucción if porque se declaró como let.
+
+// Para demostrar la diferencia de alcance entre var y let, considere este ejemplo:
+
+        function varTest (){
+            var x = 1;
+            if (true){
+                var x = 2;
+                console.log(x); //la variable sera igual a dos aqui
+            }
+            console.log(x); //igual que aqui, aunque este este fuera del scope de if, ya que es global, si la condicion es verdadera, la variable cambiara su valor globalmente
+        }
+
+        function letTest(){
+            let x = 1;
+            if (true){
+                let x = 2;  //la variable aqui es diferente por la condicional
+                console.log(x) //x es igual a 2
+            }
+            console.log(x); //pero, aqui a diferencia de el "var", el let solo sera dos si esta dentro del scope en donde se encuentra, como pueden ver, este x esta fuera de la condicional o scope de if, asi que el valor seguira siendo 1.
+        }
+
+// Nota: Uno de los mejores usos de let es en bucles:
+
+        // ejemplo:
+
+        for(let i = 0; i < 3; i++){
+            document.write(i)
+            // Aquí, la variable i es accesible solo dentro del alcance del bucle for, donde se necesita.
+        }
+
+// Nota: let no está sujeto a Variable Hoisting, lo que significa que las declaraciones let no se mueven al principio del contexto de ejecución actual.
+
+//                  -------------------CONST-----------------------
+
+// Las variables const tienen el mismo alcance que las variables declaradas usando let. La diferencia es que las variables const son inmutables; no se permite reasignarlas.
+
+// Por ejemplo, lo siguiente genera una excepción:
+
+    const t = 'hello';
+    // t = 'bye';
+
+// const tampoco está sujeto a Variable Hoisting, lo que significa que las declaraciones const no se mueven al principio del contexto de ejecución actual.
+
+// También tenga en cuenta que el código ES6 solo se ejecutará en navegadores que lo admitan. Los dispositivos y navegadores más antiguos que no son compatibles con ES6 devolverán un error de sintaxis.
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>

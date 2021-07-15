@@ -1,0 +1,61 @@
+/* Los prefijos de proveedores de CSS o los prefijos de navegador de CSS son una forma en que los fabricantes de navegadores pueden agregar soporte para nuevas funciones de CSS durante los períodos de prueba y experimentación. Los prefijos del navegador se utilizan para agregar nuevas funciones que pueden no ser parte de la especificación CSS final y formal.
+
+Por ejemplo, el prefijo para Safari y Chrome es -webkit. La propiedad border-radius se admite actualmente en Chrome, Safari y Mozilla, siempre que vaya acompañada del prefijo del navegador.
+Para especificar el radio del borde en Chrome y Safari, se utiliza la siguiente sintaxis: */
+/* 
+La regla @ font-face permite cargar fuentes personalizadas en una página web.
+Con la ayuda de esta regla, los diseños ya no se limitan a las fuentes que están instaladas en la computadora de un usuario. */
+
+/* En Internet Explorer 8 y versiones anteriores, la URL debe apuntar a un archivo OpenType (eot) incrustado, mientras que Firefox, Chrome, etc. admiten fuentes True Type (ttf) y OpenType (otf). */
+
+/* se utiliza de la siguiente manera para navegadores que no son internet explorer: */
+
+/* @font-face{
+
+    font-family: y el nombre de nuestra fuente de letra;
+    src: url('nombre de nuestra fuente.otf')
+
+}
+
+@font-face{
+    font-family: /*nombre de nuestra fuente*/;
+    /* font-weight: bold;
+    src: url('nombre de nuestra fuente.otf');
+} */
+
+/* h1{
+    font-family: nombre de nuestra fuente, y otra si quieres; */
+/* }  */
+
+
+
+
+p{
+/* -webkit-border-radius:24px; */
+
+/*
+para cada navegador hay un prefijo especifico:
+
+firefox es -moz-
+
+safariv y chrome es -webkit-
+
+opera es -o-
+
+internet explorer -ms */
+
+border-radius: 10px 10px 10px 10px ;
+/* border-radius: ; nos permite poner esquinas redondeadas a nuestros elementos, el primer numero sera la medida de la esquina superior  izquierda, la soguiente sera la media de la esquina superior derecha, la siguiente sera la meidad de la esquina inferior derecha y la ultima medida sera la esquina inferior izquierda. si pones un solo valor este sera el predeterminado para cada uno */
+
+/* box-shadow: ; */
+/* box-shadow: ; nos permite poder darle sombras a nuestros elementos. sus propiedades son las posisicones por numeros y el color de la sombras, el primer valor sera el tamaño de la sombra del lado derecho, la segunda sera su tamaño por debajo y el tercero sera su color. hay dos valores opcionales los cuales se ponen antes de el color, estos son desenfoque y propagaacion, el tercer valor sera desenfoque y el cuarto la propahacion */
+
+/* a box-shadow: inset 10px 10px 5px #000; tiene una opcion de añadir una sombra interior, esta no esta afuera sino como si fuera el mismo diseño del elemento, esto se hace con su propiedad inset, este no se le pondra propagacion supongo */
+
+/* Puede definir tantas sombras para el mismo cuadro como desee escribiendo todas ellas separadas por comas en la misma regla. se refiere a que si escribes toda la propiedad para crear la primera sombra, si le pones una coma puedes hacer otra sombra adicional */
+
+
+/* word-wrap: ; */
+/* word-wrap: ; nos permite dividir palabras largas y ajustarlas en la siguiente línea. Toma dos valores: normal y break-word. normal nos hara que el texto este en linea no importa si hay un contenedor dentro y  break-word hara que se ajuste al espacio en el cual esta. */
+
+}

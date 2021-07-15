@@ -1,0 +1,80 @@
+body {
+    background:#e9e9e9;
+}
+
+.contenedor {
+    width: 500px;
+    height: 300px;
+    background: #fff;
+    padding: 10px;
+    border: 10px solid #2C3E50;
+    margin: 20px;
+
+
+    /*estos son prefijos:*/
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    /*aqui decimos que la caja sea flexible, para eso usamos display flex (arriba)*/
+    flex-wrap: nowrap;
+    flex-direction: row;
+    
+    /* flex-direction: row; */
+    /*flex-direction:; puede tener varios valores, el primero el cual viene por defecto llamado "row" la cual te pondra los cuadros en posicionamiento incial, tenemos "row reverse" este lo que hace es posicionar los elementos de la izquierda a la derecha con un detalle el cual es que el cuadro el cual tenia la posicion inicial estara en la ultima posicion. la siguiente seria "column" esta nos pone las cajas en columnas*/
+
+    /* flex-wrap:wrap; */
+    /* /*flex wrap recibe tres valores, el primero de ellos es "no-wrap" que es el normal en el cual se alinean a la izquierda de el contenedor de forma normal (este, se ajustara al contenedor en forma horizontal). esta wrap el cual si un elemento tiene un tamaño algo alto, se ajustara (al igual a todos los demas) al contenedor dependiendo al espacio, como ejemplo 4 bloques y si el tercero no cabe en la primera linea este ira hacia abajo, junto con los demas. con wrap-reverse se pondran los elementos ajsutados y de manera inveresa. */
+
+    /* flex-flow: ; */
+    /* este recibe dos valores: el direction y el de wrap. de esta manera se escribiria: "row wrap" esto va despues de los dos puntos por si acaso. */
+
+    justify-content:center;
+    /*    justify-content: ; nos permite decidir la posicion de nuestros elementos y la distribucion que tendran. hay varias opciones a elegir dentro de justify content, las cuales son: "flex-start" tendra el valor por defecto, osea, los elementos lo tendras de manera normal. "flex-end" con este todas los elemento iran al final de la fila. "center" centrara los elementos. "space-around" hace que se distribuyan los elementos en linea horizontal dejando espacios entre ellos. "space-between" es lo mismo que space around, lo unico que no tendra margenes al principio ni al final.*/
+
+    align-items:center;
+    /* con align-items: ; con esto podemos posicionar los elementos verticalmente, dentro de este podemos poner flex-star, que es la que viene por defecto (dependiendo el tamaño de el elemento se alineara verticalmente). se le añade center el cual hace que esten centrados. flex-end el cual nos posicionara los elementos al final de una forma centrada. son adaptables al contenedor. tenemos otro valor el cual es stretch (para que funcione debes tener un Heigth automatico) este hace que nuestros elementos tomen el 100% de el contenedor (horizontalmente). baseline es otra tambien. */
+
+    /* align-content:center; */
+    /* segun falcon align-content: ; esto se utiliza para centrar grupos de elementos que esten en una sola fila.  nota: para alinear correctamente mejor utilzamos align en vez de "items" en caso de que alla grupos de dos filas o mas. creo, otra cosa es que este solo se utiliza cuando hay varias filas. dentro de esta tambien esta flex-end;: el cual nos pone el grupo completo al final del contendor. flex-start es otra propiedad que pondra el grupo al principio. space-between es otro el cual se utiliza para poner los elementos a los laterales (o paredes, o limites o esquinas). space-around el cual hace que nuestros elementos tengan espacios entre cada fila proporcionalmente al contenedor. esta propiedad solo se utiliza para varias lineas de elementos, como wrap.*/
+
+    
+    
+
+}
+
+.elemento {
+
+    /* flex-grow: 1; */
+    /* flex-grow:; funciona para dar el tamaño necesario a nuestros elementos o el tamaño necesario para poder ocupar el 100% del contenedor. este puede ser para hacer crecer un elemento expecificado en proporcion a los demas. */
+
+    
+    /* flex-shrink: 1; */
+    /* flex-shrink: ; es lo contrario a flex-grow:;. ya que este hace que todos midan los mismo. aunque, es parecido el proceso en cuanto a usarlo en otro elemento especificado, como el elemento2, pero en vez de crecer el doble se hara mas pequeño. */
+
+    flex: 1 ;
+    /* flex: 1; es el atajo o forma en la cual se unen un flex-shrink: ; y flex-grow: ; de una manera mas rapida, podemos usarlo de la manera de arriba o poniendo los valores separados (ejemplo dos 1) ademas que se le puede añadir el flex-basis:; */
+
+    flex-basis: 50px;
+    color:#fff;
+    margin: 5px;
+    width: 50px;
+    /* flex-basis:150px; */
+    /* flex-basis:50px; se utiliza para dar ancho, igual que el width:; con la diferencia que  es dinamica. para explicarlo a mi manera, esta el ejemplo de usar otro elemento aparte del primero, en este caso el elemento2 de la pagina, si este tiene otro flex-grow:; si este tiene dentro 1, el otro flex grow que esta en el elemento2 crecera de acuerdo a la primero, ejemplo: flex-grow: 2;, asi crecera el doble que el primero en base a lo que mida en la maquetacion (la maquetacion se puede ver en la consola) igual si ponemos 4, este crecera 4 veces dependiendo el tamaño que de en la maquetacion. */
+
+
+    /* order: ; */
+    /* este se utiliza para ordenar los elementos.*/
+
+
+    height: 50px;
+    background: #e67e22;
+    text-align: center;
+}
+
+
+.elemento3 {
+    align-self: flex-start;
+    /* align-self:; se utiliza para poder ordenar un elemento individualmente dentro de el contenedor. las propiedades dentro ya las explique arriba, si quieres puede pasar el mouse y arrecordartelas. */
+    /* nota: para que funcione stretch dentro de esta propiedad debes darle un height:auto; */
+}

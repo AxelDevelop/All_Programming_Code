@@ -1,0 +1,265 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+div {
+
+    /* width: 500px; */
+    /* height: auto; */
+    text-align: center;
+    align-items: center;
+    /* grid-template-columns: repeat(3, 1fr); */
+    
+}
+
+p{
+    text-transform: capitalize;
+    margin-left: 10px;
+}
+
+ 
+/* --------------------CSS FILTERS---------------------- */
+
+/* La propiedad de filtro CSS le permite aplicar efectos gráficos como blurring (desenfoque) o color shifting (cambio de color) a un elemento.
+
+Los filtros se utilizan comúnmente para ajustar la representación de imágenes, fondos y bordes.
+
+El filtrado de imágenes es útil cuando desea tener diferentes estilos para la misma imagen.
+
+En lugar de cargar varias imágenes en el sitio web, puede cargar solo una imagen y luego definir efectos visuales utilizando la propiedad de filtro.
+
+las funciones de filter incluyen blur(desenfoque), brightness(brillo), contrast(contraste), drop-shadow(sombra paralela), grayscale(escala de grises), hue-rotate(tono-rotar), invert(invertir), opacity(opacidad), saturate(saturar) y sepia(sepia). */
+
+.drop-shadow img{
+
+    height: 200px;
+    width: 200px;
+    
+
+
+/* --------------DROP SHADOW---------------- */
+
+/* drop-shadow (w h b c) crea un efecto de sombra que se extiende más allá de una imagen para el ancho (w) y la altura (h) con desenfoque (b) y color (c). (el primer valor sera el ancho, osea izquierda y derecha, el segundo valor sera el alto , sea arriba y a la izquierda, el tercero sera su  desenfoque y el cuarto el color */
+
+/* sintaxys */
+
+filter: drop-shadow(5px 5px 5px blue);
+
+
+
+}
+
+.grayscale img{
+
+    margin-top: 25px;
+    height: 200px;
+    width: 200px;
+/* -----------------GRAY SCALE------------------- */
+
+/* La función de escala de grises convierte una imagen a escala de grises.
+El único parámetro define la proporción de la conversión.
+
+El 0% de escala de grises es la imagen original, mientras que el 100% hace que la imagen sea completamente en escala de grises.
+
+Aquí hay un ejemplo que usa un valor de porcentaje para hacer una imagen completamente en escala de grises: */
+
+filter: grayscale(50%);
+
+
+
+}
+
+.sepia img{
+
+    margin-top: 25px;
+    height: 200px;
+    width: 200px;
+
+/* -------------------------SEPIA---------------------- */
+/* La función sepia convierte una imagen en sepia.
+Esto es similar al uso de la escala de grises pero con un tono de color marrón rojizo.
+
+La idea detrás de los filtros sepia es que pueden hacer que las fotos en blanco y negro se vean un poco más llamativas que la versión básica en escala de grises.
+
+0% sepia es la imagen original, mientras que 100% convierte la imagen a sepia por completo: */
+
+    filter: sepia(50%);
+
+
+
+}
+
+.saturate img{
+
+    margin-top: 25px;
+    height: 200px;
+    width: 200px;
+
+/* --------------------SATURATE------------------ */
+
+/* La función de saturación controla la saturación del color de una imagen. El único parámetro determina la proporción de saturación que se aplica a la imagen.
+El parámetro puede ser un valor porcentual o un número.
+
+0% crea una imagen completamente insaturada (escala de grises), mientras que 100% es la imagen original. */
+
+filter: saturate(50%);
+
+/* Nota: La función de saturación también acepta valores superiores al 100%. */
+
+}
+
+.hue-rotate img{
+
+    margin-top: 25px;
+    height: 200px;
+    width: 200px;
+    
+/* ----------------------------HUE-ROTATE---------------- */
+
+/* hue-rotate de tono aplica una rotación de tono (basada en el círculo de color) a una imagen. 
+
+La función toma un ángulo de rotación como parámetro. El valor del ángulo define el número de grados alrededor del círculo de color que se ajustarán las muestras de entrada. */
+
+filter: hue-rotate(100deg);
+
+/* definido a mimanera seria que hue rotate es un circulo de colores los cuales se definen por medio de grados, cad grado es un tono diferente de colores */
+
+}
+
+.invert img{
+
+    margin-top: 25px;
+    height: 200px;
+    width: 200px;
+    
+/* -------------------------INVERT------------------------ */
+
+/* La función invert invierte los colores de una imagen para hacer que las áreas oscuras sean brillantes y las áreas brillantes oscuras.
+
+La función toma la proporción de la conversión como parámetro.
+
+El parámetro puede ser un valor porcentual o un número.
+El 0% invertido deja la imagen sin cambios, mientras que el 100% crea una imagen completamente invertida que es similar a un negativo fotográfico. */
+
+    filter: invert(70%);
+
+/* Dato: La especificación permite valores superiores al 100%, pero eso no tendrá ningún efecto adicional en la imagen. */
+}
+
+.Opacity img{
+
+    margin-top: 25px;
+    height: 200px;
+    width: 200px;
+
+
+/* --------------------------OPACITY------------------ */
+
+/* La función Opacity establece la opacidad de una imagen para cambiar su transparencia.
+
+El 0% de opacidad crea una imagen completamente transparente, mientras que el 100% es la imagen original. */
+
+filter: opacity(70%);
+
+}
+
+.brightness img{
+
+    margin-top: 25px;
+    height: 200px;
+    width: 200px;
+
+/* ---------------------------BRIGHTNESS----------------- */
+/* 
+La función de brillo (cantidad) ajusta el brillo de una imagen, haciendo que parezca más brillante o más oscura.
+
+El parámetro de cantidad determina el nivel de brillo de la imagen. El parámetro puede tomar un valor porcentual o un número. */
+
+/* Un valor del 0% da como resultado una imagen completamente negra.
+
+Un valor del 100% da como resultado una imagen sin cambios.
+
+Cualquier cantidad superior al 100% produce una imagen más brillante. */
+
+filter:brightness(200%)
+
+/* Datos: Un valor numérico de 0,5 tiene el mismo efecto que el valor porcentual del 50%. Un valor de 1 es igual a 100%. */
+
+
+}
+
+.contrast img{
+
+    margin-top: 25px;
+    height: 200px;
+    width: 200px;
+
+/* --------------------CONTRAST------------------ */
+
+/* La función contrast ajusta el contraste de la imagen.
+El parámetro de cantidad puede tomar un valor porcentual o un número.
+
+Un valor por debajo del 100% disminuye el contraste, mientras que un valor por encima del 100% lo aumenta.
+
+Un valor de 0% creará una imagen completamente gris, mientras que un valor de 100% dejará la imagen sin cambios.
+
+El valor 0,5 corresponde al 50%, mientras que 1 equivale al 100%. */
+
+filter: contrast(14%);
+
+}
+
+.blur img{
+
+    margin-top: 25px;
+    height: 200px;
+    width: 200px;
+
+/* --------------------BLUR------------------------ */
+
+/* La función de blur aplica un efecto de desenfoque a una imagen.
+
+La función de desenfoque tiene solo un parámetro, radio, que define cuántos píxeles en la pantalla se mezclan entre sí. 
+
+(un valor mayor crea más desenfoque). */
+
+filter: blur(5px);
+
+}
+
+/* --------------------MULTIPLES EFECTOS EN FILTER-------------- */
+
+.multiple img{
+    margin-top: 25px;
+    height: 200px;
+    width: 200px;
+
+/* ---------------USANDO BLUR CON HUE-ROTATE----------------- */
+
+filter: blur(5px) hue-rotate(180deg);
+
+}
+
+.multiple2 img{
+    margin-top: 25px;
+    height: 200px;
+    width: 200px;
+
+/* ---------------------USANDO SATURATE Y DROP-SHADOW Y BLUR------------ */
+
+filter: saturate(30%) drop-shadow(5px 9px 2px gray) blur(1px);
+
+}
+
+.multiple3 img{
+    margin-top: 25px;
+    height: 200px;
+    width: 200px;
+
+/* -------------------------USANDO BRIGHTNESS Y SEPIA---------- */
+
+filter: brightness(150%) sepia(100%);
+
+
+}

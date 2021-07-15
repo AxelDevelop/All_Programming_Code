@@ -1,0 +1,73 @@
+body /*la etiqueta body se utiliza para cambiar a toda nuestra pagina web (lo que esta en el body bro en html mayormente)*/
+ {
+	background: #FFFFFF; 
+	/*la etiqueta background le cambiara el color de fondo a tu web*/
+
+	/*color:#;
+	/*la etiqueta color le cambiara el color a las letras*/
+}
+
+/* los selectores son la parte de nuestras reglas css que nos permite indicarle a quien le vamos a hacer un cambio en su aspecto*/
+
+/* "*" la etiqueta unirversal nos permite cambiar todos los aspectos de todos los elementos */
+/* { */
+ /*margin:0; 
+/*la etiqueta margin permite agregar margen*/
+/*padding:0; /*es un margen interno que tienen ciertos elementos*/
+/*estas dos reglas le quitan los espacios a la pagina*/
+/* } */
+
+h2 
+/*en un codigo css h2 es un selector y cambiara los aspectos que esten dentro de el*/
+/*si queremos cambiar varios selectores solos tenemos que ponerlos al lado. ejemplo: h1,h2,h3....*/
+{
+	color:red;
+}
+
+h1
+{
+
+font-size:200px;
+/*la etiqueta font size se utiliza para  cambiar el tamaño fuente de un selector con texto*/
+color:rgb(46, 207, 28);
+/*rgb es un tipo de forma para los colores, tu sabes como buscarlos andry
+andry: pos no se bro, se me olvido XD, joder yo del pasado, piensa mejor en mi*/
+/* ya ya, ya tengo la explicacion par de pendejos XD, los tres primeros pares de numeros representaran un color, y el ultimo la opacidad en caso de que sea rgba */
+}
+
+
+
+.yellow
+/*todos los elementos dentro de yellow se modificaran*/
+
+ {
+	color:yellow;
+}
+
+rem 
+/* los rem son lo mismo que los em pero en relacion a la raiz, osea el html */
+px 
+/* px puede ser absoluta */
+em 
+/* 1 em vale 16 pixeles, em funciona dependiendo del elemento padre, si el elemento padre vale cierta cantidad, el "em" valdra lo mimso */
+
+/*estas son unidades de medida relativas*/
+
+cm
+mm
+in
+/*estas son unidades de medida absolutas*/
+
+/* y estan los procentajes % */
+
+p {
+	color:rgba(119, 239, 49, 0.753);
+	/*los colores rgba tienen la ventaja de la opasidad, se maneja desde 0 y 1, se puede poner en decimales para nivelarlo, al parecer para poner el color y la opacidad se usa el numero hexagesimal para que el color se ponga en rgb*/
+	/*andry: aaaaaa peeeerrro sabias que no me iba a acordar XD.*/
+
+}
+
+
+/* dato: para indicar un elemento dentro otro, simplemente se pone primero el primer elemento (osea el que encierra el otro) y luego el siguiente, y asi con los demas */
+
+/* Nota 2: si tenemos a un href o alguna etiqueta que llame algun tipo de nombre o url o correo, si queremos referirnos a ese correo en especifico o id, usaremos "[]" este simbolo */

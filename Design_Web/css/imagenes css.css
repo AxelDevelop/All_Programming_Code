@@ -1,0 +1,122 @@
+
+
+.image img{
+
+	width: 500px;
+	/*recuerda que con width podemos poner el ancho y si solo ponemos ese pos nos lo pone simetrico*/
+
+	height: auto;
+	/*ancho*/
+
+	margin: auto;
+	/*margin:auto; nos permite siempre centrar las cosas horizontalmente, obviamente debe tener un ancho*/
+
+	display: block;
+	border-radius: 50%;
+	/*con la etiqueta border radius puedes ponerle a los bordes un radio para que se vea bonito ;3 (osea nos pone el elemento en circulo)*/
+
+	box-shadow: 5px 5px 0px #ccc;
+	/*creo que habia hablado de esta propiedad pero por si acaso, la etiqueta box-shadow es para poner las sombras, el primer dijito pone sombras de izquierda a derecha, el segundo de arriba a abajo, el tercero el tamaño y el cuarto el color*/
+
+	padding: 10px;
+	border: 2px solid #000;
+	/*con las estiquetas padding (que se utiliza para darle un margen) y el border:solid; (que se utiliza para añadirle un borde a la imagen) junto con el border:radius; podemos poner la imagen como dentro  de un marco*/
+
+/* ---------------------------IMAGENES DE FONDO-------------- */
+
+/* ----------------------background size: ;------------------ */
+
+	/* background-size: 200px 100px; */
+
+	/* con la propiedad background-image: ; podemos definir muchas cosas con respecto a las imagenes, como por ejemplo el ancho y el largo, el primer valor sera el ancho y el segundo el largo, otra forma de definir su tamaño es añadiendo la propiedad contain que contiene la escala de la imagen para que se ajuste al contenedor, en otras palabras, hara que la imagen crezca o se encoje proporcionalmente, pero el ancho y el alto no excederán las dimensiones del contenedor. tambien tenemos la propiedad cover que también hara que La imagen se escale para que se ajuste a todo el contenedor, sin embargo, si tiene una relación de aspecto diferente, la imagen se recortara, un aspecto diferente al radio o circulo. */
+
+
+
+	/* background-clip: border-box;
+	background-clip: padding-box;
+	background-clip: content-box; */
+
+	/* background-clip: ; se utiliza para dar color dentro de un borde a un elemento en el fondo de ese elemento, este tiene 3 valores, border-box (el cual es el de por defecto, que le da color desde afuera del borde), padding-box (el cual da color al fondo desde su propio padding o su ancho y largo) y content-box (el cual da color desde su margin o margen o espacio personal separado del borde o padding, recalco que padding es su propio ancho y alto) */
+
+	/* background-image: url(./imagen1.jpg); */
+	/* background-clip: content-box; */
+
+	/* tambien background-clip: ; se puede utilizar imagenes, usa la misma ciencia */
+
+
+/* ------------------BORDES TRANSPARENTES CON background-clip: ; */
+
+	/* border: 20px solid rgba(0, 0, 0, 0.3);
+	-moz-background-clip: padding-box;
+	background-clip: padding-box; */
+
+	/* segun entiendo puedes usar una imagen o texto con un border solido con mucha transparencia, no entendi muy bien pero intentare explicar, al poner un borde transparente con un background-clip: ; y con su prefijo ya que los algunos navegadores no aguantan el background-clip: ;, la funcion de esto es hacer un pequeño cuadro con esquinas transparentes por encima de letras o cosas, este alser transparente hace que se vean las letras debajo. */
+
+/* --------------------MULTIPLES background IMAGES---------- */
+
+	/* se puede añadir varias imagenes de fondo de esta manera: */
+
+	/* background-image: url(./imagen1.jpg), url(./blue\ space.jpg);
+	background-position: right bottom, left top; */
+	/* background-repeat: no-repeat; */
+
+	/* La primera imagen aparecerá en la parte superior, la última en la parte inferior (dentro del contenedor obviamente) o mejor dicho la primera imagen sera la que estara encima de la segunda las cuales seran el fondo.*/
+
+	/* aqui el background-position: ; acomoda la imagen que esta encima de la otra o la primera imagen. el primer valor sera el de la imagen de arriba y el segundo valor sera el de la imagen de fondo */
+
+	/* el background-position:; tambien puede ser añadido junto con la imagen usando solo background: ; y añadiendo los valores de esta manera: */
+
+	/* background: url(./blue\ space.jpg) right top no-repeat, url(./imagen1.jpg) left top no-repeat; */
+
+	/* explicado, con cada imagen y su posicion al lado con su no-repeat para que no se repita la imagen */
+
+	/* Dato: se pone primero la izquiera o derecha y luego el arriba y abajo cuando escribamos la posicion  */
+
+
+/* ---------------------OPACITY------------------------- */
+
+	/* opacity: 1; */
+
+	/* opacity: ; sirve para darle opacidad al elemento, osea tranparencia, este tiene valores desde 1.0 (nada de transparencia) hasta 0.0 (totalmente transparente) */
+
+	/* para que esta propiedad trabaje con internet explorer se debe usar filter: alpha(opacity="valor"); y  encima la propiedad de opacity: ; */
+
+	/* de esta manera:
+
+	opacity: 0.5 ;
+	filter:alpha(opacity=50); */
+
+
+	/* dato: el filter:alpha es una propiedad exclusiva de microsoft. no una estandar de CSS */
+
+}
+
+
+/* Nota: por defecto nuestras imagenes tienen un display inline o en otra definicion que son en linea, con display:block; lo ponemos en bloque */
+
+/* --------------------Ejemplo de los MULTIPLES background IMAGES---------- */
+
+
+.image2 {
+	background-image: url(./blue\ space.jpg), url(./imagen1.jpg);
+	background-position: right bottom, left top;
+	background-repeat: no-repeat;
+	background-size: 50%;
+	width: 50%;
+	height: 380px;
+}
+
+/* ------------------------END--------------------- */
+
+/* ---------------------Ejemplo de OPACITY------------------------- */
+
+.image3{
+	background-image: url(./blue\ space.jpg);
+	background-repeat: no-repeat;
+	margin: 20px;
+	opacity:0.5;
+	background-size: 50%;
+	width: 50%;
+	height: 380px;
+	/* filter:alpha(opacity=50);  */
+}

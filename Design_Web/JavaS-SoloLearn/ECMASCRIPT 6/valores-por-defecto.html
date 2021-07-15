@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parametros por defecto en ECMASCRIPT</title>
+</head>
+<body>
+
+    <script>
+
+// ------------------------DEFAULT PARAMETERS IN ES6-------------------------
+
+// En ES6, podemos poner los valores predeterminados directamente en la firma de las funciones.
+
+// por ejemplo:
+
+        function test (a, b = 3, c = 42){
+            return a + b + c;
+        }
+        console.log(test(5)); //aqui le añadimos un valor a la "a" el cual sera 5, y asi, sumados a los demas daran 50
+
+// Y aquí hay un ejemplo de una función de flecha con parámetros predeterminados:
+
+        const test2 = (a, b = 3, c = 42)=>{
+            return a + b + c;
+        }
+
+        console.log(test(5)); //lo mismo del ejemplo de arriba
+
+// Nota: Las expresiones de valor predeterminado se evalúan en el momento de la llamada a la función de izquierda a derecha. Esto también significa que las expresiones predeterminadas pueden utilizar los valores de los parámetros previamente rellenados.
+
+
+    </script>
+    
+</body>
+</html>

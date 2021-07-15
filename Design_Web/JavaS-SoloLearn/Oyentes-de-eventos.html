@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oyentes de eventos</title>
+</head>
+<body>
+
+    <button id="demo" >Start</button>
+    
+    <button id="demo2">Start2</button>
+
+
+    <script>
+
+// ------------------------EVENTS LISTENERS-------------------
+
+// El método addEventListener () adjunta un controlador de eventos a un elemento sin sobrescribir los controladores de eventos existentes. Puede agregar muchos controladores de eventos a un elemento.
+
+// También puede agregar muchos controladores de eventos del mismo tipo a un elemento, es decir, dos eventos de "clic".
+
+// El metodo se ve de esta manera:
+
+        // element.addEventListener(evento, funcion, useCapture);
+
+
+                            // EXPLICACION:
+
+// El primer parámetro es el tipo de evento (como "clic" o "mousedown").
+
+// El segundo parámetro es la función que queremos llamar cuando ocurre el evento.
+
+// El tercer parámetro es un valor booleano que especifica si se utilizará el burbujeo de eventos o la captura de eventos. Este parámetro es opcional y se describirá en la próxima lección.
+
+// Esto agrega dos detectores de eventos al elemento.
+
+// Podemos eliminar uno de los oyentes:
+
+// -------------------------EJEMPLO 1----------------
+
+    var element = document.getElementById("demo");
+    element.addEventListener("click", myFunction);
+    element.addEventListener("mouseout", myFunction); //(mouse over es cuando el raton esta sobre el elemento)
+
+    function myFunction() {
+    alert("Hello World!");
+    }
+
+// ---------------------------REMOVER UN DETECTOR DE EVENTOS -removeEventListener() (ESTO VA CON EL EJEMPLO DE ARRIBA).----------------
+
+// arriba se agrego dos detectores de eventos al elemento.
+
+// Podemos eliminar uno de los oyentes:
+
+// ------------------PRACTICA-------------------
+
+// Nota: el html esta arriba, lo cual solo es un boton con un id XD:
+
+    // JAVASCRIPT:
+
+    var btn = document.getElementById("demo2");
+    btn.addEventListener("click", myFunction2);
+
+    function myFunction2(){
+        alert(Math.ceil( Math.random()*10));
+        btn.removeEventListener("click", myFunction2);
+    }
+
+// -------------------EXPLICACION----------------
+
+// Después de hacer clic en el botón, se muestra una alerta con un número aleatorio y se elimina el detector de eventos.
+
+// Nota: Internet Explorer versión 8 y anteriores no admiten los métodos addEventListener () y removeEventListener (). Sin embargo, puede utilizar el método document.attachEvent () para adjuntar controladores de eventos en Internet Explorer.
+
+</script>
+    
+</body>
+</html>

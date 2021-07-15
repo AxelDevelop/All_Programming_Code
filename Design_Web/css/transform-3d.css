@@ -1,0 +1,112 @@
+/* -------------------3D TRANSFORM---------------- */
+/* Junto con los ejes x Y y, las transformaciones 3D introducen el eje Z, que permite manipulaciones 3D. */
+
+body{
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.rotatenule{
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    padding: 10px;
+}
+
+
+.rotate1{
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    padding: 10px;
+    /* transform: rotateX(50deg); */
+}
+.rotate1:hover{
+    transform: rotateX(150deg);
+    transition: 2s ease-in;
+}
+
+.rotate2{
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    padding: 10px;
+    /* transform: rotateY(150deg); */
+    
+}
+
+.rotate2:hover{
+    transform: rotateY(150deg);
+    transition: 2s ease-in;
+}
+
+.rotate3{
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    padding: 10px;
+    /* transform: rotateZ(150deg); */
+
+    /* podemos quitarle las rotaciones en 3D a los elementos usando transform: none; */
+}
+
+.rotate3:hover{
+    transform: rotateZ(1080deg);
+    transition: 6s ease;
+}
+
+
+.traslacion {
+
+/* ------------------------METODOS DE TRASLACION--------------------- */
+
+/* Los métodos de traslacion 3D le permiten mover el elemento horizontalmente (translateX), verticalmente (translateY) y dentro o fuera de la pantalla (translateZ), usando cualquier unidad de longitud CSS (px, em,%, etc.). Los valores positivos mueven el elemento hacia el espectador, los valores negativos lo alejan (osea en el Z claramente) */
+
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: firebrick;
+    padding: 10px;
+    
+    /* transform: translateX(399px)
+    translateY(-1em)
+    translateZ(-13px); */
+
+    /* aqui arriba de puede notar como podemos trasladar en un transform: ; un elemento usando los translate, no se mucho pero, ahi esta la demostracion. */
+
+
+}
+
+.traslacion:hover{
+    transform: translateX(399px)
+    translateY(-10em)
+    translateZ(-13px);
+    transition: 3s ease;
+}
+
+.traslated3D{
+        /* El método translate3d () nos permite pasar las compensaciones x, y, z, todas a la vez y en el siguiente orden: */
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 100px;
+        height: 100px;
+        background-color: fuchsia;
+        padding: 10px;
+
+        /* transform: translate3D(100px, 4em, 10px); */
+        /* el primer valor sera el translate del eje x, el segundo el del eje y, y el terceroel  */
+}
+
+.traslated3D:hover{
+    transform: translate3D(100px, 4em, 10px);
+    transition: 3s ease;
+}
+
+
+/* Notas: Al igual que el método translate3d (), también existen scale3d () y rotate3d (), que son aplicables para escalar y rotar elementos en 3D. */
+
+/* Notas: La traducción de un elemento es similar al posicionamiento relativo: no afecta el flujo del documento. El elemento traducido mantendrá su posición en el flujo y solo parecerá que se ha movido. */

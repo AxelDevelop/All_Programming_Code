@@ -1,0 +1,39 @@
+body{
+	margin:0;
+	padding:0;
+}
+
+.menu{
+	width: 100%;
+	background: #000;
+	list-style: none;
+	/*list-style nos añade un espacio antes de la frease y con none le quitamos las bolitas a la lista*/
+	margin:0;
+	padding:0;
+	/*con padding y margin le quitamos ese espacio que dejan esas bolitas*/
+	text-align: center;
+
+}
+
+.menu li{
+
+	display: inline-block;
+	/*con inline-block podemos poner las palabras de la lista una al lado de otra (lo puse en linea y en bloque)*/
+}
+
+.menu li a {
+
+	padding: 10px 100px;
+	/*recuerda que los elemento a son elementos en linea*/
+	display:block;
+	/*haci se puede ponerel padding bien, ya haci no sera en liena*/
+	color: #fff;
+	text-decoration: none;
+}
+
+.menu li a:hover{
+	background: #ccc;
+	color: #000;
+	text-decoration: underline;
+
+}

@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap");
+body {
+  background: -webkit-gradient(linear, left bottom, left top, from(#d9afd9), to(#97d9e1));
+  background: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+body .contenedor {
+  border-radius: 20px;
+  background-color: aliceblue;
+  padding: 10px;
+  width: 20%;
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: capitalize;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+body .contenedor span {
+  font-weight: 600;
+  font-size: 50px;
+  font-family: 'Odibee Sans', cursive;
+  letter-spacing: 5px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+body .contenedor:hover {
+  background: #543356;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+/*# sourceMappingURL=styles.css.map */

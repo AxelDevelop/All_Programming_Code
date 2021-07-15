@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Document Object Model 2</title>
+
+
+</head>
+<body>
+
+	<ol id="lista">
+		<li>aqui voy gente</li>
+		<li>ya fui gente XD</li>
+	</ol>
+
+
+	<script>
+		
+		var elemento = document.createElement("li");
+		contenido = document.createTextNode("Nuevo Texto");
+		elemento.appendChild(contenido);
+		
+		var padre = document.getElementsByTagName("li")[0].parentNode,
+		primerElemento = document.getElementsByTagName("li")[0];
+		padre.insertBefore(elemento, primerElemento );
+
+		// parentNode es un comando que nos devolvera el elemento padre de una etiqueta o elemento, en este caso nos devuelve la etiqueta ol que esta arriba
+
+		// insertBefore inserta elementos, el primer parametro sera el elemento o variable que queramos insertar y el segundo el nombre de la variable a la cual le sera insertado el elemento o variable, ten en cuenta que este se le insertara antes que el elemento, tambine que getElementsByTagName("") para señalar un elemento dentro de la etiqueta la cual estas llamando por su nombre, deberas añadir unas [] despues, y dentro de estas pones el numero que la señale.
+
+
+
+
+
+
+
+
+
+
+	</script>	
+
+
+
+
+
+
+
+
+
+</body>
+</html>

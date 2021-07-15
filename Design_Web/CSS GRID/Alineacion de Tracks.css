@@ -1,0 +1,26 @@
+.contenedor {
+
+	display: grid;
+	grid-gap: 20px;
+	height: 700px;
+
+	grid-template-columns: repeat(3, 150px);
+	grid-template-rows: repeat(3, 150px);
+
+
+	justify-content:space-between;
+	/*esta propiedad justify-content nos permite alinear de forma horizonta. se le pueden poner los valores start, normal, center y end*/
+	/*otro valor seria space-around que separa los cuadros o divs con espacios entre los grids y al comienzo y al final, osea deja espacios iguales entre los elementos pero al inicio y al final serian diferentes pero iguales.*/
+	/*otro valor seria space-between que permite dejar espaciados entre los grids pero sin dejar  espacios al principio y al final, osea margen.*/
+	/*otro valor seria sapce-evenly que permite poner el mismo tamaño de espaciado al inicio, centro y al final*/
+
+	align-content:space-between;
+	/*lo mismo de arriban lo unico que en forma vertical o en fila.*/
+
+
+
+
+
+
+
+}

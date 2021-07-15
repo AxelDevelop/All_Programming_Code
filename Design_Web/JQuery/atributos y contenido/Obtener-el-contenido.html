@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <title>Obtener el contenido</title>
+</head>
+<body>
+    <p>
+        JQuery es <b> divertido </b>
+     </p>
+
+    <script>
+
+// ---------------------------------GET CONTENT---------------------
+
+// --------------------------------------OBTENER CONTENIDO---------------
+
+// Existen varios métodos para manipular el contenido de elementos HTML a través de jQuery.
+
+// El método html () se utiliza para obtener el contenido del elemento seleccionado, incluido el marcado HTML. Por ejemplo:
+
+// JS:
+
+        $(function(){
+            var val = $("p").html();
+            alert(val);
+        })
+        // esto dara una alerta que diga lo que esta en el parrafo aarriba
+
+// Tenga en cuenta que también se devuelve el marcado HTML (las etiquetas <b>),
+// Si solo necesita el contenido de texto, sin el marcado HTML, puede usar el método text ():
+
+        $(function(){
+            var val = $("p").text();
+            alert(val);
+        })
+
+// Nota: Los métodos html () y text () se pueden utilizar para todos los elementos HTML que pueden contener contenido.
+
+
+
+    </script>
+
+</body>
+</html>

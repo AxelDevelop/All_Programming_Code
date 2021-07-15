@@ -1,0 +1,12 @@
+.contenedor {
+	display: grid;
+	grid-template-columns:  1fr 1fr 1fr; 
+	/*con grid-template-colums vamos a poder especificar cuantas columnas queremos que tenga, aqui se puede usar aparte de px y procentajes las fracciones, si no recuerdas como hacer cosas usando dos de esas tres ve al video*/
+	grid-template-rows: 150px 300px; 
+	/*¿que pasaria si quisieras cambiarle el tamaño a una fila en especifico? tendrias que usar grid-template-rows le podras poner el tamaño que quieras a cada fila. aqui tambien se puede usar las fracciones pero debes ponerle altura (height)*/
+	grid-gap: 20px; 
+	/*con grid gap se le puede poner espaciados entre cada uno de los elementos*/
+	
+}
+
+

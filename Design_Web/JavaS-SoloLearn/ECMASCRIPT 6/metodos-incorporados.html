@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos incorporados</title>
+</head>
+<body>
+
+    <script>
+
+// -----------------------BUILT-IN METHODS------------------------------
+
+// ES6 también introdujo nuevos métodos integrados para facilitar varias tareas. Aquí cubriremos los más comunes.
+
+// ------------------------BUSQUEDA DE ELEMENTOS DE MATRIZ (Array Element Finding)-----------
+
+// La forma heredada de encontrar el primer elemento de una matriz por su valor y una regla era la siguiente:
+
+        const array = [3, 5, 6, 7, 8, 1].filter(function(x){
+            return x > 3;
+        });
+        console.log(array)
+
+// La nueva sintaxis es más limpia y robusta:
+
+    const array2 = [3, 5, 6, 7, 8, 1].find(x => x > 3);
+    console.log(array2)
+
+// También puede obtener el índice del elemento anterior utilizando el método findIndex ():
+
+    const array3 = [3, 5, 6, 7, 8, 1].findIndex(x => x > 3);
+    console.log(array3)
+
+// ---------------------REPEATING STRINGS (Cuerdas repetidas)------------------
+
+// Antes de ES6, la siguiente sintaxis era la forma correcta de repetir una cadena varias veces:
+
+        console.log(Array(3 + 2).join("foo")); //seria igual a foo la cantidad de veces que diga el array, osea 5 veces (foofoofoofoofoo)
+
+// Con la nueva sintaxis, se convierte en:
+
+        console.log("foo".repeat(3)); //lo mismo y mas facil.
+
+// -----------------------BUSCANDO CADENAS (Searching Strings)----------------------
+
+// Antes de ES6, solo usábamos el método indexOf () para encontrar la posición del texto en la cadena. Por ejemplo:
+
+        "soloLearn".indexOf("solo") === 0; //sera verdadero si hay una palabra "solo en la cadena"
+        "soloLearn".indexOf("solo") === (4 - "solo".length); //sera verdadero
+
+        "soloLearn".indexOf("lole") !== -1; //verdadero
+        "soloLearn".indexOf("olo", 1) !== -1; //verdadero
+        "soloLearn".indexOf("olo", 2) !== -1; //false
+
+// ES6 ha reemplazado esto con una versión que tiene una sintaxis más limpia y simplificada:
+
+        "soloLearn".startsWith("solo", 0); //verdadero
+        "soloLearn".endsWith("solo", 4); //verdadero
+        "soloLearn".includes("lole"); //verdadero
+        "soloLearn".includes("olo", 1); //verdadero
+        "soloLearn".includes("olo", 2); //false
+
+// Nota: Siempre es una buena práctica refactorizar su código con la nueva sintaxis para aprender cosas nuevas y hacer que su código sea más comprensible.
+
+    </script>
+    
+</body>
+</html>

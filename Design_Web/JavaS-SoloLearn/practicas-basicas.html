@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practicas</title>
+</head>
+<body>
+
+    <script>
+        // Aqui pondre las practicas que no pude completar por falta de conocimiento en la sintaxys o pensamiento autonomo, estas practicas deberian ayudarme a recordar el proceso y porque no logre completarlas.
+
+
+        var recibido = 10;
+
+// ------------------------TRIP PLANNER--------------------
+
+// Necesitas planificar un viaje por carretera. Viaja a una velocidad promedio de 40 millas por hora.
+// Dada una distancia en millas como entrada (el código para tomar la entrada ya está presente), envíe a la consola el tiempo que le tomará recorrerlo en minutos.
+
+// Entrada de muestra:
+// 150
+
+// Salida de muestra:
+// 225
+// Explicación: Se necesitarán 150/40 = 3,75 horas para cubrir la distancia, lo que equivale a 3,75 * 60 = 225 minutos.
+
+function main() {
+    var distance = parseInt(readLine(), 10);
+    //your code goes here
+    document.write(distance/40 * 60);
+    
+}
+
+// ----------------------------THE SNAIL IN THE WELL----------------------
+
+// El caracol en el pozo
+
+
+// El caracol sube 7 pies cada día y retrocede 2 pies cada noche.
+// ¿Cuántos días tardará el caracol en salir de un pozo con la profundidad dada?
+
+// Entrada de muestra:
+// 31
+
+// Salida de muestra:
+// 6
+
+// Explicación: Analicemos la distancia que recorre el caracol cada día:
+// Día 1: 7-2 = 5
+// Día 2: 5 + 7-2 = 10
+// Día 3:10 + 7-2 = 15
+// Día 4:15 + 7-2 = 20
+// Día 5:20 + 7-2 = 25
+// Día 6:25 + 7 = 32
+// Entonces, en el día 6, el caracol alcanzará los 32 pies y saldrá del pozo durante el día, sin resbalarse esa noche.
+// Sugerencia: puede usar un bucle para calcular la distancia que cubre el caracol cada día y romper el bucle cuando alcance la distancia deseada.
+
+function main2() {
+    var depth = parseInt(readLine(), 10);
+    //your code goes here
+    
+var climb = 7;
+var slip = 2;
+var day = 0;
+    for(workdone=0;workdone<=depth;) {
+        day = day + 1;
+        workdone+=climb;
+        if(workdone>=depth){
+            break;
+        }
+        workdone = workdone - slip;
+        
+    }
+ console.log(day);
+}
+
+// -----------------------CURRENCY CONVERTER-----------------
+
+// Estás creando una aplicación de conversión de moneda.
+// Cree una función llamada convertir, que toma dos parámetros: la cantidad a convertir y la tasa, y devuelve la cantidad resultante.
+// El código para tomar los parámetros como entrada y llamar a la función ya está presente en Playground.
+// Cree la función para que el código funcione.
+
+// Entrada de muestra:
+// 100
+// 1.1
+
+// Salida de muestra:
+// 110
+// Convertir 100 a razón de 1,1 es igual a 100 * 1,1 = 110.
+
+function main3() {
+    var amount = parseFloat(readLine(), 10);
+    var rate = parseFloat(readLine(), 10);
+    
+    console.log(convert(amount, rate));
+
+    function convert(amount, rate){
+        return(amount * rate);
+    }
+
+}
+
+// -----------------------CONTACT MANAGER--------------------
+
+// Estás trabajando en una aplicación Contact Manager.
+// Ha creado el constructor del objeto de contacto, que tiene dos argumentos, nombre y número.
+// Debe agregar un método print () al objeto, que generará los datos de contacto en la consola en el siguiente formato: nombre: número
+// El código dado declara dos objetos y llama a sus métodos print (). Complete el código definiendo el método print () para los objetos.
+// Observe el espacio después de los dos puntos, al generar los datos de contacto.
+
+function contact(name, number) {
+    this.name = name;
+    this.number = number;
+    this.print = function(){
+        var x = this.name;
+        var y = this.number;
+        console.log(x + " : " + y)
+    }
+
+}
+
+var a = new contact("David", 12345);
+var b = new contact("Amy", 987654321)
+a.print();
+b.print();
+
+
+
+
+// --------------------------STORE MANAGER---------------------------
+
+
+// Está trabajando en un programa Store Manager, que almacena los precios en una matriz.
+
+// Debe agregar funcionalidad para aumentar los precios en la cantidad dada.
+
+// La variable de aumento se toma de la entrada del usuario. Necesita aumentar todos los precios en la matriz dada en esa cantidad y enviar a la consola la matriz resultante.
+
+// solucion:
+
+function main4() {
+    var increase = 10;
+    var prices = [98.99, 15.2, 20, 1026];
+    //your code goes here
+    for(var i=0;i<=prices.length-1;i++){
+        prices[i]=prices[i]+increase;
+    }
+    console.log(prices);
+    
+    
+}
+
+// ---------------------------WORDS----------------------
+
+// Estás creando un cifrador de texto. Debe tomar varias palabras y generar una versión combinada, donde cada palabra está separada por un signo de dólar $.
+// Por ejemplo, para las palabras "hola", "cómo", "estás", "tú", la salida debería ser "$ hola $ cómo $ eres $ tú $".
+// El código dado declara una clase llamada Add, con un constructor que toma un parámetro de descanso.
+// Complete el código agregando un método print () a la clase, que debería generar la salida solicitada.
+// Tenga en cuenta que el signo de dólar se coloca al principio y al final de la salida.
+
+        class Add {
+        constructor(...words) {
+            this.words = words;
+        }
+        //your code goes here
+        print(){
+            var y = "" + "$";
+            if(x < y){
+            for(x of this.words){
+                y += `${x}$`;
+            }
+            console.log(y);
+            }
+            else{ 
+            for(x of this.words){
+
+                y += `${x}$`;
+
+            }
+            console.log(y);
+
+        }
+        }
+}
+
+
+
+        var x = new Add("hehe", "hoho", "haha", "hihi", "huhu");
+        var y = new Add("this", "is", "awesome");
+        var z = new Add("lorem", "ipsum", "dolor", "sit", "amet", "consectetur", "adipiscing", "elit");
+        x.print();
+        y.print();
+        z.print();
+
+
+
+// practica a resolver
+
+// ------------------------------Practica uno---------------------------
+
+// cuatro perros: un golgo, un dogo, un alano y un podenco. este ultimo come mas que el galgo; el alano come mas que el galgo y menos que el dogo, pero este come mas que el podenco, ¿cual de los cuatro perros come menos?
+
+
+// ---------------------------------Practica dos---------------------------------------
+
+// seis amifos desean pasar sus vacaciones juntos y deciden, cada dos, utilizar diferentes medios de transporte, sabemos que alejandro no utiliza el coche ya que este acompaña benito que no va en avion. Andres viaja en avion. Si carlos no va acompañado de dario ni hace uso del avion, podria VD. decirnos en que medio de transporte llega a su destino Tomas?
+
+// -------------------------Practica 3-------------------------
+
+// Si angela habla mas bajo que Rosa y celia habla mas alto que rosa, ¿habla Angela mas alto o mas bajo que celia?
+
+// Ejercicios para la web con respecto al diseño
+
+// --------------------------Ejercicio uno--------------------
+
+// hacer que un numero el cual cambia cada 2 segundos cambie de estilos cada vez que cargue su intervalo de tiempo, y que este se detenga por medio de un boton (el cual dentro se le escriba Stop), y siga avanzando si se presiona otro diferente (que tenga dentro la palabra start)
+
+// ------------------------Ejercicio dos----------------------------
+
+// dado un formulario, con nombre, apellido, numero favorito y color, haz que estos datos se manden una vez presionado el boton de "enviar" con sus respectivos diseños, y luego estos se representen en una tabla
+
+// --------------------------Ejercicio tres--------------------------
+
+// haz un circulo que cada vez que se presione de una vuelta, luego dos, luego tres hasta llegar a 10 vueltas por toque, y una vez llegue a las 10 vueltas le des al boton y regrese a solo una vuelta por toque
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <title>Lista de quehaceres</title>
+</head>
+<body>
+
+    <script>
+
+// ------------------------EFFECTS-------------------
+
+// --------------------HIDE/SHOW---TOGGLE-------------------
+
+// jQuery tiene algunos efectos fáciles de implementar para crear animaciones.
+
+// Los métodos hide () y show () se utilizan para ocultar y mostrar los elementos seleccionados.
+
+// El método toggle () se utiliza para alternar entre ocultar y mostrar elementos.
+
+// Por ejemplo:
+
+        // $(function(){
+        //     $("p").click(function(){
+        //         $("div").toggle();
+        //     });
+        // });
+
+// Los métodos hide / show / toggle pueden tomar un argumento opcional, "speed", que especifica la velocidad de la animación en milisegundos.
+
+// Los métodos hide / show / toggle pueden tomar un argumento opcional, speed, que especifica la velocidad de la animación en milisegundos.
+
+// Por ejemplo, pasemos 1000 milisegundos como argumento de velocidad al método toggle ():
+
+
+        // $(function(){
+        //     $("p").click(function(){
+        //         $("div").toggle(1000);
+        //     });
+        // });
+
+// Los métodos hide / show / toggle también pueden tomar una segunda devolución de llamada de parámetro opcional, que es una función que se ejecutará después de que se complete la animación.
+
+// --------------------FADE/IN OUT-----------------------
+
+// Similar a los métodos hide / show, jQuery proporciona los métodos fadeIn fadeOut, que hacen que un elemento entre y desaparezca de la visibilidad.
+
+// Similar a los métodos hide / show, jQuery proporciona los métodos fadeInfadeOut, que hacen que un elemento entre y desaparezca de la visibilidad.
+
+// Al igual que el método toggle () cambia entre ocultar y mostrar, el método fadeToggle () aparece y desaparece.
+
+// Veamos fadeToggle () en acción:
+
+        $(function(){
+            $("p").click(function(){
+                $("div").fadeToggle(1000);
+            })
+        })
+
+// Al igual que toggle (), fadeToggle () toma dos parámetros opcionales: velocidad y devolución de llamada.
+
+// Nota: Otro método utilizado para el desvanecimiento es fadeTo (), que permite el desvanecimiento a una opacidad determinada (valor entre 0 y 1). Por ejemplo: $ ("div"). FadeTo (1500, 0.7);
+
+// -----------------SLIPE UP/DONW-----------------------------------
+
+// Los métodos slideUp () y slideDown () se utilizan para crear un efecto de deslizamiento en los elementos.
+
+// Nuevamente, similar a los métodos de alternancia anteriores, el método slideToggle () cambia entre los efectos de deslizamiento y puede tomar dos parámetros opcionales: velocidad y devolución de llamada.
+
+        $(function(){
+            $("p").click(function(){
+                $("div").slideToggle(500);
+            });
+        });
+
+        
+
+    </script>
+
+
+
+</body>
+</html>

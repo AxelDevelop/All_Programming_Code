@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <title>Lista de quehaceres</title>
+</head>
+<body>
+
+    <h1>My To-Do List</h1>
+
+    <input type="text" placeholder="New item" />
+
+    <button id="add">Add</button>
+
+    <ol id="mylist"></ol>
+
+
+    <script>
+
+// -------------------------TO-DO LIST-----------------------
+
+// Creemos un proyecto de lista de tareas pendientes utilizando los conceptos que hemos aprendido.
+
+// La lista de tareas pendientes podrá agregar nuevos elementos a una lista, así como eliminar elementos existentes.
+
+// Hacer clic en el botón debería agregar el valor del campo de entrada a nuestra lista <ol> (esto esta arriba, no te confundas, esta en la parte del body).
+
+// Ahora, con el HTML listo, podemos comenzar a escribir nuestro código jQuery.
+
+// Primero, manejamos el evento click para el botón:
+
+    $(function(){
+        $("#add").on( "click", function(){
+        // Dentro del controlador de eventos seleccionamos el valor del campo de entrada y creamos un nuevo elemento <li>, agregándolo a la lista:
+                var val = $("input").val();
+                if(val !== '') {
+                var elem = $("<li></li>").text(val);
+                $(elem).append("<button class='rem'>X</button>");
+                $("#mylist").append(elem);
+                $("input").val(""); //clear the input
+                }
+                // El código anterior toma el valor del campo de entrada y lo asigna a la variable val. La instrucción if verifica que el valor no esté en blanco y luego crea un nuevo elemento <li>. Se agrega un botón para eliminarlo, después de lo cual el elemento recién creado se agrega a la lista <ol id = "mylist">.
+
+                // Todo lo que queda por hacer es manejar el evento click en el botón class = "rem" y eliminar el elemento <li> correspondiente de la lista.
+                
+                // de esta manera:
+
+                $(".rem").on("click", function() {
+                $(this).parent().remove();
+            });
+        });
+    });
+
+
+// Nota: La lista de tareas pendientes fue solo una breve demostración de cómo manejar eventos y construir un proyecto simple.
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

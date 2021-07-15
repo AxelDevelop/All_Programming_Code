@@ -1,0 +1,11 @@
+.contenedor {
+	display: grid;
+	grid-gap: 20px;
+	grid-template-columns: minmax(300px, 1fr) 1fr;
+	/*la funcion minmax recibe dos parametros, el tamaño minimo y maxim (adentro seria el primer numero minimo y el siguiente el maximo) el ultimo digito es la otra columna, no te confundas*/
+	grid-template-rows: minmax(150px, auto)400px;
+	/* si te preguntas que hace el auto ahi es que tendra el ancho maximo necesario dependiendo el contenido dentro que tenga */
+
+
+
+}

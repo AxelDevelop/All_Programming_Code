@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+
+    <script>
+
+// ------------------------OBJETOS-------------------
+
+// Las variables de JavaScript son contenedores de valores de datos. Los objetos también son variables, pero pueden contener muchos valores.
+
+// Piense en un objeto como una lista de valores que se escriben como pares de "nombre: valor", con los nombres y los valores separados por dos puntos.
+
+// Ejemplo:
+
+        var persona1 = {
+            name: "john", 
+            age: 31,
+            favColor: "green",
+            height: 183
+            // Estos valores (los que estan dentro de la variable person) se denominan propiedades.
+        };
+// Notas: Los objetos JavaScript son contenedores para valores con nombre.
+
+// Puede acceder a las propiedades del objeto hay dos formas:
+
+        // esta:
+        // objectName.nombredelapropiedad
+        
+        // ó
+
+        // objectName['nombre de la propiedad'];
+
+// Este ejemplo demuestra cómo acceder a la edad de nuestro objeto persona:
+var fuera = "john";
+
+        var persona = {
+            nombre: fuera, edad: 31,
+            colorFav: "green", altura: 183
+        };
+
+        var x = persona.edad;
+        var y = persona ['nombre'];
+
+        document.write(y + "<br>");
+        document.write(x + "<br>");
+
+
+// ----------------------LENGHT---------------------
+
+// La propiedad lenght incorporada de JavaScript se usa para contar el número de caracteres en una propiedad o cadena.
+
+// ejemplo:
+
+        var course = {
+            nombre2: "JS", lessons: 41
+        };
+
+        document.write(course.nombre2.length);
+
+
+// Nota: Los objetos son uno de los conceptos centrales de JavaScript.
+
+// ------------------------------METODO DE OBJETO--------------------
+
+// Un método de objeto es una propiedad que contiene una definición de función.
+
+// Utilice la siguiente sintaxis para acceder a un método de objeto:
+
+        // objectName.methodName()
+
+// Nota: Como ya sabe, document.write() genera datos. La función write() es en realidad un método del objeto de documento.
+
+document.write("<br>" + "algo de texto");
+
+// Nota: Los métodos son funciones que se almacenan como propiedades de objeto.
+
+// arriba, creamos un objeto usando la sintaxis literal de objeto (o inicializador) osea en la parte de la variable persona de arriba.
+
+// Lo cual le permite crear un solo objeto.
+
+// A veces, necesitamos establecer un "tipo de objeto" que se pueda usar para crear varios objetos de un solo tipo.
+
+// La forma estándar de crear un "tipo de objeto" es utilizar una función de constructor de objeto.
+
+// de esta manera:
+
+        function person (name, age, color) {
+            this.name = name;
+            this.age = age;
+            this.favColor = color;
+        }
+
+// La función anterior (person) es un constructor de objetos, que toma parámetros y los asigna a las propiedades del objeto.
+
+// ------------------------------THIS-------------------------
+
+// La palabra clave this se refiere al objeto actual.
+
+// Tenga en cuenta que esto no es una variable. Es una palabra clave y su valor no se puede cambiar. se refiere a la funcion que esta encima que tiene escrito los this.
+
+// ------------------------------NEW-----------------------
+
+// Una vez que tenga un constructor de objetos, puede usar la palabra clave "new" para crear nuevos objetos del mismo tipo.
+
+// ejemplo:
+
+        var p1 = new person("john", 42, "green");
+        var p2 = new person("amy", 21, "red");
+
+        document.write("<br>" + p1.age + " " + p1.name); //dara una salida de 42
+        document.write("<br>" + p2.name); //dara una salida de amy
+
+// p1 y p2 ahora son objetos del tipo de persona. Sus propiedades se asignan a los valores correspondientes.
+
+// Nota: Acceda a las propiedades del objeto utilizando la sintaxis de puntos, como lo hizo antes.
+
+// --------------------INICIALIZACION DE OBJETOS--------------------------
+
+// Utilice la sintaxis de inicializador o literal de objeto para crear objetos individuales.
+
+// ejemplo:
+
+        var john = {name: "jhon", age: 25};
+        var james = {name: "james", age: 21};
+
+// Nota: Los objetos constan de propiedades que se utilizan para describir un objeto. Los valores de las propiedades del objeto pueden contener tipos de datos primitivos u otros objetos.
+
+// Nota: Los espacios y los saltos de línea no son importantes. Una definición de objeto puede abarcar varias líneas.
+
+// Nota: Independientemente de cómo se cree el objeto, la sintaxis para acceder a las propiedades y métodos no cambia.
+
+// No se olvide de la segunda sintaxis de acceso: John ['age'].
+
+
+    </script>
+    
+</body>
+</html>

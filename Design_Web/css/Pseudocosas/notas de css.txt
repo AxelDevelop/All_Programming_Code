@@ -1,0 +1,3 @@
+Las psudoclases los puedes ver como estados que pueden tener elementos de nuestra pagina. (como que cambia formas, se le añaden animaciones, etc.) como por ejemplo hover.
+
+los pseudoelemtos nos permiten acceder con css a partes de nuestra pagina que normalmente no podriamos acceder. como por ejemplo al sombrear una frase, por defecto el texto cambia a azul con blanco, pero esto puede cambiarse.

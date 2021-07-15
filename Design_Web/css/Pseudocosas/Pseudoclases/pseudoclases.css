@@ -1,0 +1,193 @@
+/* las pseudoclases son pequeñas palabras que podemos usar en css para acceder a estados de ciertos elementos. como el esytado hover. */
+
+/* Aqui se explica sobre las pseudoclases que son para seleccionar elementos como se vera  acontinuacion */
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>PSEUDOCLASES<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--fondoPrimario: #FCF7F8;
+	--colorOscuro: #1A1E21;
+	--azul: #3860EC;
+}
+
+body {
+	background: var(--fondoPrimario);
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+ul {
+	margin: 0;
+}
+
+.contenedor {
+	max-width: 500px;
+	width: 90%;
+	padding: 30px;
+	border-radius: 20px;
+}
+
+.titulo {
+	font-size: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--colorOscuro);
+	margin-bottom: 20px;
+}
+
+.grupo {
+	padding: 60px 0;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.grupo div p,
+.grupo div div,
+.grupo div span,
+.grupo ul li {
+	background: #dbdbdb;
+	padding: 10px;
+}
+
+/* ? ------------- PSEUDO-CLASES ------------- */
+
+.enlace:active
+/* active se utiliza para cuando el mouse toque el elemento este tenga un color o se le aplique un cambio */
+{
+	background: black;
+	
+}
+
+
+.enlace:link
+/* link nos permite es cambiar el estado del elemento cuando no hayamos entrado aun */
+{
+	background: blue;
+}
+
+
+.enlace:visited
+/* visited funciona al contrario de link ya que este aplica cambios cuando ya se ha visitado */
+{
+	background: #b1b1b1;
+}
+
+
+.enlace:hover
+/* hover nos permite cambiar el estado de nuestro elemento cuando se le pasa el mouse por encima */
+{
+	background: #fff;
+}
+
+
+/* ? --- --- --- --- PARRAFOS --- --- --- --- */
+
+.parrafos p:first-child
+/* lo primero es que esto se lee asi: quiero acceder dentro de la clase "parrafos" y dentro de esta clase acceder a los parrafos pero, solo al primero. :first-child nos permite acceder al primer elemento del elemento padre o algun otro elemento que tenga otros dentro. */
+
+/* :last-child funciona igual que :first-child lo unico que este seleccionara el ultimo elemento */
+{
+	background: var(--azul);
+	color: #fff;
+}
+
+
+.parrafos p:last-child {
+	background: #000;
+	color: #fff;
+}
+
+/* ? --- --- --- --- ELEMENTOS --- --- --- --- */
+
+.elementos p:first-of-type
+/* con :last-of-type podremos acceder al primer alemento de este tipo, como por ejemplo arriba que se esta eligiendo el primer elemento de la etiqueta tipo p */
+{
+	background: var(--azul);
+	color: #fff;
+}
+
+
+.elementos p:last-of-type
+/* :last-of-type funciona de la misma manera que :first-of-type lo unico que este sera el ultimo */
+{
+	background: black;
+	color: #fff;
+}
+
+
+/* ? --- --- --- --- LISTA --- --- --- --- */
+
+.lista :nth-child(2)
+/* :nth-child() es una funcion, y nos permite es basicamente buscar cual elemento queremos que le aplique unos estilos css, lo cual se puede hacer con un numero en el parentesis y otras formas. para seleccionar elemntos pares o impares usamos odd, y los pares con even. tambien podemos añadirle una formula para que cada ciertos numeros se cambie su estado, ejemplo: 3n (con esto queremos decir que cada 3 elementos (n es lo mismo que elementos) le va a aplicar estilos. */
+{
+
+	background: var(--azul);
+	color: #fff;
+}
+
+.lista :nth-last-child(3)
+/* :nth-last-child() funciona de la misma manera que :nth-child() pero este comenzara a contar desde abajo */
+{
+	background: black;
+	color: #fff;
+}
+
+/* ? --- --- --- --- LISTA 2 --- --- --- --- */
+.lista2 p:nth-of-type(2)
+
+{
+	background: var(--azul);
+	color: #fff;
+}
+.lista2 div:nth-last-of-type(2)
+/* recuerda que comenzara a contar de abajo hacia arriba */
+{
+	background: black;
+	color: #fff;
+}
+
+/* estos dos son como una combiancion entre nth-child y nth-last-child (los cuales escojen una combinacion en base al numero) estos se añaden en html tambien */
+
+/* ? --- --- --- --- LISTA 3 --- --- --- --- */
+
+.lista3 p:only-child
+/* aqui decimos que si el elemento parrafo solo tiene un hijo se le aplicaran los estilos o cambios, recuerda que si hay mas de dos no se le aplicaran */
+{
+	background: var(--azul);
+	color: #fff;
+}
+/* :only-child nos permitira agragarle estilos css a un elemento pero solamente si este elemento es el unico hijo de una lista o contenedor. */
+
+/* :only-of-type significa que solo se le aplicaran los estilos a los elementos de un tipo */
+
+/* ? --- --- --- --- LISTA 4 --- --- --- --- */
+
+.lista4 p:only-of-type
+/* :only-of-type significa que solo se le aplicaran los estilos a los elementos de un tipo */
+{
+	
+	background: var(--azul);
+	color: #fff;
+}
+
+/* ---------------------------------NOTAS IMPORTANTES----------------------------- */
+
+
+/* dato: para las pseudoclases se les agrega (:) dos puntos para añadirlas, y a los psudoelementos seles agrega el doble (::) */
+
+/* Dato: a lo que se refiere con "tipos" es que si tienes un elemento padre, y dentro de este tiene varias etiquetas como div, p, nav, etc. este solo buscara al que le pidas */
+
+
+

@@ -1,0 +1,33 @@
+/* ---------------------------Espacio---------------------- */
+
+/* Se le conoce como el selector descendiente, es como decir Todos los párrafos dentro del selector .contenedor */
+
+/* -----------------------El símbolo > (mayor que)------------------ */
+/* .contenedor > p {
+  color: #0000ff;
+}
+El símbolo > en css se puede interpretar como
+
+Todos los elementos que son hijos directos de .contenedor */
+
+/* --------------------El símbolo +---------------------- */
+/* Se denomina el hermano adjunto.
+
+Tomemos como ejemplo el siguiente código css
+
+div + p {
+  color: #ff0000;
+}
+Lo que hace el navegador entonces es buscar un párrafo (p) que esté inmediatamente después de un div. En nuestro caso, el único párrafo que cumple este requisito es el párrafo dos. */
+
+/* ------------------El símbolo ~ ----------------------- */
+
+
+/* Este símbolo en css funciona muy parecido a + con la diferencia que selecciona el ítem que esté inmediatamente después y todos los siguientes.
+
+Por ejemplo, con el siguientes css
+
+div ~ p {
+  color: #ff0000;
+}
+Seleccionaría el segundo párrafo ya que viene después de un div, y también el tercer párrafo, ya que estamos seleccionando los p siguientes. */

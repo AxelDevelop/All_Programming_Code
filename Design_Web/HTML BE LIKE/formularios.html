@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>document</title>
+ </head>
+ <body>
+ 	
+ 	<form action="datos.php" method="POST">
+ 		<!--el atributo action nos permite recibir una url que procesa todos los datos de nuestro formulario. la etiqueta method nos permite decir por cual metodo vamos a enviar nuestra informacion-->
+
+ 	<form>
+ 		<!--la etiqueta form se utiliza para empezar el formulario-->
+ 		<label for="nombre">ingrese su nombre en el cuadro</label>
+		 <!--la etiqueta label representa una etiqueta para un elemento en una interfaz de usuario. Este puede estar asociado con un control ya sea mediante la utilizacion del atributo for, o ubicando el control dentro del elemento label. Tal control es llamado "el control etiquetado" del elemento label. -->
+ 		<!-- el atributo for se utiliza para asignarle a un texto algun roll-->
+
+ 		<input type="text"  placeholder="puto el que escriba XD" maxlength="3" name="nombre" id="nombre">
+ 		<!-- la etiqueta input nos dara una entrada (osea como para empezar a tomar unda decision, en este caso texto, ya que el atributo type dijo el tipo de decision o roll de la entrada), este llevara un type para añadirle un atributo, si queremos una entrada de texto pondremos "text" en el type. a esta se le puede poner una etiqueta llamada value que le escribira un texto dentro de la caja de texto, como este aparece en la caja se tiene que borrar y es incomodo, por eso usamos la etiqueta placeholder para que este texto parezca invisible al no escribir en el. este lleva tambien una etiqueta llamada size que nos permite darle un tamaño a la caja de texto, pero no es recomendado porque esto se puede hacer con css. la etiqueta maxlenght nos permite establecer un limite de caracteres en nuestra caja de texto. la etiqueta name nos permite decirle al servidor que valor estamos pidiendo. la etiqueta id se utiliza para decirle al label a que texto debe ser asignado. -->
+
+ 		<input type="password" name="">
+ 		<!--el valor dentro del atributo type llamado password se utiliza para hacer un campo de texto hecho para una contraseña y asi que no se te vea los caracteres en ese campo-->
+
+ 		<input type="email" name="">
+ 		<!--el atributo email se utiliza para poner un email correctamente-->
+
+ 		<br>
+		 <input type="search" name="searchitem" id="mysearch">
+		 <!-- para añadir un cuadro de busqueda se utilizara un imput con un atributo type que dentro tenga el valor search. -->
+ 		<br>
+
+ 		<input type="checkbox" name="" id="">animal
+ 		<input type="checkbox" name="" id="">humano
+ 		<!--el atributo checkbox nos permite agregar casillas cuadradas (las casillas son las cositas que si clickeas con el mause sale como un signo de marcado)-->
+ 		<br>
+
+ 		<input type="radio" name="">mujer
+ 		<input type="radio" name="">hombre
+ 		<!-- nos permite agregar una casilla en forma circular-->
+
+ 		<input type="button" value="Enviar" name="">
+ 		<!--el atributo button se utiliza para agregar un bloque vacio, se le pone el atributo value para definirle que valor el cual tendra dentro del boton-->
+
+ 		<input type="submit">
+ 		<!--este valor llamado submit hara que los datos se manden-->
+
+ 		<select name="" id="">
+ 		<!--la etiqueta select se utiliza para hacer listas desplegables-->
+
+ 		<option value="mexico">mexico</option>
+ 		<option value="colombia">colombia</option>
+ 		<!-- la etiqueta option se utiliza dentro de un select y hace la funcion de aderirle cosas en la lista, osea le da un valor que quieres mandar al servidor-->
+		 
+ 		</select>
+
+ 	<input type="color" name="">
+ 	<!--este atributo llamado color nos permite agregar una tabla de colores para elegir uno-->
+
+ 	<input type="range" name="">
+ 	<!-- el atributo range nos permite añadir una barra de rango en el formulario-->
+ 	</form>
+
+ </body>
+
+ </html>

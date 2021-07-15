@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descansar y esparcir</title>
+</head>
+<body>
+
+    <script>
+
+// --------------------------------REST AND SPREAD----------------------------
+
+// Antes de ES6, si queríamos pasar un número variable de argumentos a una función, podíamos usar el objeto de argumentos, un objeto similar a una matriz, para acceder a los parámetros pasados a la función.
+
+// Por ejemplo, escribamos una función que verifique si una matriz contiene todos los argumentos pasados:
+
+        function containsAll(arr){
+            for (let k =  1; k < arguments.length; k++){
+            let num = arguments[k];
+            if (arr.indexOf(num) === -1){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    let x = [2, 4, 6, 7];
+    console.log(containsAll(x,2,4,7));
+
+
+
+// Podemos pasar cualquier número de argumentos a la función y acceder a ella usando el objeto de argumentos.
+
+// Si bien esto funciona, ES6 proporciona una sintaxis más legible para lograr un número variable de parámetros mediante el uso de un parámetro de descanso:
+
+    function containsAll2 (arr2, ...nums){
+        for (let num2 of nums){
+            if (arr2.indexOf(num2) === -1){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    let y = [2, 4, 6, 7];
+    console.log(containsAll2(y,2,4,7)); 
+
+
+// Solo el último parámetro de una función se puede marcar como parámetro de reposo. Si no hay argumentos adicionales, el parámetro rest simplemente será una matriz vacía; el resto del parámetro nunca estará indefinido.
+
+// ----------------------PRUEBA QUE NO PUDE COMPRENDER--------------------
+
+    function magic(...nums) {
+    let sum = 0;
+    nums.filter(n => n % 2 == 0).map(el => sum+= el);
+    return sum;
+    }
+    document.write(magic(1, 2, 3, 4, 5, 6));
+
+// --------------------------INDEX OF-----------------------------
+
+// indexOf devuelve el índice en el que se encuentra un valor en el arreglo. Si el arreglo no tiene ese valor devuelve -1.
+
+// ---------------------------SPREAD OPERATOR-------------------------
+
+// Este operador es similar al parámetro Rest, pero tiene otro propósito cuando se usa en objetos o matrices o llamadas a funciones (argumentos).
+
+// Es común pasar los elementos de una matriz como argumentos a una función. Antes de ES6, usamos el siguiente método:
+
+    function myfuction(w, x, y, z){
+        console.log(w + x + y + z);
+
+    }
+
+    var args = [1, 2, 3];
+    myfuction.apply(null, args.concat(4));
+
+
+// ES6 proporciona una manera fácil de hacer el ejemplo anterior con operadores de propagación
+
+    const myfuction2 = (w, x, y, z) => {
+        console.log(w + y + x + z);
+    };
+
+    let args2 = [1, 2, 3];
+    myfuction2(...args2, 4);
+    
+
+// ejemplo:
+
+    var datefield = [1978, 0, 1 ]; //esto seria 1 de jan 1978
+    var date = new Date(...datefield);
+    console.log(date);
+
+//----------------Difundir en literales de matriz (Spread in array literals)-------
+
+// Antes de ES6, usábamos la siguiente sintaxis para agregar un elemento en medio de una matriz:
+
+    var arr2 = ["one", "two", "five"];
+
+    arr2.splice(2, 0, "three");
+    arr2.splice(3, 0, "four");
+    console.log(arr2);
+
+// Puede utilizar métodos como push, splice y concat, por ejemplo, para lograr esto en diferentes posiciones de la matriz. Sin embargo, en ES6 el operador de propagación nos permite hacer esto más fácilmente:
+
+    let newArr = ["three", "four"];
+    let arr3 = ['one', 'two', ...newArr, 'five'];
+
+    document.write(arr3);
+
+//----------------Difundir en literales de matriz (Spread in array literals)-------
+
+// En los objetos, copia las propias propiedades enumerables del objeto proporcionado en un nuevo objeto.
+
+    // ejemplo:
+
+    const obj1 = {foo: 'bar', x: 42};
+    const obj2 = {foo: 'baz', y: 5};
+
+    const clonedObj = {...obj2}; // esto es lo mismo que {foo: "bar", x: 42};
+    const clonedObj2 = {...obj1, ...obj2}; // esto es lo mismo que {foo: "baz",x: 42, y: 5};
+
+// Sin embargo, si intenta fusionarlos, no obtendrá el resultado que esperaba.
+    // ejemplo:
+
+    const obj3 = {foo: 'bar', x: 42};
+    const obj4 = {foo: 'baz', y: 5};
+    const merge = (objects) => ({...objects});
+
+    let mergeObj = merge (obj3, obj4);
+    // esto seria lo msimo que {foo: 'bar', x: 42}, 1: {foo: 'baz', y: 5}; 
+
+    let mergeObj2 = merge ({}, obj3, obj4);
+    // esto seria lo msimo que {0: {}, 1: {foo: 'bar', x: 42}, 2: {foo: 'baz', y: 5}; 
+
+// La clonación superficial o la fusión de objetos es posible con otro operador llamado Object.assign ().
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Metodos para cadenas de textos</title>
+</head>
+<body>
+	<script>
+			
+			var texto = "Carlos Arturo";
+
+// ---------------------------SUBSTRING--------------------------
+			
+			//var nuevoTexto = texto.substring(3);
+			//con la propiedad substring podemos cortar una cadena de texto. se refiere a que comenzara a contar desde el numero de caracter que le pongas, si este caracter es uno de las letras pues comenzara a contar desde ahi, ejemplo, si comienza desde el 3, dira: "rlos Arturo"
+
+// -------------------------SUBSTR---------------------------------
+
+			//var nuevoTexto = texto.substr(0, 6);
+			//con la propiedad substr podemos tener dos parametros los cuales demostraran cuales caracteres representaremos o señalaremos, ejemplo, si el primero es 0 este señalara al primer cararter para comenzar, y si es 6 este señalara el sexto caracter para completar o terminar. en este caso dira "carlos "
+
+// ------------------------------INDEXOF---------------------------------
+
+			//var nuevoTexto = texto.indexOf("o", 5);
+
+			//con indexof podemos verificar la posicion de una letra en especifico. esta funciona poniendole un numero (el primero) para que busque que hay en esa posicion numerica, si hay varios caracteres diferentes solo pones el caracter y el numero despues del caracter, y asi  comenzara a buscar despues de ese caracter que ya añadiste
+			
+			
+			// hay otra manera mas larga de hacerlo y es agregandole var texto2 = texto.indexOf("o") +1; o otra variable, si ponemos esto antes de "var nuevoTexto = texto.indexOf("o", 4);" este nos comenzara a buscar contando desde "var texto2 = texto.indexOf("o") + 1;" esta variable, y ya que esta variable comienza a contar desde la primera "o" que es la 4 nos buscara la otra, 
+
+			// se veria asi:
+
+			// var texto = "carlos Arturo";
+			// var texto2 = texto.indexOf("o") + 1;
+			// var nuevoTexto = texto.indexOf("o", texto2);
+
+// -------------------------------LASTINDEXOF-----------------------------
+
+			// var texto = "carlos Arturo";
+			// var nuevoTexto = texto.lastIndexOf("o", texto2);
+
+			// tambien se le puede añadir lastIndexof y se pondria a contar desde el final, se pondria de esta manera: "var nuevoTexto = texto.lastIndexOf("o");" en vez de "var nuevoTexto = texto.indexOf("o", 4);"
+
+// -----------------------------REPLACE------------------------
+
+
+			// var texto = "carlos Arturo";
+			// var nuevoTexto = texto.replace("Carlos", "falcon masters");
+
+			//la propiedad replace nos permite reemplazar una cadena de texto por otra, esta se le ponen dos parametros dentro de el parentesis, si este no tiene nada en el primer parametro, el segundo reemplazara todo el significado de la variable, si este tiene la palabra o letra o algo, esta sera reemplazada por el segundo parametro, ejemplo de arriba dira: "falcon masters arturo" porque en el primer parametro se puso carlos y fue reemplazado por el segundo
+
+
+// --------------------------------TOUPPERCASE y TOLOWERCASE----------------------------
+
+
+			var nuevoTexto = texto.toUpperCase();
+			//con la propiedad toUpperCase(); podemos poner el texto en mayusculas al igual con toLowerCase lo ponemos con mayusculas. para minusculas seria tolowercase, si te preguntas por que la variable no esta en el parentesis es que esta variable esta antes de TOUPPERCASE
+
+			document.write(nuevoTexto);
+
+
+
+
+
+	</script>
+
+
+
+</body>
+</html>

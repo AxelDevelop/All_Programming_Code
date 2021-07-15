@@ -1,0 +1,30 @@
+.contenedor {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: 200px 100px 200px;
+
+  grid-auto-columns: 100px;
+  /*grid-auto-rows nos permite controlar el tamaño que va a tener las celdas que se agreguen de forma automatica, osea las que no tienen un tamaño definido aun, en este caso seria la fila 4 y 5, ya que en el template rows solo hay tamaños para tres.*/
+  grid-auto-rows: 100px;
+  /* lo mismo que el de arriba solo que en filas */
+
+  grid-auto-flow: row dense;
+  /*grid-auto-flow nos permite controlar las grids para que automaticamente nos ponga los cuadros debajo o al lado, mejor dicho como fila o columna, osea que, si en template solo hay tres filas, cuando llegue a cuatro en vez de ponerme otra extra me la pondra como columna (obviamente si la tengo en columna, si es en rows me las pondra en filas, lo cual es el por defecto), hay uno que se llama dense. otra definicion de esta propiedad es que nos permite cambiar el flujo de como acomodamos todos los elementos dentro de la grid*/
+
+  /*con el valor dentro llamado dense puedes acomodar los grids o cuadoros en los espacios vacios, se les puede añadir columns dense y rows dense tambien, si quieres saber que hacen esos dos usa la logica o ve aqui https://www.youtube.com/watch?v=FQU2zeHzll0&list=PLhSj3UTs2_yWsFd43wpLog5HUFzDgIbWj&index=9*/
+
+  /* aqui va explicado: */
+  /* si usamos column nos pondra los elementos uno debajo de otros, en este caso seria 1, luego dos abajo en ves de la derecha, luego tres y asi. el valor row dentro es el por defecto, el dense nos rellenara los espacios con los elementos restantes que puedan caber dentro de estos espacios */
+}
+.contenedor .span2 {
+  grid-column: span 2;
+  /* grid-row: span 2; */
+  background: #ff8000;
+}
+.contenedor .span3 {
+  grid-column: span 3;
+  /* grid-row: span 3; */
+
+  background: #575757;
+}

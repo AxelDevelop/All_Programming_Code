@@ -1,0 +1,52 @@
+Notas de programacion en git:
+
+(LS) es un comando para listar directorios y archivos.
+
+(PWD) se utiliza para ver en que ruta de nuestro sistemas esta posicionado el terminal.
+
+En git se utilizan algunos de los comandos que estan integrados a la CMD de la pc.
+
+(git init) se utiliza para inicializar algunos protextos.
+
+(git status) se utiliza para ver el estado de nuestros archivos.
+
+(git add) se utiliza para agregar un archivo al staging area.
+
+(git commit) se utiliza para crear un primer punto de control de nuestro codigo.
+
+(git config --global user.email "") se utiliza para poder configurar el email de este usuario.
+
+(git config --global user.name "") se utiliza para configuraer el nombre de usuario.
+
+se puede utilizar MKDIR para poder agregar una carpeta desde la terminal.
+
+(git remote add origin <url_repositorio_github>) se utiliza para especificar el origen de nuestro repositorio,
+
+(git log) es para ver todos los commits que hemos creado.
+
+(git checkout --) se utiliza para revertir los cambios.
+
+(git checkout '') se utiliza para cambiar entre branchs.
+
+(git diff) que se utiliza para ver las diferencias hechas en los archivos.
+
+(git commit -am "mensaje para el commit")  para especificar el origen de nuestro repositorio.
+
+para que git ignore los archivos se les debe escribir al final del nombre (.gitignore) no lo ignora del todo, solo que git al buscarlo no podra ver lo que este dentro de esa carpeta.
+
+(git branch) se utiliza para crear una nuesva rama.
+
+(git add .) se utiliza para agregar todos los archivos.
+
+para poder clonar o descargar archivos se utilizara (Git clone y el nombre o url).
+
+(git push origin master) para añadir a github.
+
+(git checkout -b iss53) para cambiar entre branchs
+
+si queremos renombrar una rama hacemos lo siguiente:
+
+git branch -m main master
+git fetch origin
+git branch -u origin/master master
+git remote set-head origin -a

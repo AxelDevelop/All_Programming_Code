@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Timers, Timeout e interval</title>
+</head>
+<body>
+<script>
+	
+
+	(function(){
+		var contador = 1;
+
+		//Timeout nos permite ejecutar una funcion una vez que el timempo que le hallamos especificado se acabe 
+		var saludo = function(){
+			contador++;
+			console.log("contador");
+			
+			setTimeout (saludo, 1000); //aqui estamos creando un blucle infinito, le estamos diciendo que se ejecute la funcion, pero en la funcion le estamos agregando un setTimeOut, osea cada tres segundos se va a ejecutar la funcion, esto nos sirve para ejecutar los ciclos for.
+			//if (contador === 5) {
+				//clearInterval(intervalo);
+			//}
+		};
+		saludo ();
+
+		//interval nos permiete ejecutar codigo cada determinado tiempo.
+		//var intervalo = setInterval(saludo, 1000);
+
+
+
+
+
+	}())
+
+
+
+
+</script>
+
+
+
+
+
+
+
+</body>
+</html>

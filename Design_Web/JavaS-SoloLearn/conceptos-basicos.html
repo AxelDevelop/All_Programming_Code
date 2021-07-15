@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceptos basicos</title>
+</head>
+<body>
+
+    <script>
+
+// --------------------OPERADORES MATEMATICOS--------------
+
+// El nombre puede ser un poco obvio, pero los operadores aritméticos realizan funciones aritméticas en números (tanto literales como variables).
+
+// + este es de adicion o suma
+
+// ejemplo: 25 + 5 = 30
+
+// - este de resta
+
+// ejemplo: 25 - 5 = 20
+
+// * multiplicacion
+
+// ejemplo: 10 * 20 = 200
+
+// / division 
+
+// ejemplo: 20 / 2 = 10
+
+// % modulo
+
+// ejemplo: 56 % 3 = 1
+
+// explicacion de el modulo: este divide cualquier numero entre otro hasta que llegue al numero, si este al dividirlo tiene algun sobrante que sobrepasa a este numero, el resultado sera ese sobrante, como el ejemplo de arriba, si multiplicas 3 hasta llegar al numero 56 este se pasara hasta el 57, por lo que el numero uno sera su restante.
+
+// ++ incremento
+
+// ejemplo: var a = a++; ahora sera 11 y seguira incrementandose
+
+// -- decremento
+
+// ejemplo: var a = a--; ahora sera 9 y sigue decrementando
+
+// Nota: Puede obtener el resultado de una expresión de cadena utilizando la función eval (), que toma un argumento de expresión de cadena como eval ("10 * 20 + 8") y devuelve el resultado. Si el argumento está vacío, devuelve undefined.
+
+var cadena = "20 + 10 * 8";
+var resultaado = eval(cadena);
+console.log(resultaado);
+
+// Nota: Al igual que las matemáticas que aprendiste en la escuela, puedes cambiar el orden de las operaciones aritméticas usando paréntesis.
+
+// podemos calcular valores en una sola linea de forma mas facil (creo) de esta manera:
+
+// x += y
+
+// lo cual seria lo mismo que:
+
+// x = x + y
+
+// ---------------------OPERADORES DE COMPARACION----------------------
+
+// Podemos usar operadores de comparación en declaraciones lógicas para averiguar si las variables o los valores son diferentes.
+
+// Obtienes true o false.
+
+// Por ejemplo, el operador igual a (==) comprueba si los valores de los operandos son iguales.
+
+// ejemplo:
+
+        // var num = 10;
+        // num == 8 sera falso
+
+// Los tipos de operadores de comparacion son:
+
+// == este sirve para comparar, traducido diria "igual a"
+
+// === sirve para identificar, es como decir "es identico a, igual y del mismo tipo"
+
+// != sirve para mostrar diferencia, es como decir "no es igual a, no igual a"
+
+// !== sirve para mostrar la diferencia en identificacion, es como decir "no es identico a"
+
+// > mayor que
+
+// >= mayor o igual que
+
+// < menor 
+
+// <= menor o igual que
+
+
+// -----------------------OPERADORES LOGICOS----------------------
+
+// Los Operadores Lógicos, también conocidos como Operadores Booleanos, (o los Operadores Vulcan… .ok, ese no es verdadero) evalúan una expresión y devuelven verdadero o falso.
+
+// Consulte la tabla a continuación para ver más detalles sobre los operadores lógicos (Y, O, NO).
+
+
+
+// && devuelve verdadero, si ambos operandos son verdaderos
+
+// || devuelve verdadero, si uno de los operandos es verdadero, y tambien si los dos lo son
+
+// ! devuelve verdadero, si el operando es falso, y falso, si el operando es verdadero.
+ 
+ 
+ 
+// ----------------CONCATENACION---------------------
+
+// Podemos usar la concatenación (representada por el signo +) para construir cadenas formadas por múltiples cadenas más pequeñas, o uniendo cadenas con otros tipos. Echale un vistazo:
+
+    var frase1 = "primera frase";
+    var frase2 = "para terminar"
+    document.write(frase1 + " " + frase2);
+
+// Nota: Los números entre comillas se tratan como cadenas: por lo tanto, "42" no es el número 42, es una cadena que incluye los dos caracteres separados, 4 y 2 (esto habla en caso de que usaramos numeros).
+
+ 
+ </script>
+    
+</body>
+</html>

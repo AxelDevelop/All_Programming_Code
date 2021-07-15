@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos de clase en ES6</title>
+</head>
+<body>
+
+    <script>
+
+// --------------------------CLASS METHODS IN ES6------------------------
+
+// ES6 introdujo una abreviatura que no requiere la función de palabra clave para una función asignada al nombre de un método. Un tipo de método de clase es el método prototipo, que está disponible para los objetos de la clase.
+
+        class Rectangule {
+            constructor (height, width){
+                this.height = height;
+                this.width = width;
+
+            }
+            get area (){
+                return this.calcArea();
+            }
+            calcArea(){
+                return this.height * this.width;
+            }
+        }
+
+        const square = new Rectangule(5,5);
+        console.log(square.area); //sera igual a 25
+
+// En el código anterior, area es un captador, calcArea es un método.
+
+// --------------------STATIC METHOD------------------
+
+// Otro tipo de método es el método estático, que no se puede llamar a través de una instancia de clase. Los métodos estáticos se utilizan a menudo para crear funciones de utilidad para una aplicación.
+
+// Por ejemplo:
+
+        class point {
+            constructor(x,y){
+                this.x = x;
+                this.y = y;
+                
+            }
+
+            static distance (a,b) {
+                const dx = a.x - b.x;
+                const dy = a.y - b.y;
+                return Math.hypot(dx,dy);
+            }
+        }
+
+        const p1 = new point (7, 2);
+        const p2 = new point (4, 6);
+
+        console.log(point.distance(p1, p2));
+
+// Como puede ver, el método de static distance se llama directamente usando el nombre de la clase, sin un objeto.
+
+
+    </script>
+    
+</body>
+</html>

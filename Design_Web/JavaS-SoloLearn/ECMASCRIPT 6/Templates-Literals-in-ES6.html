@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templates Literals en ES6</title>
+</head>
+<body>
+
+    <script>
+
+// -------------------Templates Literals en ES6--------------------
+
+// Los literales de plantilla son una forma de generar variables en la cadena.
+
+// Antes de ES6 teníamos que romper la cuerda, por ejemplo:
+
+        let name = 'david';
+        let msg = 'Welcome ' + name + '!';
+        console.log(msg);
+
+// ES6 introduce una nueva forma de generar valores de variables en cadenas. El mismo código anterior se puede reescribir como:
+
+        let name2 = 'lian';
+        let msg2 = `welcome ${name2}!`;
+        document.write(msg2);
+
+// Tenga en cuenta que los literales de plantilla están encerrados por el carácter de tilde (``) en lugar de comillas simples o dobles.
+
+// $ {Expresión} es un marcador de posición y puede incluir cualquier expresión, que será evaluada e insertada en la plantilla literal.
+
+
+// Por ejemplo:
+
+        let a = 8;
+        let b = 34;
+        let msg3 = `the sum is ${a+b}`;
+        console.log(msg3);
+
+// Nota: Para escapar de una comilla invertida en un literal de plantilla, coloque una barra invertida \ antes de la comilla invertida.
+
+    </script>
+    
+</body>
+</html>

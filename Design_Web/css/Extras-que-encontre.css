@@ -1,0 +1,15 @@
+body{
+    user-select: none;
+    /* La propiedad de selección de usuario especifica si se puede seleccionar el texto de un elemento.
+
+    En los navegadores web, si hace doble clic en algún texto, se seleccionará / resaltará. Esta propiedad se puede utilizar para evitarlo.  */
+
+    /* tiene valores como: */
+    /* auto: predeterminado. Se puede seleccionar texto si el navegador lo permite.
+
+    none: evita la selección de texto.
+
+    text: el usuario puede seleccionar el texto.
+
+    all: la selección de texto se realiza con un clic en lugar de un doble clic. */
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Scope Javascript</title>
+	<!--el scope de javascript (ambito de las varibales) es lo que determina la accesibilidad de nuestro codigo-->
+
+</head>
+<body>
+	<!-- el scope de javascript en este nivel lo que nos demuestra es que cuando busque la funcion dentro de la funcion primaria nos va a leer ese contexto o representar  esa funcion, si no lo encuentra buscara la primaria, si no encuentra la primaria o la ultima javascript buscara a nivel global, osea, en todo nuestro codigo, desde dentro de una funcion siempre podemos ver hacia afuera de ella. -->
+	<script>
+
+	// Variable Global - son las variables las cuales podemos acceder a ellas desde cualquier parte del codigo.
+
+	// Variable Local - estas son las variables creadas dentro de una funcion y que solo pueden ser accedidas desde una funcion o una funcion anidada (anidada es una funcion dentro de otra, es a lo que se refiere) o una variable dentro de una funcion.
+		
+
+	(function(){
+		//para proteger nuestro codigo pondremos nustra funcion de la siguiente maneera: (function(){codigo}()), de esta manera el codigo que esta afuera no puede acceder al codigo que esta dentro, pero el codigo que tenemos dentro si podra acceder a el que esta fuera.
+
+		var variablesGlobal = "Esta es Global";
+
+		var miFuncion = function (){
+		var variableLocal = "Esta es Local";
+		alert(variableLocal);
+
+		var FuncionLocal = function(){
+			//var variableLocal = "Esta es variable Local dentro de funcionlocal";
+			//alert(variableLocal);
+		}
+
+		FuncionLocal();
+	}
+
+	miFuncion()
+
+	
+	
+	// alert(variablesGlobal);
+
+	}())
+
+	// DATO: si una funcion tiene una variable dentro de ella esta sera local, entonces, si dentro de esta funcion hay  otra variable local  y esta tiene un comando, digamos un alert, este alert llamara a primero a la variable de su funcion, si no lo encuentra llamara a la variable que esta en la funcioon que contiene su funcion original, osea, esta buscara desde dentro hacia afuera alguna variable que tenga el mismo nombre que la que esta buscando, scope papaaa, XD, en fin.
+	</script>
+
+
+</body>
+</html>

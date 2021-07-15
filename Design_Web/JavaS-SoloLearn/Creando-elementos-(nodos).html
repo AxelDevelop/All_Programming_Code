@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creando Elementos</title>
+</head>
+<body>
+
+    <div id="demo"></div>
+
+    <script>
+
+// -----------------CREANDO ELEMENTOS-------------------------
+
+// Utilice los siguientes métodos para crear nuevos nodos:
+
+// element.cloneNode () clona un elemento y devuelve el nodo resultante.
+
+// document.createElement (elemento) crea un nuevo nodo de elemento.
+
+// document.createTextNode (texto) crea un nuevo nodo de texto.
+
+// Por ejemplo:
+
+        var node1 = document.createTextNode("some new text");
+        console.log(node1);
+
+// Esto creará un nuevo nodo de texto, pero no aparecerá en el documento hasta que lo agregue a un elemento existente con uno de los siguientes métodos:
+
+// element.appendChild(newNode) agrega un nuevo nodo hijo a un elemento como último nodo hijo.
+
+// element.insertBefore(node1, node2) inserta node1 como hijo antes de node2.
+
+// ejemplo, vamos a crear un parrafo:
+
+// html:
+        // <div> id="demo"> algo de texto o contenido</div>
+
+// JavaScript:
+
+        // primero crear el elemento parrafo:
+
+        var p = document.createElement("p");
+        var node = document.createTextNode("algo de texto");
+        var nodeT = document.createTextNode("algo de texto pero por dos");
+
+
+        // ahora añadiremos un texto al parrafo
+        p.appendChild(node);
+
+        // ahora llamamos al div para añadirle este parrafo
+        var div = document.getElementById("demo");
+
+        // añadimos el parrafo a el div
+        div.appendChild(p);
+
+// aqui debajo tenemos un ejemplo de cloneNode:
+
+        var clone = p.cloneNode();
+
+        div.appendChild(clone);
+
+// este es un extra:
+
+        var b = document.createElement("b");
+        b.appendChild(nodeT);
+        div.appendChild(b);
+
+
+// Esto crea un nuevo párrafo y lo agrega al elemento div existente en la página.
+
+
+    </script>
+    
+</body>
+</html>

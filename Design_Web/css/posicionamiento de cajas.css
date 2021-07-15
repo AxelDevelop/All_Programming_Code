@@ -1,0 +1,95 @@
+ /* body{ */
+	/*background:url(../imagenes/logo.jpg); (no lo usaremos asi, ya que se repetira)*/
+	/*para poder poner una imagen de fondo usamos la propiedad background de esta manera con url para poner el fondo de nuestra pagina o para buscarlo en nuestros archivos*/
+
+
+	/*background-repeat:no-repeat;*/
+	/* la etiqeta background-repeat se utiliza para controlar nuestro fondo de web, si dentro de ella usamos la propiedad llamada no repeat, la imagen no se repetira, si ponemos repeat-x la imagen se repetira hacia la derecha (o en el eje horizontal), "si ponemos repeat y" sera hacia abajo (o en el eje vertical*/
+
+	
+	/*background-attachment:scroll;*/
+	/* La propiedad background-attachment controla si la imagen de fondo establecida en un elemento se mueve o permanece fija cuando se hace scroll en la ventana del navegador. Por defecto, las imágenes de fondo se mueven con el elemento en el que se muestran. */
+	/*la propiedad background-attacment:scroll hace que la imagen de fondo de nuestra web se mueva cuando vajamos nuestra web, tambien se usa fixed pera que no se mueva la imagen*/
+	
+	/*background-position:center;*/
+	/*la propiedad background-position hace que la imagen de fondo se pueda mover hacia un lugar especifico, usando primeramente la forma numeral, la cual el primer numero seria la derecha, el segundo hacia abajo. la otra forma de usarlo seria local.*/
+
+	
+	
+	div{
+
+	width: 100px;
+	height: 100px;
+	background: #4A88F4;
+	color: #000;
+	font-size: 30px; 
+	float:left;
+	/*la propiedad float o flotante se usa para que todas las cajas se muevan a la izquierda o derecha, recuerda la limpieza con clear:both*/
+}
+
+
+
+/*.caja_padre{
+
+	width: 500px;
+	height: 500px;
+	background: #000;
+	position:relative;
+	/*si hacemos esto la caja comenzara a contar desde el cuadro que creamos, recuerda wue, el hizo un cuadro negro y la caja comenzo a contar desde la parte inicial o la esquina del cuadro*/
+
+ .caja {
+
+	position: relative;
+	/*la propiedad position:relative; nos permite posicionar una caja y despues desplazarla desde su posicion original dejando el espacio vacio, cuando se le cambia el atributo ¨relative¨ por ¨absolute¨ al desplazar una de las cajas el espacio que deja lo borra y acomoda las demas*/
+
+
+	/*si ponemos la atributo fixed (osea, fijo) tambien es por atributos de movimiento que se usan para que se muevan, aqui cuenta a fuerzas a partir de lo que es de nuestra ventana, este atributo le permite a la caja mantenerse en un lugar fijo sin poder moverse*/
+
+
+	/*la atributo static al usarse con position, hace que todas las cajas vuelvan a su lugar de origen sin importar las etiquetas de movimiento*/
+	
+	/* top: ; abajo */
+	/* bottom: ; arriba */
+	/* right: ; derecha */
+	/* left: ; izquierda */
+	
+	top:200px; 
+	bottom:0;
+	right:0;
+	left:300px;
+	/*estas cuatro son las propiedades que nos permiten desplazar las cajas*/
+
+	border: 5px solid rgb(22, 185, 197);
+	/* La propiedad de border en CSS le permite personalizar los bordes de los elementos HTML.
+	Para agregar un borde al elemento, debe especificar el tamaño, el estilo y el color del borde. */
+
+	border-width: 5px ;
+	/* border-width:; define el ancho del borde del recuadro */
+	
+
+	border-style: none;
+
+	/* border-style:; le da estilos al borde creado, y tiene bastantes propiedades, las cuales son: none (ningun estilo de borde, ni tampoco borde) dotted (hace un borde hecho de puntos separados) dashed (hace un borde con estilo de rayas separadas, como si fueran guiones anchos), double (hace un borde doble con espaciado fino), grooved (hace un borde con el diseño de un marco de foto), ridged (que hace un borde con diseño de marco de foto pero este tiene un diseño mas suave y cuadriculado), inset (hace un borde con un fondo de arriba mas oscuro que el de abajo), outset (lo contrario de inset) y hidden (un borde oculto)*/
+
+	/* border-top-style: ;
+	border-right-style: ;
+	border-bottom-style: ;
+	border-left-style: ; */
+	/* estos son para modificar el tamaño de los bordes por cada uno de sus lados */
+	
+	/* min-height: ; */
+	/* define el minimo de alto */
+
+	/* min-width: ; */
+	/* define el minimo de ancho */
+
+	/* max-width: ; */
+	/* define el maximo de anchura */
+
+	/* max-height: ; */
+	/* define maximo de altura  */
+
+	border-radius: 10px 10px 10px 10px ;
+	/* border-radius: ; nos permite poner esquinas redondeadas a nuestros elementos, el primer numero sera la medida de la esquina superior  izquierda, la siguiente sera la media de la esquina superior derecha, la siguiente sera la medida de la esquina inferior derecha y la ultima medida sera la esquina inferior izquierda. si pones un solo valor este sera el predeterminado para todos y cada uno */
+
+}

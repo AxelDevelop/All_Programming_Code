@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Eventos</title>
+	
+
+
+	</head>
+	<body>
+		
+		<button id="boton">boton</button>
+		<input type="text" id="input">
+
+		<script>
+			
+		(function(){
+
+			var saludo = function(){
+
+				console.log("focus!");
+			};
+
+
+			var boton = document.getElementById("id");
+			boton.addEventListener("focus" , saludo);
+
+			//con addEventListener tenenemos el tipo de evento que queremos poner, en este caso un tipo click, y tambien pondremos una funcion, puede ser una anonima nombrada dentro o una puesta ahi
+
+			//focus es cuando le damos un click al cuadro donde se escribe en los formula
+
+
+		}())
+
+
+
+		</script>
+
+
+
+
+
+
+
+
+
+
+
+
+	</body>
+	</html>

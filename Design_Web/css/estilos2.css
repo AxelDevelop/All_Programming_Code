@@ -1,0 +1,17 @@
+div{
+	width:300px;
+	height:300px;
+	/*recuerda que width es para el ancho de un elemento y height es para la altura*/
+	background:#ff8000;
+	/*aqui estoy probando la anchura de nuestros elementos dentro de div, y de si llega al max o no*/
+ 	margin:20px 50px;
+ 	/* recuerda que la etiqueta margin se utiliza para darle un margen a un elemento, si pones dos medidas la primera sera la de arriba y abajo y la segunda de los lados, si pones una seran todas iguales*/
+ 	padding:30px;
+ 	/* el padding es la etiqueta para agregar el marjen interior, no solo el interior, pero en este caso si, simplemente le da margen a los elementos.*/
+ 	border:10px solid #000;
+ 	/*la etiqueta border es la que le da marco a los elementos, tiene una condicion llamada solid que hace que el borde sea derecho, dotted la hace en puntitos, la medida que le pongas al principio sera el tamaño del borde. */
+ 	display:inline-block;
+ 	/*la etiqueta display hace los encuadrados en los elementos, para que queden encuadrados se usan dentro de esta siglas llamadas inline, inline solo no puede ya que encuadra feo, asi que a fuerzas usamos inline-block*/
+	 /* nota: existen elementos tipo bloque y tipo linea, los tipo bloques abarcan por defecto toda la pantalla a lo largo, los linea solo abarcan lo suficiente. los elementos tipo linea no se les puede poner un ancho o un largo*/
+}
+

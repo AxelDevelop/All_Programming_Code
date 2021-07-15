@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos y propiedades de los arreglos</title>
+</head>
+<body>
+
+    <script>
+// ---------------------------------LENGTH-------------------------------------
+
+        // var amigos = ["carlos", "cesar", "alex" ];
+        // length se usa para poder saber cuantos elementos tiene un arreglo 
+        // para acceder a las propiedades se usa un punto
+        // document.write("tienes " + amigos.length + " amigos");
+        // asi se concatena varias bro
+
+        // amigos[amigos.length] = "fernando";
+        // de esta manera accedemos al ultimo elemento. asi amigos[amigos.length] despues para añadir uno nuevo le pones el signo de igual y el elemento con unas comillas.
+        // en este caso ya no se vera en la pagina sino en la consola
+        
+        
+        // si queremos añadir otro amigo lo hacemos de la misma manera
+
+// ------------------------------------POP------------------------------------------
+        
+        // hay otra forma de hacerlo, la cual es:
+
+        // amigos.push("luis", "fernando", "oscar");
+        // con push lo que hacemos es que empujamos cada elemento al final, en otras palabaras, se añaden al final de los elementos, dentro del arreglo claro. dato, esto se añadio a la de arriba, no tiene nada que ver con la de abajo, lo unico que es un ejemplo-
+
+        // ejemplo 2:
+
+        		//amigos.pop();
+
+		//document.write(amigos[0]);
+		//document.write(amigos[1]);
+		//document.write(amigos[2]);
+		//document.write(amigos[3]);
+
+		//si queremos borrar el ultimo elemento seria usando pop, en el ejemolo de arriba lo que sucede es que el "amigos [3]" esta indefinido porque no tiene valor, ya que fue borrado por amigos.pop
+
+
+
+// ---------------------------CONCAT--------------------------------
+
+
+        // var amigos = ["carlos", "cesar", "alex", "manuel"];
+        // var amigos2 = ["luis", "fernando", "oscar"];
+
+        // var amigos3 = amigos.concat(amigos2);
+
+        // con concat podemos concartenar variables, a ver, deja te explico XD: cuando ponemos al variable con el punto y la palabra concat, esa variable sera una de las que vamos a concatenar, luego la vaariable que pongamos dentro del paretesis sera la otra que se concatenara, y al final la varibale que es igual al concar (en este caso amigos3) sera igual a la concatenacion de esas dos
+
+// ---------------------------JOIN--------------------------------
+
+
+        // var amigos = ["carlos", "cesar", "alex", "manuel"];
+		// document.write(amigos.join(" : ")) ; 
+
+        // join lo que nos permite es añadirle a los elementos del arreglo un caracter o lo que sea que este dentro de el parentesis entre cada elemento, ejemplo: carlos:cesar: y asi
+		
+		// var amigos2 = amigos.join(" | ") ;
+		// document.write( amigos2 );
+
+        // tu entendiste, solo intenta ver las dos variables, y lee bien el codigo
+
+
+// ---------------------------------SORT-----------------------------------------
+
+
+        var amigos = ["carlos", "cesar", "alex", "manuel"];
+
+        var ordenados = amigos.sort();
+        document.write(ordenados);
+
+        // sort nos permite ordenar alfabeticamente los elementos dentro de un arreglo
+		
+
+
+
+
+
+		
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

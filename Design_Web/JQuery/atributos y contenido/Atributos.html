@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
+    <title>Atributos</title>
+</head>
+<body>
+
+    <a href="www.sololearn.com">
+        haga clic aquí
+    </a>
+
+        </script>
+        
+    </body>
+    </html>
+
+    <script>
+
+// ------------------------ATTRIBUTES---------------------
+
+// ------------------------ATTR----------------------
+
+// Podemos manipular los atributos asignados a los elementos HTML fácilmente a través de jQuery.
+// href, src, id, class, style son todos ejemplos de atributos HTML.
+
+// El método attr () se usa para obtener el valor de un atributo. Por ejemplo:
+
+        $(function(){
+            var val = $('a').attr("href");
+            alert(val);
+        })
+
+        // esto da una alerta que tiene dentro escrito "url que tenga el atribut href, en este caso www.sololearn.com"
+
+// En el código anterior, seleccionamos y alertamos el valor del atributo href del elemento <a>.
+
+// El método attr () también nos permite establecer un valor para un atributo especificándolo como segundo parámetro.
+
+// de esta manera:
+
+    $(function(){
+        $("a").attr("href", "http://www.Jquery.com");
+    });
+
+    // Esto cambiará el atributo href del elemento <a> al valor proporcionado.
+
+
+
+
+</script>

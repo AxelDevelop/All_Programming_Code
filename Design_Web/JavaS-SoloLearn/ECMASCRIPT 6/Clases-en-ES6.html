@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases en ES6</title>
+</head>
+<body>
+
+    <script>
+
+// ---------------------------CLASS IN ES6-------------------------
+
+// En esta lección explicaremos cómo crear una clase que se puede usar para crear múltiples objetos de la misma estructura.
+
+// Una clase usa la "class" de palabra clave y contiene un método constructor para inicializar.
+
+// por ejemplo:
+
+
+    class Rectangle {
+    constructor(height, width) {
+        this.height = height;
+        this.width = width;
+    }
+}
+
+
+// Luego, una clase declarada se puede usar para crear múltiples objetos usando la palabra clave new.
+
+// Por ejemplo:
+
+
+    const poster = new Rectangle(2, 3);
+    const square = new Rectangle (5, 5);
+    console.log(square);
+
+
+// Notas: Las declaraciones de clase no se elevan mientras que las declaraciones de función sí lo son. Si intenta acceder a su clase antes de declararla, se devolverá ReferenceError.
+
+// También puede definir una clase con una expresión de clase, donde la clase puede tener nombre o no.
+
+// Una clase nombrada se ve así:
+
+    var cuadrado = class Rectangulo {
+        constructor (ancho, alto){
+            this.ancho = ancho;
+            this.alto = alto;
+        }
+    };
+
+    const cuadrado1 = new cuadrado (82,83);
+    console.log(cuadrado1);
+
+// En la expresión de clase sin nombre, a una variable simplemente se le asigna la definición de clase:
+
+var cuatroladitos = class {
+        constructor (ancho, alto){
+            this.ancho = ancho;
+            this.alto = alto;
+        }
+    };
+
+    const cuatroladitos1 = new cuatroladitos (13,324);
+    console.log(cuatroladitos1);
+
+// El constructor es un método especial que se utiliza para crear e inicializar un objeto creado con una clase.
+
+// Solo puede haber un constructor en cada clase.
+
+
+    </script>
+    
+</body>
+</html>

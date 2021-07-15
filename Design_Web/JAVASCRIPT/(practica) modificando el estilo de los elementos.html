@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>(practi) Modificando estilos de los elementos</title>
+	<style>
+		
+		.thumb {
+			width: 200px;
+			transition: 300ms all ease;
+		}
+
+		.grande {
+			width: 400px;
+
+		}
+
+		
+		.tgrande {
+			font-size: 60px;
+		}
+	</style>
+
+</head>
+<body>
+	<form action="">
+		<input type="button" value="cambio de tamaño" onclick="zoom" >
+	</form>
+
+	<img id="thumb" class="thumb" src="https://s1.eestatic.com/2017/02/24/actualidad/Actualidad_196242404_129790152_1706x960.jpg" width="400" alt="">
+
+
+
+	<script>
+
+			var zoom = function(){
+
+				var thumb = document.getElementById("thumb");
+				thumb.className = "thumb grande";
+				//se suponia que esto con el codigo de arriba en el form iba a cambiar el tamaño de nuestra imagen pero no me funciono, no se que pedo
+			}
+
+
+	</script>
+
+</body>
+</html>

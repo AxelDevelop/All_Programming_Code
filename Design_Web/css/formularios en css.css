@@ -1,0 +1,94 @@
+form{
+	width: 25%;
+	border: 1px solid #ccc;
+	margin: 20px auto;
+	padding: 20px;
+}
+
+label {
+	font-size: 12px;
+	/*con font-size cambiamos el tamaño de las letras*/
+	display: block;
+	/*aqui cambiamos los elementos label que estan en inline a elementos en bloque*/
+	width: 100%;
+	text-transform: capitalize;
+}
+/*en todo lo que es el label hicimos que las letras esten de un tamaño determinado y que los label cambien de inline a elementos de bloque*/
+
+input, textarea
+/*con la coma haces que se le apliquen los estilos a ambos*/
+ {
+	margin-bottom: 20px;
+	/*en margin-bottom separamos todos los input por el espaciado de fondo que da*/
+	width: 100%;
+	padding: 10px;
+	/*aqui con el padding añadimos un espaciado interno entre las palabras y bordes del cuadro*/
+	/* -webkit-box-sizing: 20px;
+	-moz-box-sizing: border-box; */
+
+	box-sizing: border-box;
+	/* box-sizing: border-box; */
+	/* con la propiedad box-sizing podemos solucionar el problema de que la caja que tiene dentro el formulario se pegue a la otra, se ve mas bonito, se le pone border-box dentro*/
+
+	border: 1px solid #ccc;
+	/*con border recuerda que le podemos cambiar el borde que tiene por defecto*/
+
+
+
+}
+
+input:focus, textarea:focus
+/*con focus (el cual es un seudoselector) se pueden detectar cuando el usuario este seleccionando un input, cuando le da un click*/
+{
+border: 1px solid #1668C4;
+}
+
+textarea{
+	resize: both;
+	/*con rezise podemos controlar el tamaño en nuestro textarea (panel de texto como comentario), puede ser solo horizontal como a todos lados con both y a solo vertical con la palabra vertical*/
+
+	/* La propiedad resize de CSS permite controlar la capacidad de cambio de tamaño de un elemento. */
+	/* los atributos dentro son: none (El elemento no efrece método para que el usuario controle el cambio de tamaño del elemento.) both (El elemento efrece un mecanismo que permite al usuario cambiar el tamaño del elemento el cual puede ser tanto horizontal como verticalmente.) horizontal (El elemento efrece un mecanismo que permite al usuario cambiar el tamaño del elemento sólo horintalmente.) vertical (El elemento efrece un mecanismo que permite al usuario cambiar el tamaño del elemento sólo verticalmente.) */
+
+
+
+	max-height: 300px;
+	/*con max-height podemos asignarle un limite de extension cuando los usuarios lo alarguen*/ 
+
+	min-height: 100px;
+	/*con min-height podemos asignarle un limite de altura, con las dos podemos hacer que no se extienda mas de 300px y no se encoja a menos de 100px*/
+
+
+
+
+
+}
+
+	input[type="submit"]
+	/*en este input le decimos que todos los input que tengan el atributo type y el valor subMit van a tener el siguiente valor*/
+{
+	margin-bottom: 0;
+	/*con margin-bottom podemos arreglar el espaciado que podremos tener al extender el cuadro de texto*/
+
+	background: #1668c4;
+	color: #fff;
+	border: none;
+
+
+}
+
+input[type="submit"]:hover
+
+{
+background: #4A88F4;
+/* el hover junto al background hace que se vea mas como un boton alpasar el mouse*/
+
+cursor: pointer;
+/*con cursor:pointer; podemos modificar que cursor se va a mostrar, como por ejemplo que el mouse se cambie a una mano*/
+
+
+}
+
+
+
+

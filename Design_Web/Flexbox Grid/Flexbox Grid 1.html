@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Grid 1</title>
+    <link rel="stylesheet" href="flexboxgrid.min.css" />
+    <link rel="stylesheet" href="Flexbox Grid 1.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- container es el  contenedor que abarcara la columna -->
+      <header class="row">
+        <!-- row indica la columna -->
+        <div class="col-xs-12">
+          <!-- col..... indica el numero de columnas -->
+          <div class="header">
+            <h1>header</h1>
+          </div>
+        </div>
+      </header>
+
+      <div class="row center-xs start-sm end-md">
+        <!-- aqui debajo se utilizo offset, el lo borro pero wueno -->
+        <div class="col-xs-4">
+          <!-- col-xs-offset-8 -->
+          <div class="aux">
+            <h2>:D</h2>
+          </div>
+        </div>
+      </div>
+
+      <div class="row principal middle-xs between-xs reverse">
+        <!-- aqui utilizamos middle para poder centrar y a between para poder añadir al final, osea hacia abajo. -->
+        <div class="col-xs-12 col-md-2 first-md">
+          <div class="sidebar1">
+            <h3>Sidebar 1</h3>
+            <br /><br /><br /><br />
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-4">
+          <div class="contenido">
+            <h2>Contenido</h2>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-md-2">
+          <div class="sidebar2">
+            <h3>Sidebar 2</h3>
+            <br /><br /><br /><br />
+          </div>
+        </div>
+      </div>
+
+      <footer class="row">
+        <div class="col-xs-12">
+          <div class="footer">
+            <h2>Footer</h2>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <footer>
+      <h4>footer</h4>
+    </footer>
+  </body>
+</html>
+
+<!-- Datos -->
+
+<!-- unidad de medida de las columnas utilizado en este ejemplo: -->
+
+<!-- XS: Extra Small -->
+
+<!-- SM/sm: small -->
+
+<!-- MD/md: medium -->
+
+<!-- LG/lg: large -->

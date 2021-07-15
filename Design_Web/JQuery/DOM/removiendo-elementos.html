@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <title>DOM Transversal</title>
+</head>
+<body>
+
+    <style>
+
+div {
+  background-color: aqua;
+  width: 300px;
+  height: 200px;
+}
+
+    </style>
+
+<!-- /* --------------------------REMOVE-------------------------- */ -->
+
+    
+        <header>
+            <p style="color:red">Red</p>
+            <p style="color:green">Green</p>
+            <p style="color:blue">Blue</p>
+            
+                <!-- /* ---------------------------------EMPTY------------------------------------- */ -->
+            <div>
+                <p style="color:red">Red</p>
+                <p style="color:green">Green</p>
+                <p style="color:blue">Blue</p>
+            </div>
+        </header>
+
+    <script>
+
+// --------------------------REMOVE ELEMENTS----------------------
+
+// Eliminamos los elementos seleccionados del DOM usando el método remove (). Por ejemplo:
+
+        $("p").eq(1).remove();
+
+// Esto elimina el verde, el segundo elemento de párrafo.
+
+// También puede utilizar el método remove () en varios elementos seleccionados, por ejemplo $ ("p"). Remove () elimina todos los párrafos.
+
+// Nota: El método jQuery remove () elimina los elementos seleccionados, así como sus elementos secundarios.
+
+// ---------------------------------EMPTY-------------------------------------
+
+// El método empty () se utiliza para eliminar los elementos secundarios de los elementos seleccionados. Por ejemplo:
+
+        $("div").empty();
+
+// Esto elimina los tres elementos secundarios del div, dejándolo vacío.
+
+
+
+    </script>
+
+</body>
+</html>
