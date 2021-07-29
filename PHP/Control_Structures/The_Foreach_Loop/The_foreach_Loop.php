@@ -18,7 +18,7 @@ The following example demonstrates a loop that outputs the values of the $names 
 
 <?php
 
-    $names = array("john", "David", "David");
+    $names = array("john", "David", "Alfred");
     foreach ($name as $name){
         echo $name.'<br />';
     }

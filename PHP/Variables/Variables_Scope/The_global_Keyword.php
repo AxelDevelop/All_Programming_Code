@@ -8,7 +8,7 @@
         global $name;
         echo $name;
     }
-    Getname();
+    getname();
 
     //Outputs 'David'
 ?>
