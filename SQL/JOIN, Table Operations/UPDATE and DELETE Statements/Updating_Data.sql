@@ -2,7 +2,7 @@
 
 -- The basic syntax of an UPDATE query with a WHERE clause is as follows:
 
-UPDATE table_name
+UPDATE actor
 SET column1 = value1, column2 = value2, ...
 WHERE condition;
 
