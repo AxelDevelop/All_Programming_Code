@@ -1,31 +1,51 @@
 {
-    "scripts": {
-        "script1": "npm init -y",
-        "script2": "npm install -D postcss postcss -cli",
-        "autoprefixerScript": "npm install -D autoprefixer"
-    },
-    "filesConfig":{
-        "configCss": "Create a new file called postcss.config.js inside the working file and to write module.exports = {plugins:[ require('tailwindcss'),require('autoprefixer')]}",
-        "package.json": "add the following sentences to the file called package.json in the part called scripts:  ",
-        "scripts": " 'build': 'postcss src/styles.css --output css/styles.css', 'watch': 'postcss src/styles.css --output css/styles.css --watch'",
-        "src/Styles": "create a folder inside the work file called src and inside a file called style.css"
-    },
-    
-    "installTailwind":{
-        "scripts": "npm i -D tailwindcss"
-    },
-    "configTailwindFile":{
-        "scripts": "npx tailwind init"
-    },
-    "addTailwindToCss": {
-        "CssFile":"@tailwind base; @tailwind components; @tailwind utilities ",
-        "runTail":{
-            "script1":"npm run dev",
-            "script2":"npm run"
+    "first steps":{
+        "scripts": {
+            "script1": "npm init -y",
+            "script2": "npm install -D postcss postcss -cli",
+            "autoprefixerScript": "npm install -D autoprefixer"
+        },
+        "filesConfig":{
+            "configCss": "Create a new file called postcss.config.js inside the working file and to write module.exports = {plugins:[ require('tailwindcss'),require('autoprefixer')]}",
+            "package.json": "add the following sentences to the file called package.json in the part called scripts:  ",
+            "scripts": " 'build': 'postcss src/styles.css --output css/styles.css', 'watch': 'postcss src/styles.css --output css/styles.css --watch'",
+            "src/Styles": "create a folder inside the work file called src and inside a file called style.css"
+        },
+        
+        "installTailwind":{
+            "scripts": "npm i -D tailwindcss"
+        },
+        "configTailwindFile":{
+            "scripts": "npx tailwind init"
+        },
+        "addTailwindToCss": {
+            "CssFile":"@tailwind base; @tailwind components; @tailwind utilities ",
+            "runTail":{
+                "script1":"npm run dev",
+                "script2":"npm run"
+            }
+
         }
 
+    },
+    "second steps":{
+        "scripts":{
+            "script1": "npm -y init",
+            "script2": "npm instal tailwindcss"
+        },
+        "filesConfig":{
+            "ImportTailwindcss":"create a folder called src and inside a file called styles.css, inside this write: @tailwind base; @tailwind components; @tailwind utilities;",
+            "stylesTailwindcss":{
+                "ConfigPackage.json":"stick in the package.json file in the part of scritps tailwind build src/style.css -o css/style.css"
+            }
+
+        },
+        "runScripts":{
+            "run the json file":"npm run build",
+            "Create your configuration file": "npx tailwindcss init"
+        }
+
+        
     }
-
-
     
 }
