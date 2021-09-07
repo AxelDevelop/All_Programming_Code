@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="flex justify-center items-center h-screen">
+    
+    <div class="mt-5 w-px/40 text-black" id="app" >
+
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username" v-model='newTask' v-on:keyup.enter="addTask">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline my-3 w-full" type="button" @click="addTask">Add</button>
+
+
+        <div :class="['mt-3', item.state ? 'bg-green-100' : 'bg-red-100', 'rounded-sm', 'px-3']"  v-for="(item, index) of task">
+            <div class="flex justify-between items-center">
+                <div class="">{{ index }} - {{ item.name }}</div>
+                <div class="">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 rounded focus:outline-none focus:shadow-outline mx-1 my-1 px-5" @click="editTask(index)">OK</button>
+                    
+                    <button class="bg-red-500 hover:bg-red-700 text-white font-bold py-4 rounded focus:outline-none focus:shadow-outline mx-1 my-1 px-5 text-sm" @click="deleteTask(index)">X</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./app.js"></script>
+
+</body>
+</html>

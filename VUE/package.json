@@ -1,0 +1,15 @@
+{
+  "name": "VUE",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01.js",
+  "scripts": {
+    "build": "tailwind build src/style.css -o css/style.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^2.2.11"
+  }
+}

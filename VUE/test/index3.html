@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computed</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="flex justify-center items-center h-screen">
+    <div id="app">
+
+        <div class="">
+            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username" v-model='message' v-on:keyup.enter="addTask">
+            <h3>invertido: {{invertido}}</h3>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 rounded focus:outline-none focus:shadow-outline mx-1 my-1 px-5" @click="contador++">+</button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-4 rounded focus:outline-none focus:shadow-outline mx-1 my-1 px-5" @click="contador--">-</button>
+            <h3>{{contador}}</h3>
+
+            <div class="h-3 relative max-w-xl rounded-full overflow-hidden">
+                <div class="w-full h-full bg-gray-200 absolute"></div>
+                <div class="transition-all ease-out duration-1000 h-full relative" :style="{'width': contador+'%'}"
+                :class="color"
+                ></div>
+            </div>
+        </div>
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="./03.js"></script>
+</body>
+</html>
