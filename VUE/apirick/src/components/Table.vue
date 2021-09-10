@@ -1,9 +1,12 @@
 <template>
   <div class="hello">
       <h1>{{ msg }}</h1>
-        <div>
+  <b-row>
+    <b-col class="md">
         <b-table  bordered hover :items="posts"></b-table>
-          </div>
+
+    </b-col>
+  </b-row>
 
   </div>
 
