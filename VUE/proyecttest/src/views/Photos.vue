@@ -1,5 +1,6 @@
 <template>
     <div>
+    <div>
         <h1>Photo Gallery</h1>
 
         <router-link :to="{ name: 'photos', params: {id : item} }" v-for="(item, index) of photoArray" :key="index">
@@ -10,7 +11,11 @@
         <button @click="home">Home</button>
         <button @click="previous">Previous</button>
         <button @click="next">Next</button>
-
+        
+    </div>
+    <div>
+        {{posts}}
+    </div>
     </div>
 </template>
 
