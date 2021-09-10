@@ -1,20 +1,10 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-        <table class="rwd-table">
-          <thead>
-            <tr>
-              <th>ID</th>
-              <th>Name</th>
-              <th>Status</th>
-              <th>Species</th>
-              <th>Type</th>
-            </tr>
-          </thead>
-          <tbody v-for="(item, index) of posts" :key="index">
-            <td>{{item}}</td>
-          </tbody>
-    </table>
+      <h1>{{ msg }}</h1>
+        <div>
+        <b-table  bordered hover :items="posts"></b-table>
+          </div>
+
   </div>
 
 </template>
@@ -25,6 +15,7 @@ export default {
   name: 'Table',
   data(){
     return{
+      fields: ['id','name', 'status', 'species', 'gender'],
       posts:[]
     }
   },
@@ -35,7 +26,7 @@ export default {
     let vue = this;
     this.$api.get('https://rickandmortyapi.com/api/character')
     .then(function(response){
-      vue.posts = response.data;
+      vue.posts = response.data.results;
     });
   }
 }
