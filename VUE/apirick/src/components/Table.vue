@@ -1,13 +1,14 @@
 <template>
-  <div class="hello">
-      <h1>{{ msg }}</h1>
-  <b-row>
-    <b-col class="md">
-        <b-table  bordered hover :items="posts"></b-table>
-
-    </b-col>
+  <div class="ml-1">
+  <b-row  align-content="center">
+        <h1 >{{ msg }}</h1>
+        <b-form-input :type="types.number" placeholder="Busca tu personaje" class="mb-4"></b-form-input>
+            <b-table id="table" bordered  hover :items="posts" :fields="fields" v- selectable select-mode="single" foot-clone >
+              <template #cell(posts)='posts'>
+                {{posts[0]}}
+              </template>
+            </b-table>
   </b-row>
-
   </div>
 
 </template>
@@ -18,12 +19,26 @@ export default {
   name: 'Table',
   data(){
     return{
-      fields: ['id','name', 'status', 'species', 'gender'],
-      posts:[]
+      fields: ['id','name', 'species', 'gender', 'origin.name'],
+      posts:[],
+      types: [
+          'text',
+          'number',
+          'email',
+          'password',
+          'search',
+          'url',
+          'tel',
+          'date',
+          'time',
+          'range',
+          'color'
+        ]
+
     }
   },
   props:{
-    msg: String
+    msg: String,
   },
   mounted(){
     let vue = this;
@@ -31,6 +46,6 @@ export default {
     .then(function(response){
       vue.posts = response.data.results;
     });
-  }
+  },
 }
 </script>
