@@ -1,46 +1,30 @@
 <template>
   <div>
 <b-container class="bv-example-row bv-example-row-flex-cols">
-  <b-card
-    overlay
-    :img-src="data.image"
-    style="max-width:400px"
-    img-alt="Card Image"
-    text-variant="white"
-    :title="data.name"
-    sub-title="Subtitle"
-  >
-    <b-card-text>
-      <p>ID: {{data.id}}</p> 
-    </b-card-text>
-        <b-card-text>
-      <p>Status: {{data.status}}</p> 
-    </b-card-text>
-        <b-card-text>
-      <p>Type: {{data.type}}</p> 
-    </b-card-text>
-        <b-card-text>
-      <p>Gender: {{data.gender}}</p> 
-    </b-card-text>
-        <b-card-text>
-      <p>Origin: {{data.origin.name}}</p> 
-    </b-card-text>
-
-      <b-button to="/">Home</b-button>
-  </b-card>
-
   <div>
-  <b-card no-body class="overflow-hidden" style="max-width: 540px;">
+  <b-card  no-body class="overflow-hidden">
     <b-row no-gutters>
       <b-col md="6">
-        <b-card-img :src="data.image" alt="Image" class="rounded-0"></b-card-img>
+        <b-card-img :src="data.image" alt="Image" class="rounded-4" style="max-height: 100%;"></b-card-img>
       </b-col>
       <b-col md="6">
-        <b-card-body title="Horizontal Card">
+        <b-card-body :title="data.name">
           <b-card-text>
-            This is a wider card with supporting text as a natural lead-in to additional content.
-            This content is a little bit longer.
+            <h2 style="font-size:24px;">ID: {{data.id}}</h2>
           </b-card-text>
+                    <b-card-text>
+            <h2 style="font-size:24px;">Status: {{data.status}}</h2>
+          </b-card-text>
+                    <b-card-text>
+            <h2 style="font-size:24px;">Type: {{data.type}}</h2>
+          </b-card-text>
+                    <b-card-text>
+            <h2 style="font-size:24px;">Gender: {{data.gender}}</h2>
+          </b-card-text>
+                    <b-card-text>
+            <h2>Origin: {{data.origin.name}}</h2>
+          </b-card-text>
+          <b-button to="/">Home</b-button>
         </b-card-body>
       </b-col>
     </b-row>
