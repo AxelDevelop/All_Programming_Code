@@ -32,7 +32,7 @@
         "second steps":{
             "scripts":{
                 "script1": "npm -y init",
-                "script2": "npm instal tailwindcss"
+                "script2": "npm install tailwindcss"
             },
             "filesConfig":{
                 "ImportTailwindcss":"create a folder called src and inside a file called styles.css, inside this write: @tailwind base; @tailwind components; @tailwind utilities;",
